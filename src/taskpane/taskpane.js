@@ -1,80 +1,12 @@
 /* src/taskpane/taskpane.js */
 
-// ---- 假資料：之後可以用 CSV / Graph 產生 ----
-let orgTree = [
-  {
-    id: "kangqiao",
-    name: "康橋學校",
-    children: [
-      {
-        id: "qingshan",
-        name: "青山校區",
-        children: [
-          {
-            id: "qingshan-admin",
-            name: "校務處",
-            children: [
-              {
-                id: "qingshan-admin-hr",
-                name: "人資組",
-                employees: [
-                  {
-                    id: "emp-001",
-                    name: "蔡婉思 Jessie",
-                    title: "專任教師",
-                    email: "jessie@example.com"
-                  },
-                  {
-                    id: "emp-002",
-                    name: "歐文娟 Wenchuan",
-                    title: "教務組長",
-                    email: "wenchuan@example.com"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            id: "qingshan-teach",
-            name: "教務處",
-            children: [
-              {
-                id: "qingshan-teach-curriculum",
-                name: "課務組",
-                employees: [
-                  {
-                    id: "emp-003",
-                    name: "陳科佑 Keyu",
-                    title: "教師",
-                    email: "keyu@example.com"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: "kaohsiung",
-        name: "高雄校區",
-        children: [
-          {
-            id: "kaohsiung-admin-hr",
-            name: "人資組",
-            employees: [
-              {
-                id: "emp-004",
-                name: "李芝文 Joanne",
-                title: "人資專員",
-                email: "joanne@example.com"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-];
+// ---- Entra 群組設定與成員快取 ----
+// orgTreeConfig 控制 UI 露出的群組白名單；實際的成員資料目前從 CSV snapshot 轉成 JSON。
+const { orgTreeConfig } = require("../data/orgTreeConfig");
+const { getMembersByGroupId, getAllMembersWithPath } = require("../data/entraMembersService");
+
+// 以設定檔為基礎的組織樹（避免直接修改 import 內容）
+const orgTree = JSON.parse(JSON.stringify(orgTreeConfig));
 
 // ---- 全域狀態 ----
 let appInitialized = false;
@@ -93,6 +25,12 @@ function initApp() {
   const searchInput = document.getElementById("search-input");
   const clearSearchBtn = document.getElementById("clear-search-btn");
   const clearSelectionBtn = document.getElementById("clear-selection-btn");
+  const previewBadge = document.querySelector(".app-badge");
+
+  if (previewBadge) {
+    previewBadge.textContent = isOutlook ? "Outlook 模式" : "預覽模式";
+    previewBadge.classList.toggle("is-outlook", isOutlook);
+  }
 
   if (searchInput) {
     searchInput.addEventListener("input", handleSearchInputChange);
@@ -167,7 +105,7 @@ function buildTreeNode(node, depth) {
   container.style.paddingLeft = `${depth * 16}px`;
 
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
-  const isLeaf = !hasChildren && Array.isArray(node.employees);
+  const isLeaf = !hasChildren && (!!node.groupId || Array.isArray(node.employees));
 
   const label = document.createElement("div");
   label.className = "tree-label";
@@ -202,7 +140,7 @@ function buildTreeNode(node, depth) {
 
 // ------- 節點選取 & 顯示員工 --------
 
-function selectNode(nodeId) {
+async function selectNode(nodeId) {
   lastSelectedNodeId = nodeId;
   currentMode = "browse";
   lastSearchKeyword = "";
@@ -221,8 +159,43 @@ function selectNode(nodeId) {
   }
 
   const node = findNodeById(orgTree, nodeId);
-  const employees = (node && node.employees) || [];
-  renderEmployees(employees, buildBreadcrumb(node), { isSearch: false });
+  if (!node) return;
+
+  // 有 employees 為 demo 節點，直接渲染
+  if (Array.isArray(node.employees)) {
+    renderEmployees(node.employees, buildBreadcrumb(node), { isSearch: false });
+    return;
+  }
+
+  if (node.groupId) {
+    renderLoading(buildBreadcrumb(node));
+    try {
+      const employees = await getMembersByGroupId(node.groupId);
+      renderEmployees(employees, buildBreadcrumb(node), { isSearch: false });
+    } catch (err) {
+      console.error(err);
+      renderError("載入群組成員時發生錯誤，請稍後再試一次。");
+    }
+    return;
+  }
+
+  renderEmployees([], buildBreadcrumb(node), { isSearch: false });
+}
+
+function renderLoading(breadcrumbText) {
+  const breadcrumb = document.getElementById("breadcrumb");
+  const list = document.getElementById("contacts-list");
+  const countEl = document.getElementById("contacts-count");
+  if (breadcrumb) breadcrumb.textContent = breadcrumbText || "";
+  if (countEl) countEl.textContent = "載入中...";
+  if (list) list.innerHTML = "<div class='empty'>載入中...</div>";
+}
+
+function renderError(message) {
+  const list = document.getElementById("contacts-list");
+  const countEl = document.getElementById("contacts-count");
+  if (countEl) countEl.textContent = "0";
+  if (list) list.innerHTML = `<div class='empty'>${message}</div>`;
 }
 
 function findNodeById(nodes, id) {
@@ -237,7 +210,7 @@ function findNodeById(nodes, id) {
 }
 
 function findFirstLeaf(node) {
-  if (node.employees && node.employees.length > 0) return node;
+  if ((node.groupId || (node.employees && node.employees.length > 0)) && !node.children) return node;
   if (!node.children) return null;
   for (const child of node.children) {
     const leaf = findFirstLeaf(child);
@@ -271,7 +244,7 @@ function findParent(root, childId, parent = null) {
 
 // ------- 搜尋功能：全公司搜尋姓名 / 職稱 / Email --------
 
-function handleSearchInputChange(event) {
+async function handleSearchInputChange(event) {
   const keyword = event.target.value.trim();
   lastSearchKeyword = keyword;
 
@@ -287,12 +260,18 @@ function handleSearchInputChange(event) {
   }
 
   currentMode = "search";
-  const results = searchEmployees(keyword);
-  renderEmployees(results, `搜尋結果：「${keyword}」`, { isSearch: true, showOrgPath: true });
+  renderLoading(`搜尋結果：「${keyword}」`);
+  try {
+    const results = await searchEmployees(keyword);
+    renderEmployees(results, `搜尋結果：「${keyword}」`, { isSearch: true, showOrgPath: true });
+  } catch (err) {
+    console.error(err);
+    renderError("搜尋時發生錯誤，請稍後再試一次。");
+  }
 }
 
-function searchEmployees(keyword) {
-  const all = collectAllEmployeesWithPath(orgTree);
+async function searchEmployees(keyword) {
+  const all = await collectAllEmployeesWithPath(orgTree);
   const lower = keyword.toLowerCase();
   return all.filter(emp =>
     (emp.name && emp.name.toLowerCase().includes(lower)) ||
@@ -301,23 +280,31 @@ function searchEmployees(keyword) {
   );
 }
 
-function collectAllEmployeesWithPath(nodes, path = []) {
-  let result = [];
-  for (const n of nodes) {
-    const newPath = [...path, n.name];
-    if (Array.isArray(n.employees)) {
-      result = result.concat(
-        n.employees.map(e => ({
-          ...e,
-          path: newPath.join(" / ")
-        }))
-      );
+async function collectAllEmployeesWithPath(nodes) {
+  // 先優先使用服務整合的快取，避免重複展開
+  const enriched = await getAllMembersWithPath();
+  if (enriched.length) return enriched;
+
+  // 若無預載資料，仍 fallback 以目前節點資料搜尋
+  const walk = (list, path = []) => {
+    let result = [];
+    for (const n of list) {
+      const newPath = [...path, n.name];
+      if (Array.isArray(n.employees)) {
+        result = result.concat(
+          n.employees.map(e => ({
+            ...e,
+            path: newPath.join(" / ")
+          }))
+        );
+      }
+      if (Array.isArray(n.children)) {
+        result = result.concat(walk(n.children, newPath));
+      }
     }
-    if (Array.isArray(n.children)) {
-      result = result.concat(collectAllEmployeesWithPath(n.children, newPath));
-    }
-  }
-  return result;
+    return result;
+  };
+  return walk(nodes);
 }
 
 // ------- 員工卡片 & 清單渲染 --------
@@ -402,7 +389,7 @@ function addToRecipient(emp) {
         console.error(result.error);
         alert("加入收件人失敗：" + result.error.message);
       } else {
-        // 你可以選擇要不要也同步到本地選擇清單
+        // 也同步到本地選擇清單，方便 Task Pane 顯示
         addToLocalSelection(emp);
       }
     });
