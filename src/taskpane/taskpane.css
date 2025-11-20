@@ -1,0 +1,325 @@
+/* 基本字型設定 */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.app-header {
+  padding: 6px 10px;
+  background: #0099cc;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-title {
+  font-size: 14px;
+}
+
+.app-badge {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  opacity: 0.85;
+}
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-input {
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  min-width: 180px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-clear-btn {
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.search-clear-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* 主體 layout */
+
+.app-main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* 左側：組織樹 */
+
+.org-panel {
+  width: 220px;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.org-panel-title {
+  padding: 8px 10px;
+  font-weight: 600;
+  background: #f5f7fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.org-tree {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px;
+}
+
+.tree-node {
+  cursor: pointer;
+  user-select: none;
+}
+
+.tree-label {
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.tree-label:hover {
+  background: #e6f4ff;
+}
+
+.tree-node.leaf-selected > .tree-label {
+  background: #cce7ff;
+}
+
+.tree-children {
+  margin-top: 2px;
+}
+
+.tree-node.collapsed > .tree-children {
+  display: none;
+}
+
+/* 右側：聯絡人 + 選擇清單 */
+
+.contacts-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.contacts-header {
+  padding: 6px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.contacts-meta {
+  font-size: 12px;
+  color: #555;
+}
+
+.contacts-count {
+  font-weight: 500;
+}
+
+.contacts-list {
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 8px;
+  overflow-y: auto;
+}
+
+.contact-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #ffffff;
+}
+
+.contact-name {
+  font-weight: 600;
+}
+
+.contact-title {
+  font-size: 12px;
+  color: #666;
+}
+
+.contact-email {
+  font-size: 12px;
+  color: #333;
+  word-break: break-all;
+}
+
+.contact-path {
+  font-size: 11px;
+  color: #888;
+}
+
+.contact-add-btn {
+  margin-top: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #0099cc;
+  background: #0099cc;
+  color: white;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.contact-add-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* 選擇收件人 panel */
+
+.selection-panel {
+  border-top: 1px solid #e0e0e0;
+  padding: 6px 8px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.selection-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.selection-title {
+  font-weight: 600;
+}
+
+.selection-count {
+  color: #555;
+}
+
+.selection-clear-btn {
+  margin-left: auto;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 999px;
+  border: 1px solid #bbb;
+  background: white;
+  cursor: pointer;
+}
+
+.selection-clear-btn:hover {
+  background: #f0f0f0;
+}
+
+.selection-list {
+  max-height: 120px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.selection-row {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #fff;
+}
+
+.selection-main {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.selection-email {
+  font-size: 11px;
+  color: #555;
+  word-break: break-all;
+}
+
+.selection-remove-btn {
+  align-self: flex-end;
+  margin-top: 2px;
+  padding: 1px 6px;
+  font-size: 11px;
+  border-radius: 999px;
+  border: 1px solid #d33;
+  background: #fff;
+  color: #d33;
+  cursor: pointer;
+}
+
+.selection-remove-btn:hover {
+  background: #ffe5e5;
+}
+
+/* 空狀態 */
+
+.empty {
+  padding: 12px;
+  color: #888;
+  font-size: 12px;
+}
+
+.empty-selection {
+  padding: 6px;
+  font-size: 12px;
+  color: #777;
+}
