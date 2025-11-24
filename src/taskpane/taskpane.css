@@ -323,3 +323,85 @@ body {
   font-size: 12px;
   color: #777;
 }
+
+/* 針對 Outlook Task Pane 等窄版的響應式調整 */
+@media (max-width: 900px) {
+  .app-header {
+    flex-wrap: wrap;
+    padding: 8px 10px;
+  }
+
+  .search-input {
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Task Pane 窄版：改為上下堆疊 */
+  .app-main {
+    flex-direction: column;
+  }
+
+  .org-panel {
+    width: 100%;
+    max-height: 200px; /* 窄版組織樹最大高度，超出可捲動 */
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .org-tree {
+    max-height: 160px;
+    overflow-y: auto;
+  }
+
+  .contacts-panel {
+    width: 100%;
+  }
+
+  .contacts-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contacts-list {
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
+    padding: 8px 6px;
+  }
+
+  .contact-card {
+    padding: 6px 8px;
+    gap: 3px;
+  }
+
+  .contact-name {
+    font-size: 13px;
+  }
+
+  .contact-title,
+  .contact-email,
+  .contact-path {
+    font-size: 11px;
+  }
+
+  .contact-email {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Email 過長時截斷顯示 */
+  }
+
+  .contact-add-btn {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .selection-panel {
+    max-height: 200px; /* 窄版下保持區塊可視範圍並可捲動 */
+    overflow-y: auto;
+  }
+
+  .selection-list {
+    max-height: 140px;
+  }
+}
