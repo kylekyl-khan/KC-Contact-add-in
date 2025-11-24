@@ -1,5 +1,9 @@
 const orgMembers = require("../../data/orgMembers.generated.json");
 const { orgTreeConfig } = require("./orgTreeConfig");
+const { getGroupMembers } = require("../services/graph/groupMembers");
+
+// 切換 mock 資料或 Graph 真實查詢：改為 true 即會走 Graph 呼叫
+const USE_GRAPH = false;
 
 // 簡易快取，避免重複處理同一個 groupId
 const groupCache = new Map();
@@ -26,6 +30,26 @@ async function getMembersByGroupId(groupId) {
 }
 
 /**
+ * 單一介面切換使用 Graph 或離線 snapshot
+ * @param {string} groupId
+ * @returns {Promise<Array<{id,name,title,email}>>}
+ */
+async function loadMembersForGroup(groupId) {
+  if (!groupId) return [];
+
+  if (USE_GRAPH) {
+    if (groupCache.has(groupId)) {
+      return groupCache.get(groupId);
+    }
+    const members = await getGroupMembers(groupId);
+    groupCache.set(groupId, members);
+    return members;
+  }
+
+  return getMembersByGroupId(groupId);
+}
+
+/**
  * 為搜尋功能整合所有葉節點的成員，並附上組織路徑
  * @returns {Promise<Array<{id,name,title,email,path}>>}
  */
@@ -37,7 +61,7 @@ async function getAllMembersWithPath() {
     for (const node of nodes) {
       const currentPath = [...path, node.name];
       if (node.groupId) {
-        const members = await getMembersByGroupId(node.groupId);
+        const members = await loadMembersForGroup(node.groupId);
         members.forEach(m => {
           result.push({ ...m, path: currentPath.join(" / ") });
         });
@@ -61,4 +85,5 @@ async function getAllMembersWithPath() {
 module.exports = {
   getMembersByGroupId,
   getAllMembersWithPath,
+  loadMembersForGroup,
 };

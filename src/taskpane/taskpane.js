@@ -3,7 +3,8 @@
 // ---- Entra 群組設定與成員快取 ----
 // orgTreeConfig 控制 UI 露出的群組白名單；實際的成員資料目前從 CSV snapshot 轉成 JSON。
 const { orgTreeConfig } = require("../data/orgTreeConfig");
-const { getMembersByGroupId, getAllMembersWithPath } = require("../data/entraMembersService");
+const { getAllMembersWithPath, loadMembersForGroup } = require("../data/entraMembersService");
+const { ensureLogin, getGraphToken } = require("../services/auth/msalClient");
 
 // 以設定檔為基礎的組織樹（避免直接修改 import 內容）
 const orgTree = JSON.parse(JSON.stringify(orgTreeConfig));
@@ -70,6 +71,26 @@ function initApp() {
   renderSelection();
 }
 
+async function initOutlookMode() {
+  const previewBadge = document.querySelector(".app-badge");
+  if (previewBadge) {
+    previewBadge.textContent = "Outlook 模式";
+    previewBadge.classList.add("is-outlook");
+  }
+
+  try {
+    await ensureLogin();
+    const token = await getGraphToken();
+    if (token) {
+      console.log("Graph token acquired:", `${token.substring(0, 12)}...`);
+    }
+    initApp();
+  } catch (error) {
+    console.error("初始化 Outlook 模式失敗：", error);
+    renderError("登入 Microsoft 失敗，請稍後再試。");
+  }
+}
+
 // Outlook 環境：用 Office.onReady 啟動
 if (typeof Office !== "undefined" && Office.onReady) {
   Office.onReady(info => {
@@ -80,7 +101,17 @@ if (typeof Office !== "undefined" && Office.onReady) {
     } catch (e) {
       console.warn("Office.onReady info error:", e);
     }
-    initApp();
+
+    if (isOutlook) {
+      // 確保 DOM 已載入再做 MSAL 初始化
+      if (document.readyState === "loading") {
+        window.addEventListener("DOMContentLoaded", initOutlookMode);
+      } else {
+        initOutlookMode();
+      }
+    } else {
+      window.addEventListener("DOMContentLoaded", initApp);
+    }
   });
 } else {
   // 純瀏覽器預覽：用 DOMContentLoaded 啟動
@@ -170,7 +201,7 @@ async function selectNode(nodeId) {
   if (node.groupId) {
     renderLoading(buildBreadcrumb(node));
     try {
-      const employees = await getMembersByGroupId(node.groupId);
+      const employees = await loadMembersForGroup(node.groupId);
       renderEmployees(employees, buildBreadcrumb(node), { isSearch: false });
     } catch (err) {
       console.error(err);
