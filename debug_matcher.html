@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>離線配對診斷工具</title>
+    <style>
+        body { font-family: "Segoe UI", sans-serif; padding: 20px; background: #f4f4f4; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h2 { margin-top: 0; color: #333; }
+        .success { color: green; font-weight: bold; }
+        .fail { color: red; font-weight: bold; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f8f9fa; }
+    </style>
+</head>
+<body>
+    <h1>🕵️‍♂️ 離線配對診斷工具</h1>
+    <p>此工具模擬 taskpane.js 的邏輯，協助找出字串不匹配的原因。</p>
+
+    <div class="card">
+        <h2>1. 資料模擬</h2>
+        <div id="data-preview"></div>
+    </div>
+
+    <div class="card">
+        <h2>2. 配對結果分析</h2>
+        <table id="result-table">
+            <thead>
+                <tr>
+                    <th>使用者部門 (Raw)</th>
+                    <th>標準化後 (User Clean)</th>
+                    <th>預期匹配群組 (Group Clean)</th>
+                    <th>結果</th>
+                    <th>原因推測</th>
+                </tr>
+            </thead>
+            <tbody id="result-body"></tbody>
+        </table>
+    </div>
+
+    <script>
+        // === 1. 模擬資料 (來自你的 Log) ===
+        const mockUsers = [
+            { displayName: "陳建銘", department: "營業二處高雄營業部國中高一區" }, // 你的真實失敗案例
+            { displayName: "測試人員", department: "新竹教務處" } // 對照組
+        ];
+
+        const mockGroups = [
+            { displayName: "KS020901.營業二處高雄營業部國中高一區" }, // 對應的群組
+            { displayName: "KCHC1010.新竹教務處" }
+        ];
+
+        // === 2. 你的核心邏輯 (待測試) ===
+        
+        // 🔥 這裡就是我們要測試的「標準化函式」
+        // 目前版本 (可能失敗)
+        function normalizeName_Old(str) {
+            return str.replace(/[ \t\r\n\.\-_\(\)（）]+/g, "").trim().toLowerCase();
+        }
+
+        // ✅ 改良版本 (加入 Unicode Normalization)
+        function normalizeName_New(str) {
+            if (!str) return "";
+            // NFKC 可以把全形轉半形，把特殊的空白轉成普通空白
+            return str.normalize('NFKC').replace(/[ \t\r\n\.\-_\(\)（）]+/g, "").trim().toLowerCase();
+        }
+
+        // === 3. 執行測試 ===
+        
+        // 解析群組
+        const parsedGroups = mockGroups.map(g => {
+            const match = g.displayName.match(/^([A-Z0-9]+)[\.\-_\s]+(.+)$/);
+            if (match) {
+                return { 
+                    original: g.displayName,
+                    code: match[1], 
+                    name: match[2].trim(),
+                    cleanOld: normalizeName_Old(match[2]),
+                    cleanNew: normalizeName_New(match[2])
+                };
+            }
+            return null;
+        }).filter(g => g);
+
+        const tbody = document.getElementById("result-body");
+
+        mockUsers.forEach(u => {
+            const row = document.createElement("tr");
+            
+            // 使用新舊兩種方法測試
+            const userCleanOld = normalizeName_Old(u.department);
+            const userCleanNew = normalizeName_New(u.department);
+            
+            // 嘗試尋找匹配
+            const matchOld = parsedGroups.find(g => g.cleanOld === userCleanOld || g.cleanOld.includes(userCleanOld) || userCleanOld.includes(g.cleanOld));
+            const matchNew = parsedGroups.find(g => g.cleanNew === userCleanNew || g.cleanNew.includes(userCleanNew) || userCleanNew.includes(g.cleanNew));
+
+            let status = "";
+            let reason = "";
+
+            if (matchNew) {
+                status = `<span class="success">成功 (新邏輯)</span>`;
+                if (!matchOld) {
+                    reason = "舊邏輯失敗，新邏輯成功！可能是隱藏字元或全形符號問題。";
+                } else {
+                    reason = "新舊邏輯都成功。";
+                }
+            } else {
+                status = `<span class="fail">失敗</span>`;
+                reason = "完全無法匹配，請檢查是否字元根本不同 (例如 '台' vs '臺')。";
+            }
+
+            // 顯示最接近的群組資訊
+            const targetGroup = matchNew || matchOld || parsedGroups[0]; // 預設顯示第一個當參考
+
+            row.innerHTML = `
+                <td>${u.department}</td>
+                <td>
+                    Old: <code>${escapeHtml(userCleanOld)}</code><br>
+                    New: <code>${escapeHtml(userCleanNew)}</code>
+                </td>
+                <td>
+                    Group: ${targetGroup ? targetGroup.name : '無'}<br>
+                    Clean: <code>${targetGroup ? targetGroup.cleanNew : ''}</code>
+                </td>
+                <td>${status}</td>
+                <td>${reason}</td>
+            `;
+            tbody.appendChild(row);
+        });
+
+        function escapeHtml(text) {
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>

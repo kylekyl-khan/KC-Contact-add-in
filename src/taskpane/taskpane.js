@@ -1,127 +1,245 @@
 /* global Office, document */
-import { fetchEntraUsers, fetchEntraGroups } from "../services/graph/entraUsers";
+import { fetchEntraUsers, fetchEntraGroups, fetchGroupMembers } from "../services/graph/entraUsers";
 
 // === 全域變數 ===
-let allUsers = [];
+let allUsers = []; // 暫存全域使用者供搜尋用
 let orgTree = null;
 let orgNodeIndex = {};
+let selectedRecipients = [];
+
+// 定義校區前綴對照表
 const CAMPUS_PREFIX_MAP = {
-  "KCHC": "新竹校區",
+  "KCXG": "秀岡校區",
   "KCQS": "青山校區",
-  "NJ": "南京校區",
+  "KCHC": "新竹校區",
+  // "NJ": "南京校區", // 已移除
   "KS": "康軒集團",
   "K1": "康軒集團",
   "KKC": "康橋幼兒園"
 };
 
 Office.onReady(() => {
-  // ... (UI 初始化代碼保持不變) ...
+  const sideloadMsg = document.getElementById("sideload-msg");
+  const appBody = document.getElementById("app-body");
+  if (sideloadMsg) sideloadMsg.style.display = "none";
+  if (appBody) {
+    appBody.style.display = "flex";
+    appBody.style.flexDirection = "column";
+  }
   initializeOrgUI();
 });
 
 async function initializeOrgUI() {
   try {
-    console.log("🚀 開始初始化...");
+    console.log("🚀 開始初始化 (API 模式)...");
     
-    // 1. 抓取資料 (加入個別錯誤處理，避免一個失敗全軍覆沒)
-    let users = [], groups = [];
-    
-    try {
-      users = await fetchEntraUsers();
-      console.log(`✅ 成功抓取使用者: ${users.length} 筆`);
-    } catch (e) {
-      console.error("❌ 抓取使用者失敗:", e);
-    }
-
+    // 1. 抓取群組 (這是最優先的)
+    let groups = [];
     try {
       groups = await fetchEntraGroups();
       console.log(`✅ 成功抓取群組: ${groups.length} 筆`);
-      // 🔍 測試印出第一筆群組，確認格式
-      if (groups.length > 0) console.log("🔍 群組資料範例:", groups[0]);
     } catch (e) {
-      console.error("❌ 抓取群組失敗 (請檢查 API 權限 Group.Read.All):", e);
+      console.error("❌ 抓取群組失敗:", e);
+      throw e; // 群組失敗就無法繼續
     }
 
-    if (groups.length === 0) {
-      console.warn("⚠️ 沒有群組資料，將無法建立完整樹狀圖。");
-    }
-
-    allUsers = users;
-    
     // 2. 建立樹狀骨架
-    console.log("🌲 正在建立組織樹...");
+    console.log("🌲 建立組織樹...");
     orgTree = buildOrgTreeStructure(groups);
-    console.log("🌲 樹狀骨架建立完成:", orgTree);
 
-    // 3. 將人員填入
-    console.log("👤 正在填入人員...");
-    populateUsersIntoTree(users);
+    // 3. 渲染 UI (使用者此時已經可以看到組織樹)
+    console.log("🎨 渲染介面...");
+    renderOrgTree(orgTree); 
+    
+    // 4. 【優化修改】將背景抓取改為 await 串行執行
+    // 這樣可以確保它絕對不會跟上面的 fetchEntraGroups 或使用者的點擊操作撞車
+    // 雖然叫做"背景"，但為了穩定性，我們讓它乖乖排隊
+    try {
+        console.log("⏳ 開始載入全域使用者清單 (搜尋用)...");
+        const users = await fetchEntraUsers();
+        allUsers = users;
+        console.log(`✅ 全域使用者清單載入完成: ${users.length} 筆`);
+    } catch (e) {
+        console.warn("⚠️ 無法載入全域使用者 (不影響樹狀圖功能):", e);
+    }
 
-    // 4. 渲染 UI (請確保你有這個函式)
-    // renderOrgTree(orgTree); 
-    console.log("🎉 初始化完成！");
+    console.log("🎉 初始化全部完成！系統就緒。");
+    setupEventHandlers();
 
   } catch (e) {
-    console.error("💥 初始化發生致命錯誤：", e);
+    console.error("💥 初始化錯誤：", e);
+    const appBody = document.getElementById("app-body");
+    if (appBody) appBody.innerHTML = `<div style="color:red; padding:20px;">初始化錯誤: ${e.message}</div>`;
   }
 }
 
-// === 渲染 UI (安全版，避開 innerHTML) ===
+// === 核心邏輯：建立樹狀骨架 ===
+function buildOrgTreeStructure(groups) {
+  orgNodeIndex = {}; 
+  const root = { id: "root", name: "康橋通訊錄", children: [], users: [] };
+  
+  const campusNodes = {};
+  for (const [prefix, name] of Object.entries(CAMPUS_PREFIX_MAP)) {
+    if (!campusNodes[name]) {
+      const node = { 
+          id: `campus-${prefix}`, 
+          name: name, 
+          children: [], 
+          users: [], 
+          type: 'campus',
+          membersLoaded: true // 校區節點視為已載入(因為它只是容器)
+      };
+      campusNodes[name] = node;
+      root.children.push(node);
+    }
+  }
+
+  // 解析群組
+  let parsedGroups = groups.map(g => {
+    const match = g.displayName && g.displayName.match(/^([A-Z0-9]+)[\.\-_\s]+(.+)$/);
+    if (match) {
+      return { 
+        original: g, 
+        code: match[1], 
+        name: match[2].trim() 
+      };
+    }
+    return null; 
+  }).filter(g => g !== null);
+
+  parsedGroups.sort((a, b) => a.code.length - b.code.length || a.code.localeCompare(b.code));
+
+  parsedGroups.forEach(pg => {
+    orgNodeIndex[pg.code] = { 
+        id: pg.code, // 這是樹的 ID
+        name: pg.name, 
+        children: [], 
+        users: [], 
+        original: pg.original, // 保留原始 Graph 資料以便後續查詢 ID
+        membersLoaded: false,  // 標記：成員尚未載入
+        isLoading: false       // 🔥 新增：標記是否正在載入中 (防止連點)
+    };
+  });
+
+  parsedGroups.forEach(pg => {
+    const currentNode = orgNodeIndex[pg.code];
+    let parentFound = false;
+
+    for (let i = pg.code.length - 1; i >= 2; i--) {
+      const parentCode = pg.code.substring(0, i);
+      if (orgNodeIndex[parentCode]) {
+        orgNodeIndex[parentCode].children.push(currentNode);
+        parentFound = true;
+        break;
+      }
+    }
+
+    if (!parentFound) {
+      for (const [prefix, campusName] of Object.entries(CAMPUS_PREFIX_MAP)) {
+        if (pg.code.startsWith(prefix)) {
+          campusNodes[campusName].children.push(currentNode);
+          break;
+        }
+      }
+    }
+  });
+
+  return root;
+}
+
+// === 渲染 UI (支援 Lazy Loading) ===
 function renderOrgTree(rootNode) {
   const treeContainer = document.getElementById("org-tree");
   if (!treeContainer) return;
+  treeContainer.innerHTML = ""; 
   
-  treeContainer.innerHTML = ""; // 清空容器 (這是唯一允許的操作)
-  
-  // 遞迴渲染函式
   function createTreeNodeElement(node) {
-    // 1. 建立容器
     const nodeEl = document.createElement("div");
     nodeEl.className = "tree-node";
-    nodeEl.style.marginLeft = "15px"; // 簡單縮排
+    nodeEl.style.marginLeft = "15px";
 
-    // 2. 建立標題列 (包含展開/收合圖示與名稱)
     const titleRow = document.createElement("div");
     titleRow.className = "node-title";
     titleRow.style.cursor = "pointer";
     titleRow.style.padding = "4px";
+    titleRow.style.display = "flex";
+    titleRow.style.alignItems = "center";
     
-    // 圖示 (使用文字代替 icon 以避免載入問題，或者用 span class)
+    // Icon
     const icon = document.createElement("span");
     const hasChildren = node.children && node.children.length > 0;
-    icon.textContent = hasChildren ? "📂 " : "📁 ";
+    icon.textContent = hasChildren ? "📁 " : "🔹 ";
+    icon.style.marginRight = "5px";
     
-    // 名稱
+    // Name
     const nameSpan = document.createElement("span");
-    nameSpan.textContent = `${node.name} (${node.users.length})`;
-    nameSpan.style.fontWeight = node.users.length > 0 ? "bold" : "normal";
+    nameSpan.textContent = node.name; 
+    
+    // 如果是群組節點且未載入，顯示灰色
+    if (!node.membersLoaded && node.original) {
+        nameSpan.style.color = "#555";
+    }
 
     titleRow.appendChild(icon);
     titleRow.appendChild(nameSpan);
 
-    // 3. 點擊事件：展開/收合 或 顯示成員
-    titleRow.onclick = (e) => {
+    // 🔥 點擊事件：Lazy Load 成員 (包含防連點機制)
+    titleRow.onclick = async (e) => {
       e.stopPropagation();
-      // 切換子節點顯示
+
+      // 1. 如果正在載入中，直接忽略點擊 (防止 interaction_in_progress)
+      if (node.isLoading) {
+          console.log("⏳ 正在載入中，請稍候...");
+          return;
+      }
+
+      // 2. 展開/收合子節點 (視覺效果)
       if (childrenContainer) {
         const isHidden = childrenContainer.style.display === "none";
         childrenContainer.style.display = isHidden ? "block" : "none";
         icon.textContent = isHidden ? "📂 " : "📁 ";
       }
-      // 觸發顯示成員 (呼叫外部函式)
+
+      // 3. 如果是群組節點，且還沒載入成員 -> 去 API 抓！
+      if (node.original && !node.membersLoaded) {
+          // 鎖定狀態
+          node.isLoading = true;
+          
+          nameSpan.textContent = `${node.name} (載入中...)`;
+          nameSpan.style.color = "blue";
+          
+          try {
+              // 這裡會觸發 Graph API 呼叫
+              const members = await fetchGroupMembers(node.original.id);
+              node.users = members;
+              node.membersLoaded = true;
+              
+              // 更新顯示
+              nameSpan.textContent = `${node.name} (${members.length})`;
+              nameSpan.style.color = members.length > 0 ? "black" : "#888";
+              nameSpan.style.fontWeight = members.length > 0 ? "bold" : "normal";
+          } catch (err) {
+              console.error("載入成員失敗:", err);
+              nameSpan.textContent = `${node.name} (載入失敗)`;
+              nameSpan.style.color = "red";
+          } finally {
+              // 無論成功失敗，都解除鎖定
+              node.isLoading = false;
+          }
+      }
+
+      // 4. 顯示成員列表
       showContacts(node); 
     };
 
     nodeEl.appendChild(titleRow);
 
-    // 4. 建立子節點容器
     let childrenContainer = null;
     if (hasChildren) {
       childrenContainer = document.createElement("div");
       childrenContainer.className = "node-children";
-      childrenContainer.style.display = "none"; // 預設收合，避免畫面太長
+      childrenContainer.style.display = "none"; 
       
-      // 遞迴建立子節點
       node.children.forEach(child => {
         childrenContainer.appendChild(createTreeNodeElement(child));
       });
@@ -131,23 +249,34 @@ function renderOrgTree(rootNode) {
     return nodeEl;
   }
 
-  // 開始渲染
-  if (rootNode) {
-    // 因為 root 包含多個校區，我們直接遍歷 root.children
+  if (rootNode && rootNode.children) {
     rootNode.children.forEach(campus => {
        treeContainer.appendChild(createTreeNodeElement(campus));
     });
   }
 }
 
-// 輔助函式：顯示成員 (這部分不需要動 innerHTML，也建議用 DOM API)
+// === 顯示成員列表 ===
 function showContacts(node) {
   const listContainer = document.getElementById("contacts-list");
-  listContainer.innerHTML = ""; // 清空
+  if (!listContainer) return;
+  listContainer.innerHTML = ""; 
+
+  const breadcrumb = document.getElementById("breadcrumb");
+  if (breadcrumb) breadcrumb.textContent = node.name;
+  
+  const countSpan = document.getElementById("contacts-count");
+  if (countSpan) {
+      if (node.membersLoaded) {
+        countSpan.textContent = `共 ${node.users.length} 筆`;
+      } else {
+        countSpan.textContent = "點擊載入...";
+      }
+  }
 
   if (!node.users || node.users.length === 0) {
     const emptyMsg = document.createElement("div");
-    emptyMsg.textContent = "此群組無成員";
+    emptyMsg.textContent = node.membersLoaded ? "此群組無成員" : "請點擊群組標題以載入成員";
     emptyMsg.style.color = "#888";
     emptyMsg.style.padding = "10px";
     listContainer.appendChild(emptyMsg);
@@ -160,124 +289,96 @@ function showContacts(node) {
     item.style.padding = "8px";
     item.style.borderBottom = "1px solid #eee";
     item.style.cursor = "pointer";
+    item.style.display = "flex";
+    item.style.justifyContent = "space-between";
+    item.style.alignItems = "center";
 
-    // 名稱
-    const name = document.createElement("div");
-    name.textContent = user.displayName;
-    name.style.fontWeight = "bold";
+    const infoDiv = document.createElement("div");
+    const nameDiv = document.createElement("div");
+    nameDiv.textContent = user.displayName;
+    nameDiv.style.fontWeight = "bold";
+    const emailDiv = document.createElement("div");
+    emailDiv.textContent = user.mail || user.userPrincipalName;
+    emailDiv.style.fontSize = "0.85em";
+    emailDiv.style.color = "#666";
 
-    // Email
-    const email = document.createElement("div");
-    email.textContent = user.mail || user.userPrincipalName;
-    email.style.fontSize = "0.85em";
-    email.style.color = "#666";
+    infoDiv.appendChild(nameDiv);
+    infoDiv.appendChild(emailDiv);
 
-    item.appendChild(name);
-    item.appendChild(email);
+    const addBtn = document.createElement("button");
+    addBtn.textContent = "+";
+    addBtn.style.padding = "2px 8px";
     
-    // 點擊事件 (加入收件人)
-    item.onclick = () => {
-        // 這裡呼叫你原本的 addToRecipients 邏輯
-        console.log("選取使用者:", user.displayName);
-        // addRecipientToSelection(user); // 假設你有這個函式
-    };
-
+    item.appendChild(infoDiv);
+    item.appendChild(addBtn);
+    
+    item.onclick = () => addToSelection(user);
     listContainer.appendChild(item);
   });
 }
 
-function buildOrgTreeStructure(groups) {
-  orgNodeIndex = {}; 
-  const root = { id: "root", name: "康橋通訊錄", children: [], users: [] };
-  
-  // 建立校區節點
-  const campusNodes = {};
-  for (const [prefix, name] of Object.entries(CAMPUS_PREFIX_MAP)) {
-    if (!campusNodes[name]) {
-      const node = { id: `campus-${prefix}`, name: name, children: [], users: [], type: 'campus' };
-      campusNodes[name] = node;
-      root.children.push(node);
-    }
-  }
-
-  // 解析群組 (加強 Debug)
-  let parsedCount = 0;
-  let parsedGroups = groups.map(g => {
-    // 嘗試解析 "K10010.康軒經管會議" 或 "K10010 康軒經管會議"
-    // Regex 解釋：
-    // ^([A-Z0-9]+) -> 開頭是英數字 (Code)
-    // [\.\-_\s]+   -> 中間是 點、減號、底線或空白
-    // (.+)$        -> 後面是 名稱
-    const match = g.displayName && g.displayName.match(/^([A-Z0-9]+)[\.\-_\s]+(.+)$/);
-    
-    if (match) {
-      parsedCount++;
-      return { original: g, code: match[1], name: match[2].trim() };
-    } else {
-      // 若解析失敗，可在這裡 log 看看為什麼失敗
-      // console.log("無法解析群組名稱:", g.displayName); 
-      return null; 
-    }
-  }).filter(g => g !== null);
-
-  console.log(`📊 解析成功群組數: ${parsedCount} / ${groups.length}`);
-
-  parsedGroups.sort((a, b) => a.code.length - b.code.length || a.code.localeCompare(b.code));
-
-  // 建立節點索引
-  parsedGroups.forEach(pg => {
-    orgNodeIndex[pg.code] = { id: pg.code, name: pg.name, children: [], users: [] };
-  });
-
-  // 建立層級
-  parsedGroups.forEach(pg => {
-    const currentNode = orgNodeIndex[pg.code];
-    let parentFound = false;
-
-    // 往回找父節點 (e.g. KCHC100101 -> KCHC1001 -> KCHC10)
-    for (let i = pg.code.length - 1; i >= 2; i--) {
-      const parentCode = pg.code.substring(0, i);
-      if (orgNodeIndex[parentCode]) {
-        orgNodeIndex[parentCode].children.push(currentNode);
-        parentFound = true;
-        break;
-      }
-    }
-
-    if (!parentFound) {
-      // 找不到父群組，嘗試歸類到校區
-      let assigned = false;
-      for (const [prefix, campusName] of Object.entries(CAMPUS_PREFIX_MAP)) {
-        if (pg.code.startsWith(prefix)) {
-          campusNodes[campusName].children.push(currentNode);
-          assigned = true;
-          break;
-        }
-      }
-      // 如果連校區都沒有，這是一個孤兒節點 (Orphan)，暫時掛在根目錄底下以便除錯
-      if (!assigned) {
-         // root.children.push(currentNode); // 解開註解可顯示未分類群組
-      }
-    }
-  });
-
-  return root;
+// === 選取清單與其他功能 (維持不變) ===
+function addToSelection(user) {
+    if (selectedRecipients.find(u => u.id === user.id)) return;
+    selectedRecipients.push(user);
+    renderSelectionList();
 }
 
-function populateUsersIntoTree(users) {
-  let mappedCount = 0;
-  users.forEach(u => {
-    if (!u.department) return;
-    
-    // 嘗試從 department 字串 (e.g. "KCHC1010.新竹教務處") 抓出代碼
-    const match = u.department.match(/^([A-Z0-9]+)/);
-    if (match) {
-      const code = match[1];
-      if (orgNodeIndex[code]) {
-        orgNodeIndex[code].users.push(u);
-        mappedCount++;
-      }
+function renderSelectionList() {
+    const container = document.getElementById("selection-list");
+    const countSpan = document.getElementById("selection-count");
+    if (!container) return;
+    container.innerHTML = "";
+    if (countSpan) countSpan.textContent = `${selectedRecipients.length} 位`;
+
+    selectedRecipients.forEach((user, index) => {
+        const tag = document.createElement("span");
+        tag.className = "recipient-tag";
+        tag.style.display = "inline-block";
+        tag.style.background = "#e1f5fe";
+        tag.style.padding = "2px 6px";
+        tag.style.margin = "2px";
+        tag.style.borderRadius = "4px";
+        tag.style.fontSize = "0.9em";
+        tag.textContent = user.displayName;
+        
+        const removeBtn = document.createElement("span");
+        removeBtn.textContent = " ×";
+        removeBtn.style.cursor = "pointer";
+        removeBtn.style.color = "red";
+        removeBtn.onclick = (e) => {
+            e.stopPropagation();
+            selectedRecipients.splice(index, 1);
+            renderSelectionList();
+        };
+        
+        tag.appendChild(removeBtn);
+        container.appendChild(tag);
+    });
+}
+
+function setupEventHandlers() {
+    const clearBtn = document.getElementById("clear-selection-btn");
+    if (clearBtn) {
+        clearBtn.onclick = () => {
+            selectedRecipients = [];
+            renderSelectionList();
+        };
     }
-  });
-  console.log(`📌 成功定位人員: ${mappedCount} / ${users.length}`);
+    document.getElementById("btn-add-to")?.addEventListener("click", () => addRecipientsToOutlook("to"));
+    document.getElementById("btn-add-cc")?.addEventListener("click", () => addRecipientsToOutlook("cc"));
+    document.getElementById("btn-add-bcc")?.addEventListener("click", () => addRecipientsToOutlook("bcc"));
+}
+
+function addRecipientsToOutlook(type) {
+    if (selectedRecipients.length === 0) return;
+    const recipients = selectedRecipients.map(u => ({
+        displayName: u.displayName,
+        emailAddress: u.mail || u.userPrincipalName
+    }));
+    if (Office.context.mailbox.item) {
+        Office.context.mailbox.item[type].addAsync(recipients, (result) => {
+            if (result.status === Office.AsyncResultStatus.Failed) console.error("加入收件人失敗:", result.error);
+        });
+    }
 }

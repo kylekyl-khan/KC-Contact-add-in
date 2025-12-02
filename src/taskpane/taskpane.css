@@ -1,414 +1,162 @@
-/* 基本字型設定 */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 13px;
+/* taskpane.css */
+
+/* === 全局基礎設定 === */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 禁止整個視窗出現卷軸，強制在區塊內滾動 */
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    font-size: 14px;
+    box-sizing: border-box; /* 確保 padding 不會撐大寬度 */
 }
 
-#app {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* 讓所有元素都繼承 box-sizing */
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
-/* Header */
-
-.app-header {
-  padding: 6px 10px;
-  background: #0099cc;
-  color: white;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.app-header-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.app-title {
-  font-size: 14px;
-}
-
-.app-badge {
-  font-size: 11px;
-  padding: 2px 6px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  opacity: 0.85;
-}
-
-.app-header-right {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.search-input {
-  padding: 3px 8px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  font-size: 12px;
-  min-width: 180px;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.search-input:focus {
-  outline: none;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.search-clear-btn {
-  padding: 2px 8px;
-  font-size: 11px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background: transparent;
-  color: white;
-  cursor: pointer;
-}
-
-.search-clear-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
-}
-
-/* 主體 layout */
-
-.app-main {
-  flex: 1;
-  display: flex;
-  min-height: 0;
-}
-
-/* 左側：組織樹 */
-
-.org-panel {
-  width: 220px;
-  border-right: 1px solid #e0e0e0;
-  display: flex;
-  flex-direction: column;
-}
-
-.org-panel-title {
-  padding: 8px 10px;
-  font-weight: 600;
-  background: #f5f7fa;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.org-tree {
-  flex: 1;
-  overflow-y: auto;
-  padding: 6px;
-}
-
-.tree-node {
-  cursor: pointer;
-  user-select: none;
-}
-
-.tree-label {
-  padding: 4px 6px;
-  border-radius: 4px;
-}
-
-.tree-label:hover {
-  background: #e6f4ff;
-}
-
-.tree-node.leaf-selected > .tree-label {
-  background: #cce7ff;
-}
-
-.tree-children {
-  margin-top: 2px;
-}
-
-.tree-node.collapsed > .tree-children {
-  display: none;
-}
-
-/* 右側：聯絡人 + 選擇清單 */
-
-.contacts-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.contacts-header {
-  padding: 6px 10px;
-  border-bottom: 1px solid #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-}
-
-.breadcrumb {
-  font-size: 12px;
-  color: #666;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.contacts-meta {
-  font-size: 12px;
-  color: #555;
-}
-
-.contacts-count {
-  font-weight: 500;
-}
-
-.contacts-list {
-  padding: 8px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-gap: 8px;
-  overflow-y: auto;
-}
-
-.contact-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  background: #ffffff;
-}
-
-.contact-name {
-  font-weight: 600;
-}
-
-.contact-title {
-  font-size: 12px;
-  color: #666;
-}
-
-.contact-email {
-  font-size: 12px;
-  color: #333;
-  word-break: break-all;
-}
-
-.contact-path {
-  font-size: 11px;
-  color: #888;
-}
-
-.contact-add-btn {
-  margin-top: 6px;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 4px;
-  border: 1px solid #0099cc;
-  background: #0099cc;
-  color: white;
-  cursor: pointer;
-  align-self: flex-start;
-}
-
-.contact-add-btn:hover {
-  filter: brightness(1.05);
-}
-
-/* 選擇收件人 panel */
-
-.selection-panel {
-  border-top: 1px solid #e0e0e0;
-  padding: 6px 8px;
-  background: #fafafa;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.selection-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-}
-
-.selection-title {
-  font-weight: 600;
-}
-
-.selection-count {
-  color: #555;
-}
-
-.selection-clear-btn {
-  margin-left: auto;
-  padding: 2px 8px;
-  font-size: 11px;
-  border-radius: 999px;
-  border: 1px solid #bbb;
-  background: white;
-  cursor: pointer;
-}
-
-.selection-clear-btn:hover {
-  background: #f0f0f0;
-}
-
-.selection-list {
-  max-height: 120px;
-  overflow-y: auto;
-  padding-right: 2px;
-}
-
-.selection-row {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 4px 6px;
-  margin-bottom: 4px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  background: #fff;
-}
-
-.selection-main {
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.selection-email {
-  font-size: 11px;
-  color: #555;
-  word-break: break-all;
-}
-
-.selection-remove-btn {
-  align-self: flex-end;
-  margin-top: 2px;
-  padding: 1px 6px;
-  font-size: 11px;
-  border-radius: 999px;
-  border: 1px solid #d33;
-  background: #fff;
-  color: #d33;
-  cursor: pointer;
-}
-
-.selection-remove-btn:hover {
-  background: #ffe5e5;
-}
-
-/* 空狀態 */
-
-.empty {
-  padding: 12px;
-  color: #888;
-  font-size: 12px;
-}
-
-.empty-selection {
-  padding: 6px;
-  font-size: 12px;
-  color: #777;
-}
-
-/* ===== Task Pane 窄版設定 (Outlook 右側欄) ===== */
-@media (max-width: 700px) {
-  /* 1. 主容器：垂直排列，且禁止整頁捲動 */
-  .app-main {
-    flex-direction: column; 
-    height: 100%;       /* 佔滿剩餘高度 */
-    overflow: hidden;   /* 重要：禁止外層出現捲軸 */
-  }
-
-  /* 2. 上方：組織樹區塊 */
-  .org-panel {
-    width: 100%;
-    /* 設定固定高度比例，例如 40% 給樹狀圖 */
-    flex: 0 0 40%;      
-    height: 40%;
-    
-    border-right: none;
-    border-bottom: 2px solid #ccc; /* 加粗分隔線方便辨識 */
-    
-    /* 讓內容在區塊內捲動 */
-    overflow-y: auto;   
-    padding-bottom: 8px;
-  }
-
-  /* 3. 下方：聯絡人區塊 (包含 Header, List, Footer) */
-  .contacts-panel {
-    /* 佔據剩餘空間 (約 60%) */
-    flex: 1;            
-    height: 60%;
-    min-height: 0;      /* Flexbox 巢狀捲動必備 */
+#app-body {
     display: flex;
     flex-direction: column;
-    overflow: hidden;   /* 內層還有捲動，這裡先 hidden */
-  }
+    height: 100vh; /* 佔滿 100% 視窗高度 */
+    background-color: #fff;
+}
 
-  /* 4. 聯絡人「列表」本體 */
-  .contacts-list {
-    flex: 1;            /* 佔滿 Panel 剩餘空間 */
-    overflow-y: auto;   /* 讓列表自己捲動 */
+/* =========================================
+   區塊 1: 搜尋列 (假設您有這個區塊，若無可忽略)
+   設定: 固定高度 60px，不伸縮
+   ========================================= */
+#search-section, .search-container {
+    flex: 0 0 60px; /* 固定高度，不隨視窗比例改變 */
     
-    /* 改回單欄顯示，避免卡片太擠 */
-    grid-template-columns: 1fr; 
-  }
-
-  /* 調整選擇收件人區塊的高度限制 */
-  .selection-panel {
-    max-height: 120px;
-    flex-shrink: 0;     /* 防止被壓縮 */
-    overflow-y: auto;
-  }
-}
-/* 新增的操作按鈕區 */
-.selection-actions {
-  margin-top: 6px;
-  display: flex;
-  gap: 6px;
-  padding-top: 4px;
-  border-top: 1px solid #eee;
+    padding: 10px;
+    background-color: #f3f2f1;
+    border-bottom: 1px solid #e1dfdd;
+    display: flex;
+    align-items: center;
 }
 
-.action-btn {
-  flex: 1; /* 三個按鈕平均分配寬度 */
-  padding: 6px 0;
-  font-size: 12px;
-  border-radius: 4px;
-  border: 1px solid #0078d4;
-  background: white;
-  color: #0078d4;
-  cursor: pointer;
-  transition: all 0.1s;
+/* =========================================
+   區塊 2: 組織樹
+   設定: 固定佔高 30%，內容多了出現卷軸
+   ========================================= */
+#org-tree {
+    flex: 0 0 30%; /* 鎖死高度 30% */
+    
+    overflow-y: auto; /* 內容多時，卷軸只出現在這裡 */
+    padding: 10px;
+    border-bottom: 4px solid #e1dfdd; /* 加粗分隔線，讓區塊更明顯 */
+    background-color: #fff;
 }
 
-.action-btn:hover {
-  background: #f0f8ff;
+/* =========================================
+   區塊 3: 人員列表
+   設定: 固定佔高 40% (最主要的區域)
+   ========================================= */
+#contacts-list {
+    flex: 0 0 40%; /* 鎖死高度 40% */
+    
+    overflow-y: auto; /* 內容多時，卷軸只出現在這裡 */
+    padding: 0;
+    background-color: #fff;
+    border-bottom: 4px solid #e1dfdd; /* 加粗分隔線 */
 }
 
-.action-btn:active {
-  background: #0078d4;
-  color: white;
+/* =========================================
+   區塊 4: 已選人員 + 按鈕區 (底部區)
+   設定: 自動填滿剩下的空間 (約 25%-30%)
+   注意：這裡包含兩個部分，我們把它們包在一起看
+   ========================================= */
+
+/* 4-1. 已選人員清單 */
+#selection-area {
+    /* 這裡使用 flex: 1 讓它佔據底部的「剩餘空間」 */
+    flex: 1; 
+    
+    overflow-y: auto; /* 選太多人時，這裡會有卷軸 */
+    padding: 10px;
+    background-color: #faf9f8;
+    border-bottom: 1px solid #edebe9;
+    min-height: 80px; /* 至少保留一點高度給它 */
 }
 
-/* 確保窄版時按鈕區不會被擋住 */
-@media (max-width: 700px) {
-  .selection-panel {
-    /* 稍微增加最大高度，容納按鈕 */
-    max-height: 160px; 
-  }
+/* 4-2. 按鈕群組 (釘死在最下面) */
+.button-group {
+    flex: 0 0 auto; /* 高度隨內容自動，但不伸縮 */
+    
+    padding: 12px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #c8c6c4;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+
+/* === 以下是美化樣式 (維持不變) === */
+
+/* 樹狀節點 */
+.tree-node { user-select: none; }
+.node-title {
+    padding: 6px 8px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.node-title:hover { background-color: #f3f2f1; }
+
+/* 聯絡人項目 */
+.contact-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f3f2f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.contact-item:hover { background-color: #fbfbfb; }
+
+/* 標籤樣式 */
+.recipient-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: #deecf9;
+    color: #005a9e;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.recipient-tag span {
+    margin-left: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #d13438;
+}
+
+/* 按鈕樣式 */
+button {
+    cursor: pointer;
+    border: 1px solid #8a8886;
+    background-color: #fff;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+button:hover { background-color: #f3f2f1; }
+
+#btn-add-to, #btn-add-cc, #btn-add-bcc {
+    background-color: #0078d4;
+    color: white;
+    border-color: #0078d4;
+}
+#btn-add-to:hover { background-color: #106ebe; }
+
+#clear-selection-btn {
+    border: none;
+    color: #a4262c;
 }

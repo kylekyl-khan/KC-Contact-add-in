@@ -3,67 +3,60 @@
   <head>
     <meta charset="utf-8" />
     <title>康橋通訊錄</title>
-    <!-- 之後跑在 Outlook 裡會用到；現在在瀏覽器多載沒關係 -->
     <script
       src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"
       type="text/javascript"
     ></script>
     <link rel="stylesheet" href="taskpane.css" />
   </head>
+  
   <body>
-    <div id="app">
-      <header class="app-header">
-        <div class="app-header-left">
-          <span class="app-title">康橋通訊錄</span>
-          <span class="app-badge">預覽模式</span>
+    <div id="app-body">
+      
+      <div id="search-section">
+        <div class="app-header-left" style="margin-right: auto;">
+          <span style="font-weight:bold; font-size:16px;">康橋通訊錄</span>
         </div>
-        <div class="app-header-right">
+        <div class="app-header-right" style="display:flex; gap:5px;">
           <input
             id="search-input"
-            class="search-input"
             type="text"
-            placeholder="搜尋姓名 / 職稱 / Email"
+            placeholder="搜尋姓名..."
+            style="padding:4px; border:1px solid #ccc; border-radius:2px;"
           />
-          <button id="clear-search-btn" class="search-clear-btn">清除</button>
+          <button id="clear-search-btn" style="padding:4px 8px;">清除</button>
         </div>
-      </header>
+      </div>
 
-      <main class="app-main">
-        <aside class="org-panel">
-          <div class="org-panel-title">組織樹</div>
-          <div id="org-tree" class="org-tree"></div>
-        </aside>
+      <div style="padding: 5px 10px; background:#f3f2f1; font-weight:bold; font-size:12px; color:#666;">
+        組織架構
+      </div>
+      <div id="org-tree">
+        </div>
 
-        <section class="contacts-panel">
-          <div class="contacts-header">
-            <div id="breadcrumb" class="breadcrumb"></div>
-            <div class="contacts-meta">
-              <span id="contacts-count" class="contacts-count">共 0 筆</span>
-            </div>
+      <div style="padding: 5px 10px; background:#f3f2f1; display:flex; justify-content:space-between; align-items:center; border-top:1px solid #e1dfdd;">
+        <span id="breadcrumb" style="font-weight:bold; color:#0078d4;">所有聯絡人</span>
+        <span id="contacts-count" style="font-size:12px; color:#666;"></span>
+      </div>
+      <div id="contacts-list">
+        </div>
+
+      <div id="selection-area">
+        <div style="margin-bottom:5px; font-size:12px; color:#666; display:flex; justify-content:space-between;">
+           <span>已選擇收件人 (<span id="selection-count">0</span>)</span>
+           <button id="clear-selection-btn" style="border:none; background:none; color:red; cursor:pointer;">清除全部</button>
+        </div>
+        <div id="selection-list">
           </div>
+      </div>
 
-          <div id="contacts-list" class="contacts-list"></div>
+      <div class="button-group">
+        <button id="btn-add-to">加入收件人</button>
+        <button id="btn-add-cc">加入副本</button>
+        <button id="btn-add-bcc">加入密件</button>
+      </div>
 
-          <div class="selection-panel">
-            <div class="selection-header">
-              <span class="selection-title">已選擇收件人</span>
-              <span id="selection-count" class="selection-count">0 位</span>
-              <button
-                id="clear-selection-btn"
-                class="selection-clear-btn"
-                type="button"
-              >
-                清除全部
-              </button>
-            </div>
-            <div id="selection-list" class="selection-list"></div>
-
-            <div class="selection-actions">
-              <button id="btn-add-to" class="action-btn" type="button">加入收件人</button>
-              <button id="btn-add-cc" class="action-btn" type="button">加入副本</button>
-              <button id="btn-add-bcc" class="action-btn" type="button">加入密件</button>
-            </div>
-            </div>
+    </div>
 
     <script type="text/javascript" src="https://localhost:3000/taskpane.js"></script>
   </body>
