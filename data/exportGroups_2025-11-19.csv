@@ -1,0 +1,784 @@
+﻿displayName,id,groupType,membershipType,mail,source,mailEnabled,onPremisesSyncEnabled
+administration,89c25750-eef4-49d9-b0d0-1c14fad53f0d,Security,assigned,,Windows Server AD,False,True
+AllTeacher,a865d754-719f-4315-9766-0c6f881cd78c,Security,assigned,,Windows Server AD,False,True
+auto-shutdown,4fa43b5b-73b3-43c5-a3f1-7c7088d2998b,Security,assigned,,Windows Server AD,False,True
+chinese,cb8e75f9-884c-4dad-970c-564d26348efb,Security,assigned,,Windows Server AD,False,True
+disable-wifi,e6f03c00-ed2f-4246-a150-3a361c47efc8,Security,assigned,,Windows Server AD,False,True
+k0010.經營管理委員會,8b54f40b-9348-4dc5-99ca-df916c2b2be1,Mail enabled security,assigned,K0010@knsh.com.tw,Windows Server AD,True,True
+K0020.集團處主管（含直屬部）,7771bfb7-bf42-4367-a6d6-d9ea16dfe5c4,Mail enabled security,assigned,K0020@knsh.com.tw,Windows Server AD,True,True
+K0025.集團長,160241fc-b380-49f8-aee1-f0ad01cd2a77,Mail enabled security,assigned,K0025@knsh.com.tw,Windows Server AD,True,True
+K0030.集團主管,0dfd8e10-a466-42fe-91b5-ed48af3336e8,Mail enabled security,assigned,K0030@knsh.com.tw,Windows Server AD,True,True
+K0031.集團主管(含內地主管),e676a104-39cd-4936-a663-9e2f6233e097,Mail enabled security,assigned,K0031@knsh.com.tw,Windows Server AD,True,True
+K0050.集團基層主管,f01f4e91-c7b3-40a6-9edc-1b275cf641a8,Mail enabled security,assigned,K0050@knsh.com.tw,Windows Server AD,True,True
+K0051.集團基層主管(含內地主管),2bd2c4f6-3f5c-4b7e-9145-05318bee7470,Mail enabled security,assigned,K0051@knsh.com.tw,Windows Server AD,True,True
+K10010.康軒經管會議,47ed64a0-7b6f-4315-a82a-dd8eec57fc38,Mail enabled security,assigned,K10010@knsh.com.tw,Windows Server AD,True,True
+K10015.康軒主管會議,344b312e-91c6-4f8d-9116-589795975839,Mail enabled security,assigned,K10015@knsh.com.tw,Windows Server AD,True,True
+K10020.康軒基層主管,354b34f6-00e6-4f23-93f0-d02976e19d8e,Mail enabled security,assigned,K10020@knsh.com.tw,Windows Server AD,True,True
+K10025.康軒部級以上主管,0b0ebd6e-8cd8-4cd5-ba71-9d27c3825077,Mail enabled security,assigned,K10025@knsh.com.tw,Windows Server AD,True,True
+K10030.康軒文教成員,8027dd5d-3015-4166-a2de-622bf278840c,Mail enabled security,assigned,K10030@knsh.com.tw,Windows Server AD,True,True
+K10080.康軒成員,56ff092e-502d-48de-897c-8350ba89d526,Mail enabled security,assigned,K10080@knsh.com.tw,Windows Server AD,True,True
+K1EWC.康軒職委會,74353cfc-616a-47c7-8553-b5150c0774a7,Mail enabled security,assigned,K1EWC@knsh.com.tw,Windows Server AD,True,True
+K1EWC01.康軒職委會福利金保管人,70221708-64e2-4315-9b3f-7cb937a743c5,Mail enabled security,assigned,K1EWC01@knsh.com.tw,Windows Server AD,True,True
+K1EWC02.康軒職委會運動社團社長,30082e83-f593-4bdf-8c96-1c5ddc563e5d,Mail enabled security,assigned,K1EWC02@knsh.com.tw,Windows Server AD,True,True
+K1LCY.康軒成員(雲嘉分公司),97d3062f-9fbf-4e3d-bc2e-63ddfa0bde5a,Mail enabled security,assigned,K1LCY@knsh.com.tw,Windows Server AD,True,True
+K1LKS.康軒成員(高雄分公司),d29a241b-7f08-4374-84bc-62b18a7c20d5,Mail enabled security,assigned,K1LKS@knsh.com.tw,Windows Server AD,True,True
+K1LNJ.康軒外派成員(南京),bb359c0d-1f35-45b4-bed4-07c94ff3d6a5,Mail enabled security,assigned,K1LNJ@knsh.com.tw,Windows Server AD,True,True
+K1LTC.康軒成員(台中分公司),a158ae4f-48be-4e9a-92c0-a86dde42f587,Mail enabled security,assigned,K1LTC@knsh.com.tw,Windows Server AD,True,True
+K1LTH.康軒外派成員(泰國),9bd98c83-7b76-4baf-845f-0fd02cb42b81,Mail enabled security,assigned,K1LTH@knsh.com.tw,Windows Server AD,True,True
+K1LTN.康軒成員(台南分公司),5bfa166e-f0b2-46c7-ae2e-aa6b053b292f,Mail enabled security,assigned,K1LTN@knsh.com.tw,Windows Server AD,True,True
+K1LTP.康軒成員(台北總公司),30d35500-5e34-41ba-95d7-c07b3238be3f,Mail enabled security,assigned,K1LTP@knsh.com.tw,Windows Server AD,True,True
+K1LTY.康軒成員(桃園分公司),c604733b-b4e8-4e9f-805d-ea85bb33915d,Mail enabled security,assigned,K1LTY@knsh.com.tw,Windows Server AD,True,True
+KCCS7013.常熟,8ac3cef2-8476-4b25-bff9-7638e4bc5e55,Distribution,assigned,KCCS7013@kciscs.org.cn,Windows Server AD,True,True
+KCCS701301.常熟校区校长办公室,3636b685-3134-4fe6-8caa-53e1dcd05f82,Distribution,assigned,KCCS701301@kciscs.org.cn,Windows Server AD,True,True
+KCCS701303.常熟会计组,4a91b74c-9a56-4d60-a507-e0efe893666f,Distribution,assigned,KCCS701303@kciscs.org.cn,Windows Server AD,True,True
+KCCS701305.常熟中籍人事组,4b17f442-af96-4536-a725-4287a6ff46a6,Distribution,assigned,KCCS701305@kciscs.org.cn,Windows Server AD,True,True
+KCCS701307.常熟招生处,4a7210c8-5a37-4c50-9cd7-7fed250d58c8,Distribution,assigned,KCCS701307@kciscs.org.cn,Windows Server AD,True,True
+KCCS70130701.常熟招生处招生一组,be034064-8fd3-4ea0-b144-617a7315089f,Distribution,assigned,KCCS70130701@kciscs.org.cn,Windows Server AD,True,True
+KCCS70130702.常熟招生处招生二组,9b8b1fe3-cb20-4187-a50b-0f4dd120e53a,Distribution,assigned,KCCS70130702@kciscs.org.cn,Windows Server AD,True,True
+KCCS70130703.常熟招生处企划组,7140b94c-4719-4ba8-84d6-489108ce5765,Distribution,assigned,KCCS70130703@kciscs.org.cn,Windows Server AD,True,True
+KCCS701310.常熟总务处,0d36283a-3d74-4938-b7e6-c911560ffd8b,Mail enabled security,assigned,KCCS701310@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131001.常熟总务处行政组,c670a9f9-a8c0-4d17-85fb-f3c9bf931688,Mail enabled security,assigned,KCCS70131001@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131002.常熟总务处事务组,d746f9ec-966d-4f53-9366-71e1388bd9d8,Mail enabled security,assigned,KCCS70131002@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131005.常熟总务处采购组,59ea5434-ce4b-4113-8bed-af9c11aa9494,Mail enabled security,assigned,KCCS70131005@kciscs.org.cn,Windows Server AD,True,True
+KCCS701312.常熟初中教务处,0255bdcc-421c-4918-bf66-e6de1afc3c33,Mail enabled security,assigned,KCCS701312@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131201.常熟初中教务处教学组,3dbda637-85d3-41dc-aa8a-c11cadf1ad09,Mail enabled security,assigned,KCCS70131201@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131202.常熟初中教务处教务组,482cb4fe-8b28-4a5f-949d-9f1b1192c9a9,Mail enabled security,assigned,KCCS70131202@kciscs.org.cn,Windows Server AD,True,True
+KCCS701314.常熟高中教务处,0eaeeb3e-71f4-4640-82da-a7452882fbbf,Mail enabled security,assigned,KCCS701314@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131401.常熟高中教务处教学组,d822f368-b94a-4294-a859-fe3fb8465349,Mail enabled security,assigned,KCCS70131401@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131402.常熟高中教务处教务组,da5efea5-2305-4e9a-ac3f-069fdb4dcf49,Mail enabled security,assigned,KCCS70131402@kciscs.org.cn,Windows Server AD,True,True
+KCCS701315.常熟幼小部,47321dc9-cdf7-46ed-81e9-71c662a2d9aa,Mail enabled security,assigned,KCCS701315@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131501.常熟幼小部小学教务处,c535df87-d230-4ce4-ab3d-1d76cae18b43,Mail enabled security,assigned,KCCS70131501@kciscs.org.cn,Windows Server AD,True,True
+KCCS7013150101.常熟幼小部小学教务处教学组,6bf53e49-d38e-4c75-ab6f-febc57286eac,Mail enabled security,assigned,KCCS7013150101@kciscs.org.cn,Windows Server AD,True,True
+KCCS7013150102.常熟幼小部小学教务处课研组,7249e463-c9f9-4c9c-8432-f8ef4a168e20,Mail enabled security,assigned,KCCS7013150102@kciscs.org.cn,Windows Server AD,True,True
+KCCS7013150103.常熟幼小部小学教务处教务组,faefd731-9d41-4bf8-8a46-bc6f9c9d17f8,Mail enabled security,assigned,KCCS7013150103@kciscs.org.cn,Windows Server AD,True,True
+KCCS7013150105.常熟幼小部小学教务处图书组,cb5b9e3d-b62e-4a6f-824b-eb4c3c5861c0,Mail enabled security,assigned,KCCS7013150105@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131502.常熟幼小部小学英语学习中心,99b7c306-5719-4cab-a5f9-13743a42b573,Mail enabled security,assigned,KCCS70131502@kciscs.org.cn,Windows Server AD,True,True
+KCCS7013150201.常熟幼小部小学英语学习中心国际课程教学组,43476a5b-670c-49ab-adce-3cfaa7bcd23a,Mail enabled security,assigned,KCCS7013150201@kciscs.org.cn,Windows Server AD,True,True
+KCCS7013150202.常熟幼小部小学英语学习中心小学课程教学组,d928e32e-2f0f-4d5d-962c-5f0e09b8a7b3,Mail enabled security,assigned,KCCS7013150202@kciscs.org.cn,Windows Server AD,True,True
+KCCS70131504.常熟幼小部幼儿园,f3ef6130-e0f1-426e-b9bd-838aa8f8d05c,Mail enabled security,assigned,KCCS70131504@kciscs.org.cn,Windows Server AD,True,True
+KCCS7013150402.常熟幼小部幼儿园保育教学组,f4014d4f-ed4a-41d3-ac91-570537da34fb,Mail enabled security,assigned,KCCS7013150402@kciscs.org.cn,Windows Server AD,True,True
+KCCS701320.常熟德育处,120fe57d-5c13-4104-9c81-b3ba6a533433,Mail enabled security,assigned,KCCS701320@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132001.常熟德育处探索活动组,87056060-5069-433f-8e5b-34f12a8c6d9d,Mail enabled security,assigned,KCCS70132001@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132002.常熟德育处保健组,6db4a63b-7db8-4804-bccc-86f347a50120,Mail enabled security,assigned,KCCS70132002@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132003.常熟德育处辅导组,38964719-d22c-4560-975b-a56178c9bf3a,Mail enabled security,assigned,KCCS70132003@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132004.常熟德育处小学德育生辅组,a0074f32-6bf6-4820-bdec-57795f5ea809,Mail enabled security,assigned,KCCS70132004@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132006.常熟德育处艺文推广组,ad0c1762-9667-4f03-a36e-cb8d49b97d06,Mail enabled security,assigned,KCCS70132006@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132007.常熟德育处体育游泳组,3b46c762-9263-4775-bcd5-3001bf0ee5ab,Mail enabled security,assigned,KCCS70132007@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132008.常熟德育处中学德育生辅组,794093c6-88a7-4e0f-a8d1-d4f527d1a7db,Mail enabled security,assigned,KCCS70132008@kciscs.org.cn,Windows Server AD,True,True
+KCCS701325.常熟教学技术组,3d87b3b8-0ee4-45fd-b938-47bee6078c45,Mail enabled security,assigned,KCCS701325@kciscs.org.cn,Windows Server AD,True,True
+KCCS701329.常熟中学国际课程处,ae99f6f7-1c00-4fd1-a403-02697288a078,Mail enabled security,assigned,KCCS701329@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132901.常熟中学国际课程处国际升学发展组,6efd7736-c2f7-450a-ad0a-ce7a4d037a4a,Mail enabled security,assigned,KCCS70132901@kciscs.org.cn,Windows Server AD,True,True
+KCCS70132902.常熟中学国际课程处国际课程教学组,b30ef104-8312-489e-9239-2ea2debfe9f0,Mail enabled security,assigned,KCCS70132902@kciscs.org.cn,Windows Server AD,True,True
+KCCSC.常熟组长,361aac56-2c6f-445d-8f79-39362b48c89c,Mail enabled security,assigned,KCCSC@kciscs.org.cn,Windows Server AD,True,True
+KCCSCN.常熟中籍人员群,b68a6900-b636-4c91-816e-e25d343792ef,Mail enabled security,assigned,KCCSCN@kciscs.org.cn,Windows Server AD,True,True
+KCCSCT.常熟中籍教师群,44422127-1d1e-4cc1-85e0-48bbca3272ab,Mail enabled security,assigned,KCCSCT@kciscs.org.cn,Windows Server AD,True,True
+KCCSEDR.常熟工程日报群,bd95606e-b596-4f38-8cd6-c234e20b7336,Mail enabled security,assigned,KCCSEDR@kciscs.org.cn,Windows Server AD,True,True
+KCCSFT.常熟外籍人员群,51420a96-39ed-43f5-98b7-a9708b6ff62a,Mail enabled security,assigned,KCCSFT@kciscs.org.cn,Windows Server AD,True,True
+KCCSM.常熟主管,81d9b0a7-1623-44d4-bcba-60266dbf7b17,Mail enabled security,assigned,KCCSM@kciscs.org.cn,Windows Server AD,True,True
+KCCSM01.常熟主管(仅常熟主管),e303126e-acaf-4338-bce3-b6bd6de03e0d,Mail enabled security,assigned,KCCSM01@kciscs.org.cn,Windows Server AD,True,True
+KCCSTW.常熟台籍外派同仁,763623c7-6555-4de5-b900-f067a4e3283a,Mail enabled security,assigned,KCCSTW@kciscs.org.cn,Windows Server AD,True,True
+KCEC70.董事长办公室,0f97cd7c-b0d3-4be9-941d-b047b2a5ae5a,Mail enabled security,assigned,KCEC70@kcisec.com,Windows Server AD,True,True
+KCEC7000.昆山校区,1a86511a-e95a-4b96-86e2-060379289990,Mail enabled security,assigned,KCEC7000@kcisec.com,Windows Server AD,True,True
+KCEC7001.昆山校区校长办公室,47844ce3-19ca-4df0-a5b5-b901e3352aed,Mail enabled security,assigned,KCEC7001@kcisec.com,Windows Server AD,True,True
+KCEC700102.昆山财务室,b485e37e-ed1f-4714-a449-1c0ddbeafe7c,Mail enabled security,assigned,KCEC700102@kcisec.com,Windows Server AD,True,True
+KCEC700104.昆山采购室,573687b7-095d-47f4-be23-d42352e46f09,Mail enabled security,assigned,KCEC700104@kcisec.com,Windows Server AD,True,True
+KCEC700109.昆山中籍人事室,0d16718a-7241-4dff-aa16-efa7fcb833bd,Mail enabled security,assigned,KCEC700109@kcisec.com,Windows Server AD,True,True
+KCEC700110.昆山外事室,6a8cafda-35d4-405f-b661-3bc2f4048167,Mail enabled security,assigned,KCEC700110@kcisec.com,Windows Server AD,True,True
+KCEC700111.昆山 资讯室,5e82a579-0428-4bae-b26d-2dbedbd97ba4,Mail enabled security,assigned,KCEC700111@kcisec.com,Windows Server AD,True,True
+KCEC70011101.昆山 资讯室 幼小组,3ca29e03-a956-4696-8354-aa6e6093e719,Mail enabled security,assigned,KCEC70011101@kcisec.com,Windows Server AD,True,True
+KCEC70011102.昆山 资讯室中学组,200af86f-89d2-4e3c-af62-fe0cd1f22d9d,Mail enabled security,assigned,KCEC70011102@kcisec.com,Windows Server AD,True,True
+KCEC70011103.昆山 资讯室 SAP组,be370311-f85f-4271-acc2-2f4bf4a7c777,Mail enabled security,assigned,KCEC70011103@kcisec.com,Windows Server AD,True,True
+KCEC7003.昆山小学部,d964c4e1-1131-4e42-8e2f-544cb318d257,Mail enabled security,assigned,KCEC7003@kcisec.com,Windows Server AD,True,True
+KCEC700301.昆山小学部教务处,d726515c-efd5-4129-9af8-f548fec8e824,Mail enabled security,assigned,KCEC700301@kcisec.com,Windows Server AD,True,True
+KCEC70030101.昆山小学部教务处教学组,23fb3bf8-dcf0-410a-90ea-fe5d8bc1bccf,Mail enabled security,assigned,KCEC70030101@kcisec.com,Windows Server AD,True,True
+KCEC70030103.昆山小学部教务处课研组,fde286d5-ed3d-4b35-a25a-1054973ab839,Mail enabled security,assigned,KCEC70030103@kcisec.com,Windows Server AD,True,True
+KCEC70030104.昆山小学部教务处图书组,021f864e-2315-4685-9b43-06a910aaca2a,Mail enabled security,assigned,KCEC70030104@kcisec.com,Windows Server AD,True,True
+KCEC70030108.昆山小学部教务处注册升学组,c3af5b87-2c43-4ce4-a484-67af846514e8,Mail enabled security,assigned,KCEC70030108@kcisec.com,Windows Server AD,True,True
+KCEC700302.昆山小学部德育处,80e625e6-e67d-43b0-b8e6-4742914a7435,Mail enabled security,assigned,KCEC700302@kcisec.com,Windows Server AD,True,True
+KCEC70030203.昆山小学部德育处交通组,8c4d1ce4-0d68-48f7-9329-b6f308ec929e,Mail enabled security,assigned,KCEC70030203@kcisec.com,Windows Server AD,True,True
+KCEC70030204.昆山小学部德育处德育组,c8c29f8a-e693-40d8-8a7c-4e7f6514f723,Mail enabled security,assigned,KCEC70030204@kcisec.com,Windows Server AD,True,True
+KCEC70030208.昆山小学部德育处活动探索组,6e6c6e36-1010-4a20-aade-4478b274518a,Mail enabled security,assigned,KCEC70030208@kcisec.com,Windows Server AD,True,True
+KCEC70030209.昆山小学部德育处体育发展组,725ad359-c0c2-4d7c-9264-4ee9eabb6e77,Mail enabled security,assigned,KCEC70030209@kcisec.com,Windows Server AD,True,True
+KCEC700303.昆山小学部英语学习中心,2b05139c-330e-424a-91a0-04d6ca772f1b,Mail enabled security,assigned,KCEC700303@kcisec.com,Windows Server AD,True,True
+KCEC70030304.昆山小学部英语学习中心中师教学组,6df3ccd0-185a-45a0-b944-6f8bc3bcfe97,Mail enabled security,assigned,KCEC70030304@kcisec.com,Windows Server AD,True,True
+KCEC70030305.昆山小学部英语学习中心外师教学组,cf9e2302-54d0-4c01-899e-a88cd63e26bc,Mail enabled security,assigned,KCEC70030305@kcisec.com,Windows Server AD,True,True
+KCEC70030309.昆山小学部英语学习中心课程研发组,5fac2cd0-0359-42b1-8f0f-258765a5e1d1,Mail enabled security,assigned,KCEC70030309@kcisec.com,Windows Server AD,True,True
+KCEC700304.昆山小学部辅导处,f8aab0b1-8347-484d-b130-e2516323b52c,Mail enabled security,assigned,KCEC700304@kcisec.com,Windows Server AD,True,True
+KCEC70030401.昆山小学部辅导处心理辅导组,dc76c298-fd37-47f4-a0bb-5bbb8fa5d98a,Mail enabled security,assigned,KCEC70030401@kcisec.com,Windows Server AD,True,True
+KCEC70030402.昆山小学部辅导处健康中心,83c6817e-b5c3-499a-9a18-b0c665f8f9b1,Mail enabled security,assigned,KCEC70030402@kcisec.com,Windows Server AD,True,True
+KCEC70030704.昆山小学部活动中心课后社团组,f099ee0f-711f-4ffe-8e8f-cdabd79f6e0a,Mail enabled security,assigned,KCEC700305@kcisec.com,Windows Server AD,True,True
+KCEC700308.昆山小学部幼儿园PYP,ac93e33e-db5a-4a48-996d-e4d7ddba527a,Mail enabled security,assigned,KCEC700308@kcisec.com,Windows Server AD,True,True
+KCEC70030801.昆山小学部幼儿园PYP教学行政组,77c4b72f-b82c-47aa-9b1c-ea055985b2c6,Mail enabled security,assigned,KCEC70030801@kcisec.com,Windows Server AD,True,True
+KCEC70030802.昆山小学部幼儿园PYP早教托育组,2f205767-0f04-4102-8696-219548870e98,Mail enabled security,assigned,KCEC70030802@kcisec.com,Windows Server AD,True,True
+KCEC70030803.昆山小学部幼儿园PYP安全保健组,50b25a8c-b925-4e6b-9fdf-d739dce1ede1,Mail enabled security,assigned,KCEC70030803@kcisec.com,Windows Server AD,True,True
+KCEC70030901昆山小学部PYP课程组,b281be26-4745-4915-9c04-dcab70d41057,Mail enabled security,assigned,KCEC70030901@kcisec.com,Windows Server AD,True,True
+KCEC7004.昆山中学部,f60e0331-590c-44eb-ae7f-c0656ae6047f,Mail enabled security,assigned,KCEC7004@kcisec.com,Windows Server AD,True,True
+KCEC70040205.昆山中学部德育处活动组,fa74014f-78b9-46d9-bd9f-04ef1d790f1a,Mail enabled security,assigned,KCEC70040205@kcisec.com,Windows Server AD,True,True
+KCEC70040207.昆山中学部德育处保健组,0e5f196e-dc5b-4126-b747-334fc42e56df,Mail enabled security,assigned,KCEC70040207@kcisec.com,Windows Server AD,True,True
+KCEC70040209.昆山中学部德育处体育发展组,5bc80028-4ea7-46bc-9b0e-79caa93f243b,Mail enabled security,assigned,KCEC70040209@kcisec.com,Windows Server AD,True,True
+KCEC70040210.昆山中学部德育处初中德育组,7c35eefd-5f15-4b11-9f33-3cfe77b390b4,Mail enabled security,assigned,KCEC70040210@kcisec.com,Windows Server AD,True,True
+KCEC70040214.昆山中学部德育处高中德育组,f07cbb4e-7871-4e91-9240-92673ee9cfa7,Mail enabled security,assigned,KCEC70040214@kcisec.com,Windows Server AD,True,True
+KCEC70040215.昆山中学部德育处生活辅导组,8c06fb7e-2edd-4bd0-a5af-f10c48e5c422,Mail enabled security,assigned,KCEC70040215@kcisec.com,Windows Server AD,True,True
+KCEC700404.昆山中学部留学辅导处,39c6e153-63eb-4ac0-b481-62ac40e2a27e,Mail enabled security,assigned,KCEC700404@kcisec.com,Windows Server AD,True,True
+KCEC70040401.昆山中学部留学辅导处升学辅导组,ace51fc3-02b1-40dc-b557-36e53062fcd6,Mail enabled security,assigned,KCEC70040401@kcisec.com,Windows Server AD,True,True
+KCEC70040402.昆山中学部留学辅导处心理辅导组,0bfe50e7-78c7-4bcb-b153-f25f28c3fe5b,Mail enabled security,assigned,KCEC70040402@kcisec.com,Windows Server AD,True,True
+KCEC700405.昆山中学部语言中心,005322ff-3867-4424-8e9d-d64bdc0fdde3,Mail enabled security,assigned,KCEC700405@kcisec.com,Windows Server AD,True,True
+KCEC70040505.昆山中学部语言中心教学教务组,32115f2d-a25c-47c5-81f0-643f61357780,Mail enabled security,assigned,KCEC70040505@kcisec.com,Windows Server AD,True,True
+KCEC70040506.昆山中学部语言中心课后课程组,7c488f7e-64f9-4117-a16c-e7d68cdfa831,Mail enabled security,assigned,KCEC70040506@kcisec.com,Windows Server AD,True,True
+KCEC70040507.昆山中学部语言中心学习辅导组,2f0ed507-03f8-4868-95eb-990bf03c8212,Mail enabled security,assigned,KCEC70040507@kcisec.com,Windows Server AD,True,True
+KCEC700407.昆山中学部艺文中心,1c290ad8-2487-476b-a892-f708af28a54e,Mail enabled security,assigned,KCEC700407@kcisec.com,Windows Server AD,True,True
+KCEC70040701.昆山中学部艺文中心艺文组,dd2751d6-54e2-4089-bc3b-cb1654b51f37,Mail enabled security,assigned,KCEC70040701@kcisec.com,Windows Server AD,True,True
+KCEC70040702.昆山中学部艺文中心行政组,03900073-d133-45c7-b3ae-cb4734127bd4,Mail enabled security,assigned,KCEC70040702@kcisec.com,Windows Server AD,True,True
+KCEC700408.昆山中学部总务处,bcee5de8-9174-41e6-b68b-6250b18c00c0,Mail enabled security,assigned,KCEC700408@kcisec.com,Windows Server AD,True,True
+KCEC70040801.昆山中学部总务处行政组,bc9f6a93-82bb-414a-ae8e-ebe6677b7e70,Mail enabled security,assigned,KCEC70040801@kcisec.com,Windows Server AD,True,True
+KCEC70040802.昆山中学部总务处事务组,39e36c70-80af-4b67-b77a-ac58c45b93e9,Mail enabled security,assigned,KCEC70040802@kcisec.com,Windows Server AD,True,True
+KCEC700411.昆山中学部初中教务处,805844a1-ef82-44e2-a422-07ede2d402b7,Mail enabled security,assigned,KCEC700411@kcisec.com,Windows Server AD,True,True
+KCEC70041101.昆山中学部初中教务处课程行政组,267cf733-dde3-4097-b2be-366881c4a75b,Mail enabled security,assigned,KCEC70041101@kcisec.com,Windows Server AD,True,True
+KCEC70041102.昆山中学部初中教务处G7G8综合组,394bd067-5e9b-4acb-91cf-a163f97910e5,Mail enabled security,assigned,KCEC70041102@kcisec.com,Windows Server AD,True,True
+KCEC70041103.昆山中学部初中教务处学术专案组,384816c6-f294-45de-ac21-446e66aa2dbf,Mail enabled security,assigned,KCEC70041103@kcisec.com,Windows Server AD,True,True
+KCEC70041105.昆山中学部初中教务处G7G8外语组,02e32579-6713-4436-9d15-6b3483e99450,Mail enabled security,assigned,KCEC70041105@kcisec.com,Windows Server AD,True,True
+KCEC70041106.昆山中学部初中教务处G9综合组,f41ef7ad-929b-4af6-a4cb-31c147313230,Mail enabled security,assigned,KCEC70041106@kcisec.com,Windows Server AD,True,True
+KCEC70041107.昆山中学部初中教务处G9外语组,73d00dc0-6d56-4e56-964e-afee87b01e82,Mail enabled security,assigned,KCEC70041107@kcisec.com,Windows Server AD,True,True
+KCEC70041108.昆山中学部初中教务处学术督导组,580d91e4-7f61-4584-9844-8ab5527aebfd,Mail enabled security,assigned,KCEC70041108@kcisec.com,Windows Server AD,True,True
+KCEC70041109.昆山中学部初中教务处注册组,6485cffb-2e35-407d-b16c-9fa34f7e30a5,Mail enabled security,assigned,KCEC70041109@kcisec.com,Windows Server AD,True,True
+KCEC700412.昆山中学部高中教务处,3efa6f1e-5407-46a9-842a-e86eb6748f60,Mail enabled security,assigned,KCEC700412@kcisec.com,Windows Server AD,True,True
+KCEC70041201.昆山中学部高中教务处高中教学组,27dca171-b671-4571-ad0f-1d05a28edad8,Mail enabled security,assigned,KCEC70041201@kcisec.com,Windows Server AD,True,True
+KCEC70041202.昆山中学部高中教务处课程组,669f670a-c2d9-4e41-909d-6489b36a7634,Mail enabled security,assigned,KCEC70041202@kcisec.com,Windows Server AD,True,True
+KCEC70041206.昆山中学部高中教务处强化英文组,8f95a23d-47eb-4e12-bf9a-31b9e411305e,Mail enabled security,assigned,KCEC70041206@kcisec.com,Windows Server AD,True,True
+KCEC70041207.昆山中学部高中教务处评估教学组,b2fde74d-5cd9-4cca-8137-bfae579b986a,Mail enabled security,assigned,KCEC70041207@kcisec.com,Windows Server AD,True,True
+KCEC70041208.昆山中学部高中教务处督导教学组,26684ee6-b245-42bd-a9d2-6d1088f06362,Mail enabled security,assigned,KCEC70041208@kcisec.com,Windows Server AD,True,True
+KCEC70041209.昆山中学部高中教务处AP组,e55b616c-1c40-4fc3-a4c5-f6b966dcd668,Mail enabled security,assigned,KCEC70041209@kcisec.com,Windows Server AD,True,True
+KCEC70041210.昆山中学部高中教务处Powerschool组,b6d4da1a-d373-412d-931e-407f88f9d371,Mail enabled security,assigned,KCEC70041210@kcisec.com,Windows Server AD,True,True
+KCEC70041211.昆山中学部高中教务处实验组,cbd8b4e4-69aa-4840-81db-e5dcdf6ef09b,Mail enabled security,assigned,KCEC70041211@kcisec.com,Windows Server AD,True,True
+KCEC700414.昆山中学部普高教务处,69c2190d-d447-4eb1-ba21-26f0bdf2ce83,Mail enabled security,assigned,KCEC700414@kcisec.com,Windows Server AD,True,True
+KCEC70041403.昆山中学部普高教务处督导组,4de5f9dd-c463-42a4-b540-28ce8bec8a61,Mail enabled security,assigned,KCEC70041403@kcisec.com,Windows Server AD,True,True
+KCEC70041405.昆山中学部普高教务处教学组,f766b276-0cfd-4129-9c63-ef3335577394,Mail enabled security,assigned,KCEC70041405@kcisec.com,Windows Server AD,True,True
+KCEC70041406.昆山中学部普高教务处行政组,38ed19e8-2ae8-4e8b-b069-a7345a5ce590,Mail enabled security,assigned,KCEC70041406@kcisec.com,Windows Server AD,True,True
+KCEC700415.昆山中学部A-Level课程处,54e65d23-5a25-495d-b1f0-4750cfd75eb8,Mail enabled security,assigned,KCEC700415@kcisec.com,Windows Server AD,True,True
+KCEC70041502.昆山中学部A-Level课程处课程教学组,bf12e870-6762-4e3c-81fb-2b454f8fc74c,Mail enabled security,assigned,KCEC70041502@kcisec.com,Windows Server AD,True,True
+KCEC70041503.昆山中学部A-Level课程处行政考务组,02bdd66a-ef33-43ba-9772-82886372e718,Mail enabled security,assigned,KCEC70041503@kcisec.com,Windows Server AD,True,True
+KCEC700416.昆山中学部初中勤敏班,4942860a-2f51-4455-abe4-9c24dd209ead,Mail enabled security,assigned,KCEC700416@kcisec.com,Windows Server AD,True,True
+KCEC70041601.昆山中学部初中勤敏班教务组,20763110-12b3-4fa9-b98c-17ca5d8253c8,Mail enabled security,assigned,KCEC70041601@kcisec.com,Windows Server AD,True,True
+KCEC70041602.昆山中学部初中勤敏班学务组,ee3e2f7c-7e1e-48e2-aa03-4a3141f844cc,Mail enabled security,assigned,KCEC70041602@kcisec.com,Windows Server AD,True,True
+KCEC70041603.昆山中学部初中勤敏班行政组,a7d4dcab-3ca7-4583-b8e3-ec4c8cc273c4,Mail enabled security,assigned,KCEC70041603@kcisec.com,Windows Server AD,True,True
+KCEC700417.昆山IB课程处,9a772be3-79cb-40c7-af58-8acb537f07f8,Mail enabled security,assigned,KCEC700118@kcisec.com,Windows Server AD,True,True
+KCEC70041701.昆山IB课程处IB教学组,b059c6de-73b1-4b8c-840b-c376b5d1f219,Mail enabled security,assigned,KCEC70011803@kcisec.com,Windows Server AD,True,True
+KCEC70041702.昆山IB课程处图书组,f7c1c2ae-6f42-42ba-9758-d687cf02c8b3,Mail enabled security,assigned,KCEC70011804@kcisec.com,Windows Server AD,True,True
+KCEC7008.昆山招生处,1a141d25-8211-4244-a462-bb0a40306267,Mail enabled security,assigned,KCEC7008@kcisec.com,Windows Server AD,True,True
+KCEC700803.昆山招生处上海招办,e1e39a47-6673-41c5-b591-5bdd63fa7eb8,Mail enabled security,assigned,KCEC700803@kcisec.com,Windows Server AD,True,True
+KCEC700804.昆山招生处苏锡常招办,9d252ebf-e44c-4050-84a7-5c4392a33188,Mail enabled security,assigned,KCEC700804@kcisec.com,Windows Server AD,True,True
+KCEC700805.昆山招生处宁杭招办,eed8c442-9790-431d-a358-38917c16221f,Mail enabled security,assigned,KCEC700805@kcisec.com,Windows Server AD,True,True
+KCEC700806.昆山招生处企划组,e6fafeb6-613e-4485-8191-2946e8a8870c,Mail enabled security,assigned,KCEC700806@kcisec.com,Windows Server AD,True,True
+KCEC700807.昆山招生处校本部小学组,a206b9c8-74f4-4de9-91e7-adeeb3ba973a,Mail enabled security,assigned,KCEC700807@kcisec.com,Windows Server AD,True,True
+KCEC700808.昆山招生处校本部中学组,646f3a25-7c45-4116-8ae9-d760c8ca9c7c,Mail enabled security,assigned,KCEC700808@kcisec.com,Windows Server AD,True,True
+KCECC.昆山组长,7571a9e6-2363-443d-b0e2-4ad760130fd3,Mail enabled security,assigned,KCECC@kcisec.com,Windows Server AD,True,True
+KCECC01.昆山中学部组长,62a28999-6075-467d-b62a-3e0ddd19e49f,Mail enabled security,assigned,KCECC01@kcisec.com,Windows Server AD,True,True
+KCECC02.昆山小学部组长,bbe1a8e0-92f9-41f0-ba08-d724507eaa05,Mail enabled security,assigned,KCECC02@kcisec.com,Windows Server AD,True,True
+KCECC03.昆山直属部组长,5f14f388-c49a-4444-9a65-f4a4803d70f6,Mail enabled security,assigned,KCECC03@kcisec.com,Windows Server AD,True,True
+KCECCT.昆山中籍教师群,36094789-6ab0-48ce-a127-dd28851a6744,Mail enabled security,assigned,KCECCT@kcisec.com,Windows Server AD,True,True
+KCECEDR.昆山工程日报群,156b8419-4e6e-49c8-8f1c-515432fb921c,Mail enabled security,assigned,KCECEDR@kcisec.com,Windows Server AD,True,True
+KCECFT.昆山外籍人员群,7d32c7e3-6c37-4c45-9e49-851f63659d0e,Mail enabled security,assigned,KCECF@kcisec.com,Windows Server AD,True,True
+KCECG.康橋昆山校區基层人员,0d12c3a0-5b75-483c-bf38-2dab13e9758b,Mail enabled security,assigned,KCECG@kcisec.com,Windows Server AD,True,True
+KCECM.昆山主管,e3570882-5a32-44c3-9058-7764eb40f25b,Mail enabled security,assigned,KCECM@kcisec.com,Windows Server AD,True,True
+KCECM01.昆山中学部主管,7061d4ab-6b76-4818-8ee1-9a7d7f49dc8b,Mail enabled security,assigned,KCECM01@kcisec.com,Windows Server AD,True,True
+KCECM02.昆山小学部主管,fa3d65c9-6a1f-4302-b0de-aeedae9b5abc,Mail enabled security,assigned,KCECM02@kcisec.com,Windows Server AD,True,True
+KCECM03.昆山直属部主管,bad2b755-75a2-48fb-a210-63edd8a3f5f5,Mail enabled security,assigned,KCECM03@kcisec.com,Windows Server AD,True,True
+KCECTW.昆山台籍外派同仁,665b3f3a-d17e-49f3-a802-92d57a5a74ad,Mail enabled security,assigned,KCECTW@kcisec.com,Windows Server AD,True,True
+KCHC10.新竹校長室,f4a18177-e6bd-4cc8-b70b-0ceedcb70b4e,Mail enabled security,assigned,KCHC10@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC100101.新竹人事組,4c30680d-19a3-4cae-af5b-d493686b543d,Mail enabled security,assigned,KCHC100101@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC100102.新竹會計組,3a784ed5-a89f-44bf-be50-9471597d5840,Mail enabled security,assigned,KCHC100102@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC1010.新竹教務處,7bcfd7ea-796a-4eda-84e4-ed1cfa5a716d,Mail enabled security,assigned,KCHC1010@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC101001.新竹教務處國小教學組,4f404fcc-ee46-470f-835a-cf8e8671d9b4,Mail enabled security,assigned,KCHC101001@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC101002.新竹教務處國中教學組,fb6767b7-6dc2-4ab2-895c-e11322c6d384,Mail enabled security,assigned,KCHC101002@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC101003.新竹教務處課研組,aeddc737-5d18-424c-b04c-61b41c0dd5be,Mail enabled security,assigned,KCHC101003@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC101005.新竹教務處課務組,06a577dd-2783-408d-9199-29bae1fd6b6d,Mail enabled security,assigned,KCHC101005@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC101006.新竹教務處招生組,a5960c3d-597e-443f-8a1e-bf878de1e87c,Mail enabled security,assigned,KCHC101006@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC1020.新竹學務處,bb22b20f-4ac6-444e-91f1-df4e05bdd3bf,Mail enabled security,assigned,KCHC1020@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC102001.新竹學務處生教組,27354a17-341e-4657-b028-b730dfa18620,Mail enabled security,assigned,KCHC102001@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC102002.新竹學務處訓育組,e6b7791e-f603-41f2-abff-0733007555b9,Mail enabled security,assigned,KCHC102002@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC102003.新竹學務處輔導組,ac06cbd1-bcc2-4ae9-abbe-2e2c8239e831,Mail enabled security,assigned,KCHC102003@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC102005.新竹學務處體育組,70b77854-ec0e-4a47-ba2d-1a5d3ccfc352,Mail enabled security,assigned,KCHC102004@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC1030.新竹國際處,5a776d57-9a7f-420a-8fe1-8a767ccdb17a,Mail enabled security,assigned,KCHC1030@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC103001.新竹國際處中師教學組,03f81853-0eec-46f2-9924-138657fc8fd7,Mail enabled security,assigned,KCHC103001@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC103002.新竹國際處小學中師課研組,a2a87912-bb50-4793-a94e-7719d523d38a,Mail enabled security,assigned,KCHC103002@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC103003.新竹國際處活動發展組,26226d43-e7c8-4c05-8820-491b3c3696ca,Mail enabled security,assigned,KCHC103003@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC103005.新竹國際處小學外師教學組,dad4e1a7-5922-41f6-83be-c4d148ce4058,Mail enabled security,assigned,KCHC103005@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC103006.新竹國際處中學外師教學組,3d910174-d672-4f60-ab0e-78ec5f2f9607,Mail enabled security,assigned,KCHC103006@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC103007.新竹國際處小學外師課研組,c1779d27-ba65-4d62-bcf0-9d58722f95c0,Mail enabled security,assigned,KCHC103007@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC103008.新竹國際處中學外師課研組,1593371a-28d1-4258-84d2-a6536617d51d,Mail enabled security,assigned,KCHC103008@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC1050.新竹推廣中心,27afd89d-2656-464c-b9bf-69cfd16ddfb4,Mail enabled security,assigned,KCHC1050@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC105001.新竹推廣中心活動組,99cfdf2f-2d65-4fb8-95e2-99d660c307ae,Mail enabled security,assigned,KCHC105001@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC105002.新竹推廣中心藝文組,d0c721a5-459a-450b-aa3e-575b95a2024a,Mail enabled security,assigned,KCHC105002@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC105003.新竹推廣中心探索組,bc1da894-7648-4d9c-b4e7-4165f0394534,Mail enabled security,assigned,KCHC105003@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC105005.新竹推廣中心交通組,55daa27e-b7dd-461d-ae23-f363e4f33d9d,Mail enabled security,assigned,KCHC105005@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC1060.新竹科技學習中心,641529c1-3bf0-4971-a592-153f513cfd59,Mail enabled security,assigned,KCHC1060@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC106001.新竹科技學習中心資訊組,881485f2-9b04-4821-8d1d-62a9888bb41e,Mail enabled security,assigned,KCHC106001@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC106002.新竹科技學習中心圖書組,40e31722-d46a-4ce3-8dea-452c40554e21,Mail enabled security,assigned,KCHC106002@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC1070.新竹總務部,b4a66a82-936b-4402-b201-bc1da6196a64,Mail enabled security,assigned,KCHC1070@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC107001.新竹總務部事務組,b5ad8d3f-bf0a-4c9b-acc0-0444a41fe057,Mail enabled security,assigned,KCHC107001@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC107002.新竹總務部行政組,7d5984b5-f02f-49d9-baa9-71c257c28f81,Mail enabled security,assigned,KCHC107002@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC107003.新竹總務部新工營繕組,f2575581-fd79-42b2-b3c8-4355bac735ae,Mail enabled security,assigned,KCHC107003@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC1080.幼兒園_(新竹),c057f534-754a-4b7f-8a77-9247e8d0e690,Mail enabled security,assigned,KCHC1080@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC108001.新竹幼兒園教務組,048ac014-c8bd-49cd-b0c8-b0656b146432,Mail enabled security,assigned,KCHC108001@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC108002.新竹幼兒園保育組,3496ba7d-fc8a-4c48-b189-32fafda44f64,Mail enabled security,assigned,KCHC108002@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC108003.新竹幼兒園行政組,e6a838e1-9eed-49f7-a0be-2156dff9bd44,Mail enabled security,assigned,KCHC108003@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHC108005.新竹學前課研中心,b87d5a9d-b8af-406d-a468-0a8e18badc2b,Mail enabled security,assigned,KCHC108004@kcis.hc.edu.tw,Windows Server AD,True,True
+KCHF7009.合肥校区,0866b468-80c7-471d-a90c-853ca0b2854a,Mail enabled security,assigned,KCHF7009@kcishf.com,Windows Server AD,True,True
+KCHF700901.合肥校区校长办公室,9443fe8d-e5df-4068-ae4f-77430a5a8bea,Mail enabled security,assigned,KCHF700901@kcishf.com,Windows Server AD,True,True
+KCHF700902.合肥招生处,8299d13c-a319-4926-b53e-079203fa8445,Mail enabled security,assigned,KCHF700902@kcishf.com,Windows Server AD,True,True
+KCHF70090202.合肥招生处企划组,7b960a82-0b7c-4d77-a73a-3a7705a11071,Mail enabled security,assigned,KCHF70090202@kcishf.com,Windows Server AD,True,True
+KCHF70090203.合肥招生处招生一组,a537b693-ca06-4400-b20e-286041b4eb0a,Mail enabled security,assigned,KCHF70090203@kcishf.com,Windows Server AD,True,True
+KCHF70090204.合肥招生处招生二组,0487d395-9f19-4e51-a57b-fdb28246d52d,Mail enabled security,assigned,KCHF70090204@kcishf.com,Windows Server AD,True,True
+KCHF700905.合肥会计组,7d1415a5-92d0-47d3-94c4-5bc21fbcd8b9,Mail enabled security,assigned,KCHF700905@kcishf.com,Windows Server AD,True,True
+KCHF700909.合肥中籍人事组,1c6e59fd-c290-4db6-8d93-f8fecaa9d43d,Mail enabled security,assigned,KCHF700909@kcishf.com,Windows Server AD,True,True
+KCHF700916.合肥总务处,fcb68fd7-4a48-4f54-b495-2ee63f57b58b,Mail enabled security,assigned,KCHF700916@kcishf.com,Windows Server AD,True,True
+KCHF70091601.合肥总务处行政组,8756a9a0-0d4a-4e41-90e0-b00b3c5fde86,Mail enabled security,assigned,KCHF70091601@kcishf.com,Windows Server AD,True,True
+KCHF70091602.合肥总务处事务组,4525f11f-cc8a-4779-b173-fe74eb7cccaa,Mail enabled security,assigned,KCHF70091602@kcishf.com,Windows Server AD,True,True
+KCHF700922.合肥小学部,d5650823-4f34-4d5b-b5f5-dc9f48bccab3,Mail enabled security,assigned,KCHF700922@kcishf.com,Windows Server AD,True,True
+KCHF70092201.合肥小学部教导处,c6665e87-5577-49b6-88ab-d37dd1b663e2,Mail enabled security,assigned,KCHF70092201@kcishf.com,Windows Server AD,True,True
+KCHF7009220109.合肥小学部教导处教学组,d73a1311-bb6f-45df-a995-36d70e435236,Mail enabled security,assigned,KCHF7009220109@kcishf.com,Windows Server AD,True,True
+KCHF7009220110.合肥小学部教导处课研图书组,a94d74f4-5899-483a-bab4-159972753b25,Mail enabled security,assigned,KCHF7009220110@kcishf.com,Windows Server AD,True,True
+KCHF7009220111.合肥小学部教导处德辅组,069366f6-db2a-42d2-be6d-e09eab1f2ea9,Mail enabled security,assigned,KCHF7009220111@kcishf.com,Windows Server AD,True,True
+KCHF7009220112.合肥小学部教导处活动组,bb670c8c-7d6c-4543-b2ca-a1db7dcf11df,Mail enabled security,assigned,KCHF7009220112@kcishf.com,Windows Server AD,True,True
+KCHF70092202.合肥小学部英语学习中心,e5417efb-818a-4258-a4ae-6133db9cca0f,Mail enabled security,assigned,KCHF70092202@kcishf.com,Windows Server AD,True,True
+KCHF7009220202.合肥小学部英语学习中心教学一组,71cedaa5-7cfd-48f9-9861-4e96e2b91b02,Mail enabled security,assigned,KCHF7009220202@kcishf.com,Windows Server AD,True,True
+KCHF7009220203.合肥小学部英语学习中心教学二组,35002834-5df5-4397-ad0c-d1ea3b7764a6,Mail enabled security,assigned,KCHF7009220203@kcishf.com,Windows Server AD,True,True
+KCHF70092203.合肥小学部幼儿园,a86144b9-d709-4b7d-8af6-66df624c7a29,Mail enabled security,assigned,KCHF70092203@kcishf.com,Windows Server AD,True,True
+KCHF7009220301.合肥小学部幼儿园行政组,07c2bed2-4ec0-487b-8f39-5da3249371c6,Mail enabled security,assigned,KCHF7009220301@kcishf.com,Windows Server AD,True,True
+KCHF7009220302.合肥小学部幼儿园教学组,5143d1c4-f6d4-480b-a369-960cfa6e4799,Mail enabled security,assigned,KCHF7009220302@kcishf.com,Windows Server AD,True,True
+KCHF7009220303.合肥小学部幼儿园保健组,1c876fd5-04fb-4670-84cd-08f2ab90209b,Mail enabled security,assigned,KCHF7009220303@kcishf.com,Windows Server AD,True,True
+KCHF700923.合肥中学部,5af6864a-9067-4871-b1c6-b56c3698bc8f,Mail enabled security,assigned,KCHF700923@kcishf.com,Windows Server AD,True,True
+KCHF70092303.合肥中学部初中教务处,51152b56-d948-4972-bc79-8704876b30a3,Mail enabled security,assigned,KCHF70092303@kcishf.com,Windows Server AD,True,True
+KCHF7009230301.合肥中学部初中教务处教学组,dac75f69-551d-46c3-a094-4b7dfc0d85ac,Mail enabled security,assigned,KCHF7009230301@kcishf.com,Windows Server AD,True,True
+KCHF7009230303.合肥中学部初中教务处学艺组,fb684c8e-1b9c-44dd-b4d7-8ff477af8e23,Mail enabled security,assigned,KCHF7009230303@kcishf.com,Windows Server AD,True,True
+KCHF70092304.合肥中学部高中教务一处,3a069ac7-e274-4741-bb80-59473a57a597,Mail enabled security,assigned,KCHF70092304@kcishf.com,Windows Server AD,True,True
+KCHF7009230402.合肥中学部高中教务一处学艺组,89773566-6fc2-449c-bdf1-f14e687978b6,Mail enabled security,assigned,KCHF7009230402@kcishf.com,Windows Server AD,True,True
+KCHF7009230403.合肥中学部高中教务一处教学组,641508b0-9b98-4f2b-ba1e-b85dc2a5fe12,Mail enabled security,assigned,KCHF7009230403@kcishf.com,Windows Server AD,True,True
+KCHF7009230404.合肥中学部高中教务一处升学组,d9e2bb11-1ab4-41d3-b8d3-b4192bec6e8a,Mail enabled security,assigned,KCHF7009230404@kcishf.com,Windows Server AD,True,True
+KCHF70092305.合肥中学部高中教务二处,3b3411a8-e7bd-482e-a46e-66b72bc1e6a6,Mail enabled security,assigned,KCHF70092305@kcishf.com,Windows Server AD,True,True
+KCHF7009230501.合肥中学部高中教务二处教学一组,fcb0c7d9-9375-4504-b4a8-2755b5c6ae1f,Mail enabled security,assigned,KCHF7009230501@kcishf.com,Windows Server AD,True,True
+KCHF7009230502.合肥中学部高中教务二处教学二组,6513256a-82c8-4b91-a6d2-7d8679530fd1,Mail enabled security,assigned,KCHF7009230502@kcishf.com,Windows Server AD,True,True
+KCHF70092306.合肥中学部中学德育处,de437c1a-0270-4108-aa7c-9ea25e049fd7,Mail enabled security,assigned,KCHF70092306@kcishf.com,Windows Server AD,True,True
+KCHF7009230601.合肥中学部中学德育处德辅组,a235831b-0de9-426c-8c12-db7a7bad93b2,Mail enabled security,assigned,KCHF7009230601@kcishf.com,Windows Server AD,True,True
+KCHF7009230602.合肥中学部中学德育处舍务组,5cb141d9-e05d-4e3b-9f58-8d28e15bd050,Mail enabled security,assigned,KCHF7009230602@kcishf.com,Windows Server AD,True,True
+KCHF7009230605.合肥中学部中学德育处体育组,4ed43a81-9ea1-4e99-a082-5ec39d5b604e,Mail enabled security,assigned,KCHF7009230605@kcishf.com,Windows Server AD,True,True
+KCHF7009230606.合肥中学部中学德育处活动组,111f5e9a-30d9-47e8-bbbd-efe82f74cbc6,Mail enabled security,assigned,KCHF7009230606@kcishf.com,Windows Server AD,True,True
+KCHF700926.合肥资讯组,90c42bc1-7af6-4d89-87f8-3112826e5c48,Mail enabled security,assigned,KCHF700926@kcishf.com,Windows Server AD,True,True
+KCHFC.合肥組長,292ffc8a-c89c-4158-be05-7119cba2b9b8,Mail enabled security,assigned,CKCHF@kcishf.com,Windows Server AD,True,True
+KCHFM.合肥主管(合肥一級主管),ce5a4f4b-e487-4265-94ed-6b9dbc24a17c,Mail enabled security,assigned,KCHFM@kcishf.com,Windows Server AD,True,True
+KCQS10.青山校長室,a23c4491-893d-480e-a5e1-db7a47b3799b,Mail enabled security,assigned,KCQS10@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS100101.青山校長室人會組,899b4fc4-1659-4666-8870-a1379977946a,Mail enabled security,assigned,KCQS100101@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS1010.青山教務處,4d24f88f-1b3d-4da0-b940-766c7de1cb2e,Mail enabled security,assigned,KCQS1010@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS101001.青山教務處教學組,6d32df83-c5ad-4adf-bb36-c34f4c1193d2,Mail enabled security,assigned,KCQS101001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS101002.青山教務處課研組,d3edc110-9105-4e45-b7d2-08a75f98c821,Mail enabled security,assigned,KCQS101002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS101003.青山教務處課務組,1578e794-48bd-423e-87f4-20ad6cba7eb5,Mail enabled security,assigned,KCQS101003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS101004.青山教務處招生組,2fcc5a35-542c-4ea0-ae76-82f708417b8e,Mail enabled security,assigned,KCQS101004@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS1020.青山國際處,093a22a0-3cbe-48c4-9c31-03b5f3c5d16b,Mail enabled security,assigned,KCQS1020@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS102001.青山國際處中師教學組,fcc8a546-4a12-430c-84f9-1455479e8557,Mail enabled security,assigned,KCQS102001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS102002.青山國際處中師課研組,e5efa25f-9a38-441d-9812-a3ba265097c3,Mail enabled security,assigned,KCQS102002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS102003.青山國際處外師教學組,a0a803bb-c9d4-442d-bc67-72fbe793d3e5,Mail enabled security,assigned,KCQS102003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS102004.青山國際處外師課研組,c351a411-24cc-4ea0-aeeb-4039b4614cd2,Mail enabled security,assigned,KCQS102004@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS102005.青山國際處活動交流組,b3573028-8f3c-4526-b9ec-bd0655ff5c20,Mail enabled security,assigned,KCQS102005@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS1030.青山學務處,2ea54819-5280-48da-8977-903cb3a51d18,Mail enabled security,assigned,KCQS1030@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS103001.青山學務處生教組,5bd0f64c-fd1b-40b6-a222-d5d35732b448,Mail enabled security,assigned,KCQS103001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS103002.青山學務處訓育組,e2383337-0c05-42d5-9cca-1a81c6337a2c,Mail enabled security,assigned,KCQS103002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS103003.青山學務處輔導組,c38b5aa5-7802-4251-9db2-57b03e039ed7,Mail enabled security,assigned,KCQS103003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS103004.青山學務處體育組,ee4c616d-9247-4999-acd4-f7066ebef5f3,Mail enabled security,assigned,KCQS103004@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS103005.青山學務處交通組,03838823-489f-4dd1-be52-53e457530767,Mail enabled security,assigned,KCQS103005@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS1040.青山推廣中心,9b665cc9-84d5-4412-ace1-95d7c17160d6,Mail enabled security,assigned,KCQS1040@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS104001.青山推廣中心藝文組,46c5e1c3-a77c-46ac-bf9f-970c2971ee02,Mail enabled security,assigned,KCQS104001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS104002.青山推廣中心活動組,ad6c12af-0461-43df-9b50-714f65343655,Mail enabled security,assigned,KCQS104002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS104003.青山推廣中心探索組,32e3efe1-9896-4cdc-9ef0-076a3015acf7,Mail enabled security,assigned,KCQS104003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS1050.青山總務部,e0ac25bb-a0b7-41c1-b2b2-a348144fa5b1,Mail enabled security,assigned,KCQS1050@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS105001.青山總務部事務組,8517d757-981c-4b20-8d14-e99932d6be58,Mail enabled security,assigned,KCQS105001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS105002.青山總務部行政組,cf9af144-3596-4315-807a-a3446b357325,Mail enabled security,assigned,KCQS105002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS105003.青山總務部採購組,f050a52e-21fd-4ae7-9964-f16590d1b538,Mail enabled security,assigned,KCQS105003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS105004.青山總務部警衛,47667ebc-d9ad-4382-bb85-17bdda76c1dc,Mail enabled security,assigned,KCQS105004@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS1060.青山資源中心,3a944825-9003-413d-85f8-f01c2f97a5ff,Mail enabled security,assigned,KCQS1060@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS106001.青山資源中心資訊組,340c5895-fd98-4035-ba9c-830a7531a13f,Mail enabled security,assigned,KCQS106001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS106002.青山資源中心圖書組,7797e3e2-7662-4e9a-94d4-bd820520895b,Mail enabled security,assigned,KCQS106002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS1070.幼兒園_(青山),f6894625-ae78-401d-b18d-cf0d366ddef2,Mail enabled security,assigned,KCQS1070@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS107001.幼兒園_(青山)教務組,6e04cb02-7024-4b4a-8524-35432a9651a0,Mail enabled security,assigned,KCQS107001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS107002.幼兒園_(青山)保育組,b42f693e-0e3f-4ba2-b27a-a941c0e30a27,Mail enabled security,assigned,KCQS107002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS107003.幼兒園_(青山)行政組,ad206567-77f4-4842-a160-c02cb002a612,Mail enabled security,assigned,KCQS107003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS107004.幼兒園_(青山)Curriculum Development Center,9de3ef94-99df-42bc-a179-0cc4c223a165,Mail enabled security,assigned,KCQS107004@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCQS107005.幼兒園_(青山)司機導護,9ed37f60-4dd5-46b2-b907-8a959772ca1b,Mail enabled security,assigned,KCQS107005@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCTZ7012.台州校区,de6cb5ad-3c6c-49a8-ac60-6e21a2d725f8,Mail enabled security,assigned,KCTZ7012@kcistz.com,Windows Server AD,True,True
+KCTZ701201.台州校长室,812d5ad4-4140-4dfb-9d04-3ce16498fadf,Mail enabled security,assigned,KCTZ701201@kcistz.com,Windows Server AD,True,True
+KCTZ701202.台州总务处,e546b2fd-b2c7-4c10-9ef2-7a5d6494b82b,Mail enabled security,assigned,KCTZ701202@kcistz.com,Windows Server AD,True,True
+KCTZ70120202.台州总务处事务组,00c6774f-2535-473f-a9e2-8ef8fd864174,Mail enabled security,assigned,KCTZ70120202@kcistz.com,Windows Server AD,True,True
+KCTZ70120203.台州总务处行政组,ccb06b6b-cb47-470f-bd1b-3fccc09dd118,Mail enabled security,assigned,KCTZ70120203@kcistz.com,Windows Server AD,True,True
+KCTZ70120204.台州总务处采购组,ed04865a-c39b-44ea-b7b2-a991f0f2f592,Mail enabled security,assigned,KCTZ70120204@kcistz.com,Windows Server AD,True,True
+KCTZ701203.台州会计组,c1e5fa58-1903-4b0a-b580-a79fe2587177,Mail enabled security,assigned,KCTZ701203@kcistz.com,Windows Server AD,True,True
+KCTZ701205.台州中籍人事组,c339fad6-bd98-4ee1-bc4c-1e57ccd18067,Mail enabled security,assigned,KCTZ701205@kcistz.com,Windows Server AD,True,True
+KCTZ701206.台州资讯组,892dbe16-ce55-49f0-a002-7180e299962f,Mail enabled security,assigned,KCTZ701206@kcistz.com,Windows Server AD,True,True
+KCTZ701207.台州招生处,4972afd9-8236-4b30-8f51-88daaf156125,Mail enabled security,assigned,KCTZ701207@kcistz.com,Windows Server AD,True,True
+KCTZ70120701.台州招生处企划组,3039e991-866f-421d-bda8-0bf831627330,Mail enabled security,assigned,KCTZ70120701@kcistz.com,Windows Server AD,True,True
+KCTZ70120702.台州招生处招生一组,192de5e6-e778-4328-ba8d-e80fc268b3a8,Mail enabled security,assigned,KCTZ70120702@kcistz.com,Windows Server AD,True,True
+KCTZ70120703.台州招生处招生二组,121247cb-b721-446c-a9fb-47b2d7b4789c,Mail enabled security,assigned,KCTZ70120703@kcistz.com,Windows Server AD,True,True
+KCTZ701210.台州小学部,6bed2eb1-e10f-4745-9f97-888c123fa414,Mail enabled security,assigned,KCTZ701210@kcistz.com,Windows Server AD,True,True
+KCTZ70121001.台州小学部幼儿园,8805591e-b0a9-42e5-aa1c-be0a5c01380d,Mail enabled security,assigned,KCTZ70121001@kcistz.com,Windows Server AD,True,True
+KCTZ7012100101.台州小学部幼儿园教学组,a22c74e6-7774-4fce-988a-4300d9a0d5a8,Mail enabled security,assigned,KCTZ7012100101@kcistz.com,Windows Server AD,True,True
+KCTZ7012100102.台州小学部幼儿园保健组,bc81832e-99e8-4539-a43c-7f36a5764d5d,Mail enabled security,assigned,KCTZ7012100102@kcistz.com,Windows Server AD,True,True
+KCTZ7012100103.台州小学部幼儿园行政组,e80ab358-5fa6-4396-8289-06277473431a,Mail enabled security,assigned,KCTZ7012100103@kcistz.com,Windows Server AD,True,True
+KCTZ70121002.台州小学部小学教务处,64a881d2-5108-4eaa-874b-1d5237517666,Mail enabled security,assigned,KCTZ70121002@kcistz.com,Windows Server AD,True,True
+KCTZ7012100201.台州小学部小学教务处教务处教学组,e35433a8-c40a-4be7-8a86-962a7ab0e55e,Mail enabled security,assigned,KCTZ7012100201@kcistz.com,Windows Server AD,True,True
+KCTZ7012100202.台州小学部小学教务处课研组,38ecf66c-93dc-4093-ae5a-e4a415c1dd1f,Mail enabled security,assigned,KCTZ7012100202@kcistz.com,Windows Server AD,True,True
+KCTZ7012100203.台州小学部小学教务处图书组,d8bb9b06-63e3-4d1e-9e89-7e941f6b40af,Mail enabled security,assigned,KCTZ7012100203@kcistz.com,Windows Server AD,True,True
+KCTZ7012100204.台州小学部小学教务处活动探索组(全),45927085-ef44-49a5-9aaa-88856fb0371f,Mail enabled security,assigned,KCTZ7012100204@kcistz.com,Windows Server AD,True,True
+KCTZ7012100205.台州小学部小学教务处生教组,a2433b46-87af-4993-8a63-79ae97081f25,Mail enabled security,assigned,KCTZ7012100205@kcistz.com,Windows Server AD,True,True
+KCTZ70121003.台州小学部英语学习中心,0826b8fd-bedc-497e-9af5-1fbb882b99ca,Mail enabled security,assigned,KCTZ70121003@kcistz.com,Windows Server AD,True,True
+KCTZ7012100301.台州小学部英语学习中心中师课程教学组,d79fd40e-a6b9-4bdb-8003-d4fdfa1b7a68,Mail enabled security,assigned,KCTZ7012100301@kcistz.com,Windows Server AD,True,True
+KCTZ7012100302.台州小学部英语学习中心外师课程教学组,045209d6-4ba3-429a-b9f5-0176f7750c06,Mail enabled security,assigned,KCTZ7012100302@kcistz.com,Windows Server AD,True,True
+KCTZ70121004.台州小学部活动中心,899d6f2c-33d2-42d3-80e4-d969ea6df7d1,Mail enabled security,assigned,KCTZ70121004@kcistz.com,Windows Server AD,True,True
+KCTZ7012100401.台州小学部活动中心交通组,01ad4b96-a593-425f-bc5a-e902b3fe2345,Mail enabled security,assigned,KCTZ7012100402@kcistz.com,Windows Server AD,True,True
+KCTZ7012100403.台州小学部活动中心保健组,7a1b8915-0089-431d-964f-b78c9c2dd6cc,Mail enabled security,assigned,KCTZ7012100403@kcistz.com,Windows Server AD,True,True
+KCTZ7012100405.台州小学部活动中心艺文组,e63e877e-c65c-4998-a56d-49e78fcb0ab2,Mail enabled security,assigned,KCTZ7012100405@kcistz.com,Windows Server AD,True,True
+KCTZ7012100406.台州小学部活动中心体育发展组(全),813bd0f7-3a08-4a16-a04f-f5e2f54f919e,Mail enabled security,assigned,KCTZ7012100406@kcistz.com,Windows Server AD,True,True
+KCTZ701223.台州初中教务处,108faffe-ad4a-4999-9c4e-01530cb82dce,Mail enabled security,assigned,KCTZ701223@kcistz.com,Windows Server AD,True,True
+KCTZ70122301.台州初中教务处教学组,4754d3ef-d26d-4fc6-b2ff-62d39eaab10f,Mail enabled security,assigned,KCTZ70122301@kcistz.com,Windows Server AD,True,True
+KCTZ70122302.台州初中教务处生教组,418353f4-d60d-486c-8abb-cfdc84efe5ff,Mail enabled security,assigned,KCTZ70122302@kcistz.com,Windows Server AD,True,True
+KCTZ70122304.台州初中教务处教学资源组,91ca6fe3-c942-45cd-baf0-d04e8bee49f7,Mail enabled security,assigned,KCTZ70122304@kcistz.com,Windows Server AD,True,True
+KCTZ70122307.台州初中教务处辅导组,52c73454-789e-4d7b-a0ea-c7d7ba17b23d,Mail enabled security,assigned,KCTZ70122307@kcistz.com,Windows Server AD,True,True
+KCTZ701226.台州高中教务处,8f37bead-0ed3-4891-aada-536e984d9326,Mail enabled security,assigned,KCTZ701226@kcistz.com,Windows Server AD,True,True
+KCTZ70122601.台州高中教务处教学组,bb801faf-48d3-4faf-a206-7dea770f6e9c,Mail enabled security,assigned,KCTZ70122601@kcistz.com,Windows Server AD,True,True
+KCTZ70122602.台州高中教务处生教生辅组,b02f8116-3ddd-494a-aa74-c3dcfc951300,Mail enabled security,assigned,KCTZ70122602@kcistz.com,Windows Server AD,True,True
+KCTZ701228.台州中学英语学习中心,b254ccd7-09ce-4e47-bc05-1b06dbb702fc,Mail enabled security,assigned,KCTZ701228@kcistz.com,Windows Server AD,True,True
+KCTZ70122801.台州中学英语学习中心高中卓扬课程组,7717b109-b141-436f-8ed4-d5f5ce821a74,Mail enabled security,assigned,KCTZ70122801@kcistz.com,Windows Server AD,True,True
+KCTZ70122802.台州中学英语学习中心初中卓扬课程组,a1171ff9-6781-4438-9ec3-949c6029ae25,Mail enabled security,assigned,KCTZ70122802@kcistz.com,Windows Server AD,True,True
+KCTZ70122803.台州中学英语学习中心学生发展事务组,a754913a-3855-4f57-b7fc-f9d32c8d6b2a,Mail enabled security,assigned,KCTZ70122803@kcistz.com,Windows Server AD,True,True
+KCTZAL.台州校区全员,e7062af0-ed7d-48df-bf85-05e645fecac0,Security,assigned,,Windows Server AD,False,True
+KCTZC.台州组长群,de4ce525-ddb4-4c31-8a3e-f87aac284126,Mail enabled security,assigned,KCTZC@kcistz.com,Windows Server AD,True,True
+KCTZCN.台州中籍人员群,0a0c8e75-0c1c-4e9d-97f5-fe733c153b30,Mail enabled security,assigned,KCTZCN@kcistz.com,Windows Server AD,True,True
+KCTZCT.台州中籍教师群,c1c0c022-2309-495b-b50a-33874fbd7eab,Mail enabled security,assigned,KCTZCT@kcistz.com,Windows Server AD,True,True
+KCTZEDR.台州工程日报群,4aee8917-ba96-4e84-ac90-e95f752ce877,Mail enabled security,assigned,KCTZEDR@kcistz.com,Windows Server AD,True,True
+KCTZFT.台州外籍人员群,e208ec57-397a-427b-8c63-3fa1ee4a0f64,Mail enabled security,assigned,KCTZFT@kcistz.com,Windows Server AD,True,True
+KCTZM.台州主管群,ddc24115-96b9-4ed1-82a9-12e07c05b323,Mail enabled security,assigned,KCTZM@kcistz.com,Windows Server AD,True,True
+KCTZTW.台州台籍外派同仁,204fb43a-e987-4947-8613-9a9e337eef80,Mail enabled security,assigned,KCTZTW@kcistz.com,Windows Server AD,True,True
+KCXA7011.西安曲江校区,a637551f-e82f-40b6-bf81-1d6053385f4e,Mail enabled security,assigned,KCXA7011@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701102.西安校区行政部行政人员,bf2d6d0a-d1f6-42a5-aa7d-dcc139f486ba,Mail enabled security,assigned,KCXA701102@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110201.西安校区行政部招生一组,a423f51a-4153-4d1e-a079-682f4b80f1a0,Mail enabled security,assigned,KCXA70110201@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110202.西安校区行政部招生二组,35de41a1-5bd9-4290-ac82-cdc2f62f6e02,Mail enabled security,assigned,KCXA70110202@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110203.西安校区行政部企划组,7f14310d-9a3f-4612-b582-318ff404a5d9,Mail enabled security,assigned,KCXA70110203@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701103.西安校区小学部行政人员,5699d70c-985b-4bf4-a40d-bccaa5cbfe9b,Mail enabled security,assigned,KCXA701103@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110301.西安校区小学部教务处行政人员,5bc6b1de-c61f-4b1c-a12c-7bf43b880a71,Mail enabled security,assigned,KCXA70110301@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030101.西安校区小学部教务处教务组,8efd4b4a-6d1e-45af-a4d0-042decc9e633,Mail enabled security,assigned,KCXA7011030101@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030102.西安校区小学部教务处教学二组,569c9381-fad0-4d4d-9861-ac30f77ac896,Mail enabled security,assigned,KCXA7011030102@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030103.西安校区小学部教务处教学一组,b1d4f28a-535b-4207-9027-38742f89fff7,Mail enabled security,assigned,KCXA7011030103@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110302.西安校区小学部德育处行政人员,ae3ed650-742d-4130-a59b-188ff72ca2d4,Mail enabled security,assigned,KCXA70110302@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030204.西安校区小学部德育处生辅组,46364118-f46b-4b38-994d-ec18211c1d89,Mail enabled security,assigned,KCXA7011030204@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030205.西安校区小学部德育处德育组,9196d23b-d3e7-4382-9448-bce10f0e0df9,Mail enabled security,assigned,KCXA7011030205@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030206.西安校区小学部德育处健康中心,b1629595-b17d-4c15-ad17-b68bba6e4f77,Mail enabled security,assigned,KCXA7011030206@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110303.西安校区小学部英语学习中心行政人员,0139c6d8-d69b-4488-895d-e0847d0eb579,Mail enabled security,assigned,KCXA70110303@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030307.西安校区小学部英语学习中心低年级组,d8b1842d-a57c-4b73-9e2e-cd5839928075,Mail enabled security,assigned,KCXA7011030307@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030308.西安校区小学部英语学习中心中高年级组,b2137432-3485-4f38-80df-7b2019f0cd15,Mail enabled security,assigned,KCXA7011030308@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030310.西安校区小学部英语学习中心行政组,167f4e73-9dea-46c9-acdf-681509445055,Mail enabled security,assigned,KCXA7011030310@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110304.西安校区小学部体育探索中心行政人员,7ba326be-836b-4760-807b-d3e2cf3ea799,Mail enabled security,assigned,KCXA70110304@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030401.西安校区小学部体育探索中心体育发展组,3020765f-04b3-469f-a00c-bda2d3f43ad0,Mail enabled security,assigned,KCXA7011030401@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011030402.西安校区小学部体育探索中心活动探索组,fb96b906-848b-442c-b0cb-849d6a3364f1,Mail enabled security,assigned,KCXA7011030402@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701104.西安校区国际高中部行政人员,b7efc864-ea7b-48d5-97a5-7416d91fe816,Mail enabled security,assigned,KCXA701104@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110401.西安校区国际高中部高中教务处行政人员,9a00a8c3-b320-4423-87c2-acaa2f3a7333,Mail enabled security,assigned,KCXA70110401@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040101.西安校区国际高中部高中教务处行政组,6924e29f-ca0b-48eb-86c1-0d911fbe7d1a,Mail enabled security,assigned,KCXA7011040101@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040103.西安校区国际高中部高中教务处美高理科组,25c255ff-9de5-4d53-a6a3-6b62d4fc6ea9,Mail enabled security,assigned,KCXA7011040103@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040104.西安校区国际高中部高中教务处美高文科组,b02ef8fc-524d-4ef5-8ed0-fd0c83edf119,Mail enabled security,assigned,KCXA7011040104@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040105.西安校区国际高中部高中教务处国际项目组,e6a6c681-b5cd-433e-871e-8dcc5f293da1,Mail enabled security,assigned,KCXA7011040105@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110402.西安校区国际高中部德育处行政人员,28999ae4-25db-44fb-b2a2-e53f483ad9b6,Mail enabled security,assigned,KCXA70110402@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040201.西安校区国际高中部德育处德育组,84349dff-797c-4da4-8ea5-fde4f01ef340,Mail enabled security,assigned,KCXA7011040201@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040203.西安校区国际高中部德育处活动组,32c02bd2-97c1-4652-9be1-8a25dc936076,Mail enabled security,assigned,KCXA7011040203@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040204.西安校区国际高中部德育处保健组,5525c864-ac99-4ea5-833d-860b05764297,Mail enabled security,assigned,KCXA7011040204@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110404.西安校区初中部行政人员,f438ba53-eccf-4faa-ac77-e40e2f996738,Mail enabled security,assigned,KCXA70110404@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040404.西安校区初中部初中教导处行政组,cf6a2c38-316c-4b4f-9499-274a1887091c,Mail enabled security,assigned,KCXA7011040404@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040407.西安校区初中部初中教导处教学一组,7ae4ce6d-24ab-44d9-b16b-d768c782486f,Mail enabled security,assigned,KCXA7011040407@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040408.西安校区初中部初中教导处教学二组,9dc415c2-4f0d-456d-a3ec-406926b33bee,Mail enabled security,assigned,KCXA7011040408@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040409.西安校区初中部初中教导处辅导组,3bf79855-b2cc-4132-ad2c-0a5c862257ab,Mail enabled security,assigned,KCXA7011040409@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110406.西安校区普通高中部行政人员,841f3780-7d6d-48fa-9b5b-666a26ec7676,Mail enabled security,assigned,KCXA70110406@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040601.西安校区普通高中部普高教导处教学组,c91e0c43-3ca1-403a-a805-b05d5ef2dcb9,Mail enabled security,assigned,KCXA7011040601@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011040602.西安校区普通高中部普高教导处辅导组,68285de4-38cc-499e-9496-b8dff6279af3,Mail enabled security,assigned,KCXA7011040602@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701105.西安校区直属单位行政人员,47e5f6fa-0bd6-42c3-814f-51936c352723,Mail enabled security,assigned,KCXA701105@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110501.西安校区中籍人事组,8b696a37-db56-4ea9-88bc-8dacc7a5e195,Mail enabled security,assigned,KCXA70110501@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110503.西安校区会计室,21299e1b-c5f8-4a00-a1f9-93e01e0d8b2b,Mail enabled security,assigned,KCXA70110503@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110504.西安校区图书组,8485d806-09c8-4ef7-8f01-5de1ffd3e007,Mail enabled security,assigned,KCXA70110504@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110506.西安校区艺文推广中心,0feccc90-9ab0-430a-82ae-a8e3f4ad07de,Mail enabled security,assigned,KCXA70110506@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011050601.西安校区艺文推广中心艺文组,ee5687e3-06d9-48f2-b72a-66267032b98f,Mail enabled security,assigned,KCXA7011050601@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011050602.西安校区艺文推广中心课后活动组,58d64130-3df9-43fc-ba66-30da0d80c551,Mail enabled security,assigned,KCXA7011050602@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110508.西安校区国际高中部升学发展中心行政人员,38a13ae5-9a50-4b2a-8b7e-9dca4b4bdc56,Mail enabled security,assigned,KCXA70110508@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011050801.西安校区国际高中部升学发展中心升学课程组,1d1593f2-2617-494c-a9f6-a09c721c8df6,Mail enabled security,assigned,KCXA7011050801@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011050802.西安校区国际高中部升学发展中心语言辅导组,163eaceb-193a-4177-bbe1-c31442a4de8b,Mail enabled security,assigned,KCXA7011050802@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011050805.西安校区国际高中部升学发展中心留学辅导组,1d3f2921-c06f-4bf9-ba9f-0a20ec1fed3c,Mail enabled security,assigned,KCXA7011050805@kcisxa.org.cn,Windows Server AD,True,True
+KCXA7011050806.西安校区国际高中部升学发展中心学术项目组,bc80bd93-3ab4-4d70-b826-a778d20ec27b,Mail enabled security,assigned,KCXA7011050806@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110509.西安校区资讯组,a7cc9970-47e1-4e84-9380-6647020ce0f6,Mail enabled security,assigned,KCXA70110509@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701106.西安校区总务处行政人员,eed71ab0-4ed0-4bf2-92f1-49e0896c5e2d,Mail enabled security,assigned,KCXA701106@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110603.西安校区总务处行政组,7bd7fb16-b513-47d6-b5e4-a0dfdf3d91d1,Mail enabled security,assigned,KCXA70110603@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110605.西安校区总务处事务组,862223ff-f2bd-4ae6-913d-e0d53e1e3a04,Mail enabled security,assigned,KCXA70110605@kcisxa.org.cn,Windows Server AD,True,True
+KCXA70110607.西安校区总务处采购组,28089b92-6e0e-4ca7-809e-e406265788a9,Mail enabled security,assigned,KCXA70110607@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701107.西安校区校长办公室行政人员,43277547-144c-4ec0-b54b-5649add72c2f,Mail enabled security,assigned,KCXA701107@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701108.西安校区初中部,75595edc-7202-44da-babb-2f773201a5d7,Mail enabled security,assigned,KCXA701108@kcisxa.org.cn,Windows Server AD,True,True
+KCXA701109.西安校区普通高中部,60b65af4-71c7-41a6-be02-607eabae96a8,Mail enabled security,assigned,KCXA701109@kcisxa.org.cn,Windows Server AD,True,True
+KCXAAL.西安校区全员,95d50eee-698e-4ac0-8b61-db73a40dd201,Security,assigned,,Windows Server AD,False,True
+KCXAC.西安校区组长,1dd8b592-7252-4b7c-9d08-5985198e78e9,Mail enabled security,assigned,KCXAC@kcisxa.org.cn,Windows Server AD,True,True
+KCXACN.西安中籍人员群,39422f94-6c8d-4b30-87d8-7c0a5cdd8cdf,Mail enabled security,assigned,KCXACN@kcisxa.org.cn,Windows Server AD,True,True
+KCXACT.西安中籍教师群,a74fff6e-f24a-430a-b039-49caaf313a67,Mail enabled security,assigned,KCXACT@kcisxa.org.cn,Windows Server AD,True,True
+KCXAFT.西安外籍教师群,70a8e242-58dc-4098-bbc1-0aa1932b05d8,Mail enabled security,assigned,KCXAF@kcisxa.org.cn,Windows Server AD,True,True
+KCXAG.西安校区基层人员,78b0921a-4d09-444c-8518-64fe363d53c1,Mail enabled security,assigned,KCXAG@kcisxa.org.cn,Windows Server AD,True,True
+KCXAM.西安校区主管,969449b6-3900-44dc-9a09-0de2bb747251,Mail enabled security,assigned,KCXAM@kcisxa.org.cn,Windows Server AD,True,True
+KCXATW.西安台籍外派同仁,590e2a0c-ba4c-4d41-a0cb-b29a4c8e3b9c,Mail enabled security,assigned,KCXATW@kcisxa.org.cn,Windows Server AD,True,True
+KCXG01.秀岡全校 Xiugang All Users,4e80dc5a-b18b-4794-aea1-674e8a4045b6,Mail enabled security,assigned,KCXG01@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG02.秀岡主管 Xiugang Directors,076340ca-6f68-4105-8f3f-349a5322d2ac,Mail enabled security,assigned,KCXG02@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG03.秀岡組長 Xiugang Coordinators,8e903a24-2c50-4d1c-8a9f-ccdc7078a5ba,Mail enabled security,assigned,KCXG03@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG10.秀岡校長室 Xiugang Principal Office,0163c130-bf63-40c6-ad67-67223ad63b54,Mail enabled security,assigned,KCXG10@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1001.秀岡校長室人事組,a9c48ad5-ea74-42db-85bd-4996cca30f4a,Mail enabled security,assigned,KCXG1001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1002.秀岡校長室會計組,8c56ac09-7016-4764-a729-9987e6d7104f,Mail enabled security,assigned,KCXG1002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1010.秀岡國際部教務處 Xiugang International Dept,5d1cc30b-d70c-417b-8394-9c998916acda,Mail enabled security,assigned,KCXG1010@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG101001.秀岡國際部教務處行政組 Academic Affairs Admin,97096ef3-4d7c-49da-91f5-c80ebea1cc97,Mail enabled security,assigned,KCXG101001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG101002.秀岡國際部教務處教學組,19fe5e46-e237-470f-b5f2-005460555f11,Mail enabled security,assigned,KCXG101002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG101003.秀岡國際部教務處外師組 Foreign Teachers,e4992415-50a1-4021-9d5d-1b452af44b41,Mail enabled security,assigned,KCXG101003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1020.秀岡中學部教務處 Xiugang JH_academic Affairs,9006ad58-7e58-44d8-91c8-91a5083a6978,Mail enabled security,assigned,KCXG1020@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG102001.秀岡中學部教務處國內升學輔導組,e87f5984-6a29-438f-9fd9-0712d5cefcd5,Mail enabled security,assigned,KCXG102001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG102002.秀岡中學部教務處教學組,acea3c46-8542-4fb0-b607-bf748cef2505,Mail enabled security,assigned,KCXG102002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG102003.秀岡中學部教務處課研組,d7bf0e0a-89a1-4b4f-ac1c-da1da10712ba,Mail enabled security,assigned,KCXG102003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1030.秀岡學務處 Xiugang Student Affairs,ebbd86c7-c24f-4a75-b395-296a0c8072e7,Mail enabled security,assigned,KCXG1030@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG103001.秀岡學務處訓育組,5e095ab7-3c6f-48d3-899b-c5661a4ccc1e,Mail enabled security,assigned,KCXG103001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG103002.秀岡學務處生輔組,ef1aa3e1-9bc4-4e6e-aa2c-02584e53e63b,Mail enabled security,assigned,KCXG103002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG103003.秀岡學務處活動組,749b333b-7c56-4c56-aead-545ce1cb9fd1,Mail enabled security,assigned,KCXG103003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG103004.秀岡學務處交通組,6a79cfc9-cd91-4cdb-81a1-142c7cb46085,Mail enabled security,assigned,KCXG103004@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG103005.秀岡學務處體育組,0d42066a-ae07-4c23-b4b5-1ac463c649a3,Mail enabled security,assigned,KCXG103005@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG103006.秀岡學務處舍務組,7a86ca3e-d298-4ed6-9227-14585afb2f8d,Mail enabled security,assigned,KCXG103006@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1040.秀岡學習中心 Xiugang Learning Center,69c1e209-41b6-44f7-8aae-92e99be3b356,Mail enabled security,assigned,KCXG1040@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG104001.秀岡學習中心國外升學輔導組,e9683768-7ebe-455e-87cc-c622e1ec2e0b,Mail enabled security,assigned,KCXG104001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG104002.秀岡學習中心課務組,48793bcd-c970-46df-ae6c-76f2ed3a3c78,Mail enabled security,assigned,KCXG104002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG104003.秀岡學習中心圖書組,eac131c0-f3c9-46ea-9d4a-3bdce79cd1ff,Mail enabled security,assigned,KCXG104003@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1050.秀岡輔導室,fc9442db-c750-467b-98e7-04de1ed01e00,Mail enabled security,assigned,KCXG1050@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1060.秀岡藝文中心 Xiugang Department of Creative Arts,b5e56b6e-6960-4c80-9f0d-393e183df46f,Mail enabled security,assigned,KCXG1060@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG106001.秀岡藝文中心行政組,7765f979-82b2-4b19-9fa7-a807b1499363,Mail enabled security,assigned,KCXG106001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG106002.秀岡藝文中心藝文組,33bdd447-c925-43cd-bdd0-4e3fa01ecfe7,Mail enabled security,assigned,KCXG106002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1070.秀岡總務部 Xiugang General Dept,9a9b3b9d-5b96-4855-91c4-43be65cc2413,Mail enabled security,assigned,KCXG1070@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG107001.秀岡總務部行政組,ee42df2e-a5ab-4c4f-b111-9d7221e977d5,Mail enabled security,assigned,KCXG107001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG107002.秀岡總務部事務組,c42fec9b-a6a3-4d8a-b7e6-6f07d7381fe3,Mail enabled security,assigned,KCXG107002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1080.秀岡招生中心,fe4ffa11-72a1-43fa-90cc-53f604038c33,Mail enabled security,assigned,KCXG1080@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG108001.秀岡招生中心招生組,a9e5fc9d-b9d9-46df-bd13-b803bf3b343e,Mail enabled security,assigned,KCXG108001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG108002.秀岡招生中心公關組,a0bad86b-6375-4e30-aa04-fc19bc863f29,Mail enabled security,assigned,KCXG108002@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG1090.秀岡資訊中心 Xiugang Resource Center,8f3f9123-1cea-4d08-b7ba-7f5a75878cf1,Mail enabled security,assigned,KCXG1090@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KCXG109001.秀岡資訊中心資訊組,05b0760f-f0de-491a-b941-be0241d8e5d2,Mail enabled security,assigned,KCXG109001@kcis.ntpc.edu.tw,Windows Server AD,True,True
+KIM01.2025康軒鐵人20周年,56fcf0bb-ec01-4817-9d4e-4d6f1977870a,Mail enabled security,assigned,KIM01@knsh.com.tw,Windows Server AD,True,True
+KS000001.董事長幕僚,5eabf7c1-c943-475f-bd6e-9f8cb6679150,Mail enabled security,assigned,KS000001@knsh.com.tw,Windows Server AD,True,True
+KS0003.法務室,34269987-9dd7-40f2-8e56-7616ec64d559,Mail enabled security,assigned,KS0003@knsh.com.tw,Windows Server AD,True,True
+KS0005 資訊部,91d80fbb-b791-4374-8136-be367d15e0b2,Mail enabled security,assigned,KS0005@knsh.com.tw,Windows Server AD,True,True
+KS000501.資訊部ERP維護組,9973ab4d-d731-4d9a-bfb7-b5763d4bf3e8,Mail enabled security,assigned,KS000501@knsh.com.tw,Windows Server AD,True,True
+KS000503.資訊部系統組,bb058561-95b7-4def-9104-564a3791d3c2,Mail enabled security,assigned,KS000503@knsh.com.tw,Windows Server AD,True,True
+KS00050301.資訊部系統管理組,87444d71-ad1b-47ff-9ef5-e9eff28f5cdd,Mail enabled security,assigned,KS00050301@knsh.com.tw,Windows Server AD,True,True
+KS00050303.資訊部應用軟體組,5a35dfbe-8f59-4175-a10a-27ebaeba1e3d,Mail enabled security,assigned,KS00050303@knsh.com.tw,Windows Server AD,True,True
+KS0005C.資訊部組長以上,6911a5f1-9060-482d-81d0-0e88207181a9,Mail enabled security,assigned,KS0005C@knsh.com.tw,Windows Server AD,True,True
+KS0007.財務部,bd377306-0a2a-4cfe-a0e8-57bdbadf7c7a,Mail enabled security,assigned,___7562@knshcomtw.onmicrosoft.com,Windows Server AD,True,True
+KS00070101.財務部會計組,8e24d533-6886-465b-86ee-5c7e3edac59d,Mail enabled security,assigned,KS00070101@knsh.com.tw,Windows Server AD,True,True
+KS0007C.財務部組長以上,1bd0e52e-a938-4b19-a1ee-8397a81af7d7,Mail enabled security,assigned,KS0007C@knsh.com.tw,Windows Server AD,True,True
+KS0009.人力資源部,0250f728-8c06-4995-af44-8e107406c722,Mail enabled security,assigned,KS0009@knsh.com.tw,Windows Server AD,True,True
+KS000901.人力資源部人力資源組,19ce2112-1aef-44da-8428-8f93a515b0d3,Mail enabled security,assigned,KS000901@knsh.com.tw,Windows Server AD,True,True
+KS01.營業一處,767468ed-62ba-46cf-b2d6-a26fac266f01,Mail enabled security,assigned,KS01@knsh.com.tw,Windows Server AD,True,True
+KS0101.營業一處台北營業部,3044e829-a67e-4dc4-952c-1f65cac5d77a,Mail enabled security,assigned,KS0101@knsh.com.tw,Windows Server AD,True,True
+KS010101.營業一處台北營業部國小北一區,47a08fe2-3c66-4a89-bf2c-ce4bb9a2841c,Mail enabled security,assigned,KS010101@knsh.com.tw,Windows Server AD,True,True
+KS010103.營業一處台北營業部國小北二區,1892ed0b-b9a0-4777-9c48-166a8a6cebc5,Mail enabled security,assigned,KS010103@knsh.com.tw,Windows Server AD,True,True
+KS010105.營業一處台北營業部國小北三區,16a429ab-10fe-4082-8437-5d2569b767df,Mail enabled security,assigned,KS010105@knsh.com.tw,Windows Server AD,True,True
+KS010107.營業一處台北營業部客服組,14f038f1-d61c-49aa-b5fa-89410a69c19c,Mail enabled security,assigned,KS010107@knsh.com.tw,Windows Server AD,True,True
+KS0103.營業一處桃園營業部,35158657-0ad3-4e0c-86c1-6527548c3d2a,Mail enabled security,assigned,KS0103@knsh.com.tw,Windows Server AD,True,True
+KS010301.營業一處桃園營業部國小桃園區,a8caa282-d740-469b-a5c8-c0db67fe6a83,Mail enabled security,assigned,KS010301@knsh.com.tw,Windows Server AD,True,True
+KS010303.營業一處桃園營業部國小桃竹區,e9636ea0-710a-4ac0-8eb4-2be73ffcb37d,Mail enabled security,assigned,KS010303@knsh.com.tw,Windows Server AD,True,True
+KS010305.營業一處桃園營業部語教北桃區,6235380d-4baf-4318-9208-83842c4ad081,Mail enabled security,assigned,KS010305@knsh.com.tw,Windows Server AD,True,True
+KS010307.營業一處桃園營業部客服組,8115adac-bac0-4a58-ac2b-7c1cb84d45ed,Mail enabled security,assigned,KS010307@knsh.com.tw,Windows Server AD,True,True
+KS0105.營業一處台中營業部,86bb6bd7-4df1-4f4a-98d2-40105b4b0f11,Mail enabled security,assigned,KS0105@knsh.com.tw,Windows Server AD,True,True
+KS010501.營業一處台中營業部國小中一區,b0d4f8fb-3e95-4423-986b-1791e76d40aa,Mail enabled security,assigned,KS010501@knsh.com.tw,Windows Server AD,True,True
+KS010503.營業一處台中營業部國小中二區,e2aeb495-6793-49c4-84a9-5010c846bc2d,Mail enabled security,assigned,KS010503@knsh.com.tw,Windows Server AD,True,True
+KS010504.營業一處台中營業部國小雲嘉區,11b679b1-7b61-4d7e-b7b5-9a2fcab63243,Mail enabled security,assigned,KS010504@knsh.com.tw,Windows Server AD,True,True
+KS010505.營業一處台中營業部語教中南區,d013bd47-42e7-458e-9c7a-eecadd9582dc,Mail enabled security,assigned,KS010505@knsh.com.tw,Windows Server AD,True,True
+KS010507.營業一處台中營業部客服組,94c392c0-cfda-4cf5-9eb7-2f32ca539cb7,Mail enabled security,assigned,KS010507@knsh.com.tw,Windows Server AD,True,True
+KS0107.營業一處台南營業部,c844e26c-0747-4121-8fea-a35e6548da5b,Mail enabled security,assigned,KS0107@knsh.com.tw,Windows Server AD,True,True
+KS010701.營業一處台南營業部國小台南區,776194e0-015c-4a02-b4b9-4f50896418f7,Mail enabled security,assigned,KS010701@knsh.com.tw,Windows Server AD,True,True
+KS010703.營業一處台南營業部客服組,560957cc-c9ea-4ef1-a611-c5b55a1f5f3b,Mail enabled security,assigned,KS010703@knsh.com.tw,Windows Server AD,True,True
+KS0109.營業一處高雄營業部,44603c3d-14b5-4d24-ac36-2aa123389c1a,Mail enabled security,assigned,KS0109@knsh.com.tw,Windows Server AD,True,True
+KS010901.營業一處高雄營業部國小高一區,3d88a49b-44df-4a27-8012-745304ef8b05,Mail enabled security,assigned,KS010901@knsh.com.tw,Windows Server AD,True,True
+KS010903.營業一處高雄營業部國小高二區,ff29409c-70dd-47e1-b685-e3d4890c288a,Mail enabled security,assigned,KS010903@knsh.com.tw,Windows Server AD,True,True
+KS010905.營業一處高雄營業部客服組,019ad843-015c-40c5-9d43-d96ce1e55b81,Mail enabled security,assigned,KS010905@knsh.com.tw,Windows Server AD,True,True
+KS0111.營業一處幼教事業部,1a55597d-cd2b-41a1-9862-b1c760fab336,Mail enabled security,assigned,KS0111@knsh.com.tw,Windows Server AD,True,True
+KS011101.營業一處幼教事業部-業務組,6aad4d71-c4ba-4401-bb96-d1893088b3c6,Mail enabled security,assigned,KS011101@knsh.com.tw,Windows Server AD,True,True
+KS011103.營業一處幼教事業部-行企客服組,33be5378-24a6-48e8-976f-41610eeaf428,Mail enabled security,assigned,KS011103@knsh.com.tw,Windows Server AD,True,True
+KS011105.營業一處幼教事業部編輯,5b02e701-113c-4309-af10-8e7c93b11f52,Mail enabled security,assigned,KS011105@knsh.com.tw,Windows Server AD,True,True
+KS01110501.營業一處幼教事業部編輯-文編組,f76c77f8-1343-48a2-87c5-378209a1bd40,Mail enabled security,assigned,KS01110501@knsh.com.tw,Windows Server AD,True,True
+KS01110503.營業一處幼教事業部編輯-美編組,2b570c72-b598-456b-b909-abc4ab951024,Mail enabled security,assigned,KS01110503@knsh.com.tw,Windows Server AD,True,True
+KS0111C.營業一處幼教事業部組長以上,ef9b6792-54a5-496d-9ad0-235737c10f48,Mail enabled security,assigned,KS0111C@knsh.com.tw,Windows Server AD,True,True
+KS0113.營業一處行銷企畫部,45aaf7aa-4054-4202-8fba-1e63a5abff5f,Mail enabled security,assigned,KS0113@knsh.com.tw,Windows Server AD,True,True
+KS011301.營業一處行銷企畫部教研組,b69074ca-a9ee-4d6b-877c-eb8ee7df6103,Mail enabled security,assigned,KS011301@knsh.com.tw,Windows Server AD,True,True
+KS011303.營業一處行銷企畫部行企組,e04dbee1-2e45-4f2f-bd93-a3fd180b7788,Mail enabled security,assigned,KS011303@knsh.com.tw,Windows Server AD,True,True
+KS0113C.營業一處行銷企畫部組長以上,eba66c04-58ab-49b7-acaf-939ff078134d,Mail enabled security,assigned,KS0113C@knsh.com.tw,Windows Server AD,True,True
+KS01C.營業一處區經理,5fd05072-0507-438f-b4fe-b608a68c3c23,Mail enabled security,assigned,KS01C@knsh.com.tw,Windows Server AD,True,True
+KS01M.營業一處部級主管以上,088ceb31-acaf-49fe-a931-bc9197cc421b,Mail enabled security,assigned,KS01M@knsh.com.tw,Windows Server AD,True,True
+KS02.營業二處,0daf2b4f-444a-4fab-a231-5c8ac49c9577,Mail enabled security,assigned,KS02@knsh.com.tw,Windows Server AD,True,True
+KS0201.營業二處台北營業部,d12a032b-4f16-4b61-bdb5-81c54cb20a9e,Mail enabled security,assigned,KS0201@knsh.com.tw,Windows Server AD,True,True
+KS020101.營業二處台北營業部國中北一區,9d1b5f1d-6f54-4ecf-8102-6ed7c1275862,Mail enabled security,assigned,KS020101@knsh.com.tw,Windows Server AD,True,True
+KS020103.營業二處台北營業部國中北二區,7f622361-84e0-4c90-935e-37f5f153fd45,Mail enabled security,assigned,KS020103@knsh.com.tw,Windows Server AD,True,True
+KS020105.營業二處台北營業部國中北三區,a863a648-6b8f-4b0d-9f46-3fc698a9d3f4,Mail enabled security,assigned,KS020105@knsh.com.tw,Windows Server AD,True,True
+KS020107.營業二處台北營業部國中北四區,732e1df4-9655-4002-b628-81837c538a3a,Mail enabled security,assigned,KS020107@knsh.com.tw,Windows Server AD,True,True
+KS020109.營業二處台北營業部客服組,f162e50e-dba4-48bb-9429-83cab216fc8b,Mail enabled security,assigned,KS020109@knsh.com.tw,Windows Server AD,True,True
+KS0203.營業二處桃園營業部,d64c7fac-a67f-44fd-8c25-9f6a81616e61,Mail enabled security,assigned,KS0203@knsh.com.tw,Windows Server AD,True,True
+KS020301.營業二處桃園營業部國中桃園區,a030e982-a3ee-49ac-b627-25f6f5302f81,Mail enabled security,assigned,KS020301@knsh.com.tw,Windows Server AD,True,True
+KS020303.營業二處桃園營業部國中桃竹區,3a646901-cc2c-4715-b08f-1e86cf119ba1,Mail enabled security,assigned,KS020303@knsh.com.tw,Windows Server AD,True,True
+KS020307.營業二處桃園營業部客服組,9bc35f49-ec19-406f-82d8-025532348f6f,Mail enabled security,assigned,KS020307@knsh.com.tw,Windows Server AD,True,True
+KS0205.營業二處台中營業部,a5afa77b-bc89-4740-91fe-371e094ed6bd,Mail enabled security,assigned,KS0205@knsh.com.tw,Windows Server AD,True,True
+KS020501.營業二處台中營業部國中中一區,d5c89955-17b1-4c9b-b1d6-2fef915c9555,Mail enabled security,assigned,KS020501@knsh.com.tw,Windows Server AD,True,True
+KS020503.營業二處台中營業部國中中二區,9a4c0786-f4ea-4733-b2cb-29ffe9bd91e6,Mail enabled security,assigned,KS020503@knsh.com.tw,Windows Server AD,True,True
+KS020505.營業二處台中營業部國中中三區,a7c8196e-656e-4da0-9a6c-5baa37f8e8ae,Mail enabled security,assigned,KS020505@knsh.com.tw,Windows Server AD,True,True
+KS020507.營業二處台中營業部客服組,e05c665e-aa5a-4e48-9e8c-3756c60d987d,Mail enabled security,assigned,KS020507@knsh.com.tw,Windows Server AD,True,True
+KS0207.營業二處台南營業部,e7fd3778-5ba5-46cb-8cb1-385c7117aa59,Mail enabled security,assigned,KS0207@knsh.com.tw,Windows Server AD,True,True
+KS020701.營業二處台南營業部國中台南區,6ca83b21-510b-46a1-a8eb-c86aadf3a34f,Mail enabled security,assigned,KS020701@knsh.com.tw,Windows Server AD,True,True
+KS020703.營業二處台南營業部客服組,515f0baa-0c6a-4560-861d-1c2a733c2b14,Mail enabled security,assigned,KS020703@knsh.com.tw,Windows Server AD,True,True
+KS0209.營業二處高雄營業部,a55e8611-0dc2-4686-9a24-1e8c0650e9cc,Mail enabled security,assigned,KS0209@knsh.com.tw,Windows Server AD,True,True
+KS020901.營業二處高雄營業部國中高一區,b86624d7-36b2-4975-85be-95f8f08bcd0f,Mail enabled security,assigned,KS020901@knsh.com.tw,Windows Server AD,True,True
+KS020903.營業二處高雄營業部國中高二區,0a196047-515f-4b97-a548-c4fddc80f804,Mail enabled security,assigned,KS020903@knsh.com.tw,Windows Server AD,True,True
+KS020905.營業二處高雄營業部客服組,fdc27a4c-5856-4514-879a-ae8abff921ce,Mail enabled security,assigned,KS020905@knsh.com.tw,Windows Server AD,True,True
+KS0211.營業二處輔材事業部,6c1298f0-e80d-4775-9170-fcd430e0a0b8,Mail enabled security,assigned,KS0211@knsh.com.tw,Windows Server AD,True,True
+KS021101-11.營業二處輔材事業部-業務,b6cffd50-5b1d-44d1-a996-889f8562a3e6,Mail enabled security,assigned,KS021101-11@knsh.com.tw,Windows Server AD,True,True
+KS021113.營業二處輔材事業部-行企,c6303795-41f4-4d5c-adf9-8be3244dcc3a,Mail enabled security,assigned,KS021113@knsh.com.tw,Windows Server AD,True,True
+KS021115.營業二處輔材事業部-編輯,64ac90a4-a5d3-4b64-9cbc-aaad055238d3,Mail enabled security,assigned,KS021115@knsh.com.tw,Windows Server AD,True,True
+KS0213.營業二處行銷企畫部,d19aed3a-2e7c-4fb1-adf2-b3cd9f594118,Mail enabled security,assigned,KS0213@knsh.com.tw,Windows Server AD,True,True
+KS021301.營業二處行銷企畫部教研組,c9d56475-1f8e-4aac-b134-79379282f86c,Mail enabled security,assigned,KS021301@knsh.com.tw,Windows Server AD,True,True
+KS021303.營業二處行銷企畫部行企組,9b844916-03b6-41f0-b5be-7165892f4dd8,Mail enabled security,assigned,KS021303@knsh.com.tw,Windows Server AD,True,True
+KS0213C.營業二處行銷企畫部組長以上,a97f5423-aac3-4056-b0b0-834382c6be51,Mail enabled security,assigned,KS0213C@knsh.com.tw,Windows Server AD,True,True
+KS02C.營業二處區經理,a8b4ab52-19a8-4540-9a01-ca97678c5767,Mail enabled security,assigned,KS02C@knsh.com.tw,Windows Server AD,True,True
+KS02M.營業二處部級主管以上,4acb34c6-5c65-40b1-8f27-525b16f5216c,Mail enabled security,assigned,KS02M@knsh.com.tw,Windows Server AD,True,True
+KS03.營業三處,778ee9f2-5db5-4a11-904f-922ca44a3dfb,Mail enabled security,assigned,KS03@knsh.com.tw,Windows Server AD,True,True
+KS0301.營業三處行銷部,f015ca07-e99f-4567-8c6b-2e29631fc9d2,Mail enabled security,assigned,KS0301@knsh.com.tw,Windows Server AD,True,True
+KS030101.營業三處行銷部行銷業務組,feddea5b-414d-4009-9dca-a053688c0a89,Mail enabled security,assigned,KS030101@knsh.com.tw,Windows Server AD,True,True
+KS030103.營業三處行銷部電話行銷組,9e4c8397-117b-435a-9990-38e651099a37,Mail enabled security,assigned,KS030103@knsh.com.tw,Windows Server AD,True,True
+KS030105.營業三處行銷部才藝發展組,fb6a6f6c-ada3-4d76-ac94-6676090ad376,Mail enabled security,assigned,KS030105@knsh.com.tw,Windows Server AD,True,True
+KS0303.營業三處編輯部,421d4302-c89d-499e-8434-ad7caec52ab2,Mail enabled security,assigned,KS0303@knsh.com.tw,Windows Server AD,True,True
+KS030301.營業三處編輯部文編一組,5d981efa-d2e5-4a51-8f8c-7aef4bb51054,Mail enabled security,assigned,KS030301@knsh.com.tw,Windows Server AD,True,True
+KS030303.營業三處編輯部文編二組,5f69cbc9-efd3-4091-8ec3-36fad08d9c23,Mail enabled security,assigned,KS030303@knsh.com.tw,Windows Server AD,True,True
+KS030305.營業三處編輯部文編三組,89bd0409-f292-438a-a6cc-b79e5389f843,Mail enabled security,assigned,KS030305@knsh.com.tw,Windows Server AD,True,True
+KS030307.營業三處編輯部美編組,02aad420-91b2-4669-8cf7-38df403571ae,Mail enabled security,assigned,KS030307@knsh.com.tw,Windows Server AD,True,True
+KS03C.營業三處組長以上,a68aea3e-d0da-4563-b330-02c9855ce845,Mail enabled security,assigned,KS03C@knsh.com.tw,Windows Server AD,True,True
+KS03M.營業三處部級主管以上,1bd85501-9521-464d-8a63-3730bad4adfe,Mail enabled security,assigned,KS03M@knsh.com.tw,Windows Server AD,True,True
+KS05.編務一處,cdece38e-8d77-474c-825c-6758f1db0405,Mail enabled security,assigned,KS05@knsh.com.tw,Windows Server AD,True,True
+KS0501.編務一處編輯一部,4e1e0c74-9d9b-4105-8a07-022121eb8e08,Mail enabled security,assigned,KS0501@knsh.com.tw,Windows Server AD,True,True
+KS050101.編務一處編輯一部文編一組,831dee76-5e6b-4927-b75e-ac95cefde75b,Mail enabled security,assigned,KS050101@knsh.com.tw,Windows Server AD,True,True
+KS050103.編務一處編輯一部文編二組,889cfb11-3ff5-42c6-891f-dd57fefa6e21,Mail enabled security,assigned,KS050103@knsh.com.tw,Windows Server AD,True,True
+KS050105.編務一處編輯一部文編三組,ba3fad60-5e37-4d19-afc5-f3ccebfbcfce,Mail enabled security,assigned,KS050105@knsh.com.tw,Windows Server AD,True,True
+KS0501C.編務一處編輯一部組長以上,9b65aad0-5688-431d-bcc3-7f89b2e832f8,Mail enabled security,assigned,KS0501C@knsh.com.tw,Windows Server AD,True,True
+KS0503.編務一處編輯二部,06efc5df-1af0-4ac0-9a2e-1625b24aba94,Mail enabled security,assigned,KS0503@knsh.com.tw,Windows Server AD,True,True
+KS050301.編務一處編輯二部文編一組,0bf98f24-7160-4e58-8550-67e35c473952,Mail enabled security,assigned,KS050301@knsh.com.tw,Windows Server AD,True,True
+KS050303.編務一處編輯二部文編二組,85e4a5cd-5538-4e18-abbb-3a36bcca5619,Mail enabled security,assigned,KS050303@knsh.com.tw,Windows Server AD,True,True
+KS050305.編務一處編輯二部文編三組,31373279-a0d1-4267-9931-f543cf5678a9,Mail enabled security,assigned,KS050305@knsh.com.tw,Windows Server AD,True,True
+KS050307.編務一處編輯二部文編四組,08382f17-c440-4aa6-9eaa-46b7b9098401,Mail enabled security,assigned,KS050307@knsh.com.tw,Windows Server AD,True,True
+KS0503C.編務一處編輯二部組長以上,cd96b417-7570-4f95-9c1b-63c5555c06c6,Mail enabled security,assigned,KS0503C@knsh.com.tw,Windows Server AD,True,True
+KS0505.編務一處編輯三部,5c2b6d71-4b25-4ce6-904d-07e23114bfba,Mail enabled security,assigned,KS0505@knsh.com.tw,Windows Server AD,True,True
+KS050501.編務一處編輯三部文編一組,3b69a39a-bd45-4fce-807c-10e6926eb55e,Mail enabled security,assigned,KS050501@knsh.com.tw,Windows Server AD,True,True
+KS050503.編務一處編輯三部文編二組,1430713b-5300-45fd-a70e-45f148504d58,Mail enabled security,assigned,KS050503@knsh.com.tw,Windows Server AD,True,True
+KS050505.編務一處編輯三部文編三組,3783edca-05ba-412d-b4d6-4ff7b2bc8b0b,Mail enabled security,assigned,KS050505@knsh.com.tw,Windows Server AD,True,True
+KS0505C.編務一處編輯三部組長以上,71f82bd4-7b09-4981-89a6-0e8e82b9dcde,Mail enabled security,assigned,KS0505C@knsh.com.tw,Windows Server AD,True,True
+KS0507.編務一處美編一部,a980f9c4-1161-4c09-afe2-e3f745614f2c,Mail enabled security,assigned,KS0507@knsh.com.tw,Windows Server AD,True,True
+KS050701.編務一處美編一部美編一組,f0a561d9-f3d1-4b39-9c11-a19b0bcca5be,Mail enabled security,assigned,KS050701@knsh.com.tw,Windows Server AD,True,True
+KS050703.編務一處美編一部美編二組,9f4382d6-1111-43f5-9d76-879fda33766e,Mail enabled security,assigned,KS050703@knsh.com.tw,Windows Server AD,True,True
+KS050705.編務一處美編一部美編三組,53d42c89-f0b4-45a5-97a9-5023312ac8ab,Mail enabled security,assigned,KS050705@knsh.com.tw,Windows Server AD,True,True
+KS0507C.編務一處美編一部組長以上,51ca2b20-398a-4269-a663-b0d7caa75434,Mail enabled security,assigned,KS0507C@knsh.com.tw,Windows Server AD,True,True
+KS05C.編務一處組長以上,ed3b8555-e7b1-4673-8b41-c5446ba4dc75,Mail enabled security,assigned,KS05C@knsh.com.tw,Windows Server AD,True,True
+KS05C01.編務一處文編組長以上,5d87e4d3-bbbc-4514-80e9-988486898300,Mail enabled security,assigned,KS05C01@knsh.com.tw,Windows Server AD,True,True
+KS05C02.編務一處美編組長以上,6c0c3809-c565-454b-928e-ef7ea33213ff,Mail enabled security,assigned,KS05C02@knsh.com.tw,Windows Server AD,True,True
+KS05M.編務一處部級主管以上,9feb39cc-291c-475d-915a-ccc8a195f1c3,Mail enabled security,assigned,KS05M@knsh.com.tw,Windows Server AD,True,True
+KS06.編務二處,2e81d1c2-d957-4108-b963-c02f210c9b69,Mail enabled security,assigned,KS06@knsh.com.tw,Windows Server AD,True,True
+KS0601.編務二處編輯五部,b9238313-f919-4805-ac33-43f9e7f285a0,Mail enabled security,assigned,KS0601@knsh.com.tw,Windows Server AD,True,True
+KS060101.編務二處編輯五部國文組,66c8476b-0cda-4612-ab2d-88d0aedea6c0,Mail enabled security,assigned,KS060101@knsh.com.tw,Windows Server AD,True,True
+KS060103.編務二處編輯五部社會組,203f4f50-cd86-46dc-bd41-3de9ff60d04c,Mail enabled security,assigned,KS060103@knsh.com.tw,Windows Server AD,True,True
+KS0601C.編務二處編輯五部組長以上,56e67cfd-d729-4f5e-b5d0-e76c383511a9,Mail enabled security,assigned,KS0601C@knsh.com.tw,Windows Server AD,True,True
+KS0603.編務二處編輯六部,879cbb5e-4dc5-483f-919e-75a4c87a4aa7,Mail enabled security,assigned,KS0603@knsh.com.tw,Windows Server AD,True,True
+KS060301.編務二處編輯六部英語組,690cd1ae-a1f1-4ffb-afa5-d9aa2b0ce1fe,Mail enabled security,assigned,KS060301@knsh.com.tw,Windows Server AD,True,True
+KS060303.編務二處編輯六部藝能一組,0c60736a-5492-4cfd-bffa-af5af0e15b75,Mail enabled security,assigned,KS060303@knsh.com.tw,Windows Server AD,True,True
+KS060305.編務二處編輯六部藝能二組,2785e39a-51fc-401a-9772-9f980e686cdc,Mail enabled security,assigned,KS060305@knsh.com.tw,Windows Server AD,True,True
+KS0603C.編務二處編輯六部組長以上,e1e17e2d-679a-49df-8cfb-60152369d0d7,Mail enabled security,assigned,KS0603C@knsh.com.tw,Windows Server AD,True,True
+KS0605.編務二處編輯七部,69620cad-6771-4c37-8628-e17d925cbfac,Mail enabled security,assigned,KS0605@knsh.com.tw,Windows Server AD,True,True
+KS060501.編務二處編輯七部數學組,fed57bbd-c3b1-43e2-86fe-92311f05dde9,Mail enabled security,assigned,KS060501@knsh.com.tw,Windows Server AD,True,True
+KS060503.編務二處編輯七部自然組,7c43a0b9-33b6-4aab-a949-bfa4ce67606a,Mail enabled security,assigned,KS060503@knsh.com.tw,Windows Server AD,True,True
+KS060505.編務二處編輯七部科技組,c64a368a-7b1a-4f43-9522-fe94b3251c88,Mail enabled security,assigned,KS060505@knsh.com.tw,Windows Server AD,True,True
+KS0605C.編務二處編輯七部組長以上,48035ab6-fb93-4db2-a754-43e72e047316,Mail enabled security,assigned,KS0605C@knsh.com.tw,Windows Server AD,True,True
+KS0607.編務二處編輯八部,758a85db-e25e-42cb-8bdc-07c461384fbd,Mail enabled security,assigned,KS0607@knsh.com.tw,Windows Server AD,True,True
+KS060701.編務二處編輯八部輔材國文組,8741eba9-2315-4a06-8723-1732b375f809,Mail enabled security,assigned,KS060701@knsh.com.tw,Windows Server AD,True,True
+KS060703.編務二處編輯八部輔材英語組,1d1759dd-d23b-4fb3-8aae-7b2105bc30a7,Mail enabled security,assigned,KS060703@knsh.com.tw,Windows Server AD,True,True
+KS060705.編務二處編輯八部輔材數理組,e8c7eb5a-5c57-4dc7-98fb-c60072c13a1b,Mail enabled security,assigned,KS060705@knsh.com.tw,Windows Server AD,True,True
+KS060707.編務二處編輯八部輔材社會組,44260f26-4cdd-4699-a9a2-b58ce8f75f34,Mail enabled security,assigned,KS060707@knsh.com.tw,Windows Server AD,True,True
+KS0607C.編務二處編輯八部組長以上,1914995b-9d53-4d95-8d30-6429c3eac5c5,Mail enabled security,assigned,KS0607C@knsh.com.tw,Windows Server AD,True,True
+KS0609.編務二處美編二部,ddac33bc-4e6f-4d47-8cec-ea8a8b92fcdf,Mail enabled security,assigned,KS0609@knsh.com.tw,Windows Server AD,True,True
+KS060901.編務二處美編二部美編一組,fb0aac48-cf12-47ae-93f8-d1759df5a53c,Mail enabled security,assigned,KS060901@knsh.com.tw,Windows Server AD,True,True
+KS060903.編務二處美編二部美編二組,d6564bdf-a1a1-4063-ba9a-289a886a581f,Mail enabled security,assigned,KS060903@knsh.com.tw,Windows Server AD,True,True
+KS060905.編務二處美編二部美編三組,8b350ff6-204c-4c7e-990b-e55cedb8342b,Mail enabled security,assigned,KS060905@knsh.com.tw,Windows Server AD,True,True
+KS060907.編務二處美編二部美編四組,52eb6e44-4cd7-43bb-820f-b3e4a64e068f,Mail enabled security,assigned,KS060907@knsh.com.tw,Windows Server AD,True,True
+KS0609C.編務二處美編二部組長以上,48def6f8-8924-4518-b955-18fe3257dce0,Mail enabled security,assigned,KS0609C@knsh.com.tw,Windows Server AD,True,True
+KS06C.編務二處組長,469489cf-5d3c-4f43-afda-1ad23684c257,Mail enabled security,assigned,KS06C@knsh.com.tw,Windows Server AD,True,True
+KS06C01.編務二處文編組長以上,d479965d-6359-4f16-bf71-b8936670f415,Mail enabled security,assigned,KS06C01@knsh.com.tw,Windows Server AD,True,True
+KS06C02.編務二處美編組長以上,35818fda-a990-4400-969c-546bab20ab1c,Mail enabled security,assigned,KS06C02@knsh.com.tw,Windows Server AD,True,True
+KS06M.編務二處部級主管以上,7e843456-3449-42ae-8b93-7b42bce730a3,Mail enabled security,assigned,KS06M@knsh.com.tw,Windows Server AD,True,True
+KS07.數位事業處,fae7940a-441e-499e-af11-e0e37aa4b62d,Mail enabled security,assigned,KS07@knsh.com.tw,Windows Server AD,True,True
+KS070001.數位事業處專案組,5e2d9593-ea35-4e71-a4a0-27843d9dae81,Mail enabled security,assigned,KS070001@knsh.com.tw,Windows Server AD,True,True
+KS0701.數位事業處數位營業部,a0fb447a-ddbb-4c8a-bae3-9a06355c9a25,Mail enabled security,assigned,KS0701@knsh.com.tw,Windows Server AD,True,True
+KS070101.數位事業處數位營業部營業一組,a0d50e1c-8092-481e-80cc-ac379a21db68,Mail enabled security,assigned,KS070101@knsh.com.tw,Windows Server AD,True,True
+KS070103.數位事業處數位營業部營業二組,f39d6272-96a5-47c1-b133-7a354099d4e9,Mail enabled security,assigned,KS070103@knsh.com.tw,Windows Server AD,True,True
+KS070105.數位事業處數位營業部營業三組,6237883c-0511-4952-a605-1cb966da6df5,Mail enabled security,assigned,KS070105@knsh.com.tw,Windows Server AD,True,True
+KS070107.數位事業處數位營業部課程一組,9b9c3c86-98a2-45ec-9486-078bb203dfe0,Mail enabled security,assigned,KS070107@knsh.com.tw,Windows Server AD,True,True
+KS070109.數位事業處數位營業部課程二組,99765e4c-25a4-46f2-8cd1-43d6cab346dc,Mail enabled security,assigned,KS070109@knsh.com.tw,Windows Server AD,True,True
+KS0703.數位事業處數位研發部,8f42a680-08fb-4bf9-adfe-33c8e81d185a,Mail enabled security,assigned,KS0703@knsh.com.tw,Windows Server AD,True,True
+KS0705.數位事業處國教服務部,87410c4a-f287-440e-a660-6c4a69551904,Mail enabled security,assigned,KS0705@knsh.com.tw,Windows Server AD,True,True
+KS070501.數位事業處國教服務部企畫一組,8ba526e9-63a4-4687-a452-84bf9acf0804,Mail enabled security,assigned,KS070501@knsh.com.tw,Windows Server AD,True,True
+KS070503.數位事業處國教服務部企畫二組,075acf39-55c2-4f54-8b4c-b706162661de,Mail enabled security,assigned,KS070503@knsh.com.tw,Windows Server AD,True,True
+KS070505.數位事業處國教服務部企畫三組,4303598f-ec77-49c7-91f2-f346affd7408,Mail enabled security,assigned,KS070505@knsh.com.tw,Windows Server AD,True,True
+KS070507.數位事業處國教服務部工程組,92d35049-7d97-454e-8133-ed0fb01ecc8a,Mail enabled security,assigned,KS070507@knsh.com.tw,Windows Server AD,True,True
+KS07C.數位事業處組長以上,9dc72d1b-25a2-4f20-930e-3b025893ddda,Mail enabled security,assigned,KS07C@knsh.com.tw,Windows Server AD,True,True
+KS07M.數位事業處部級主管以上,1e8889ab-fd65-4a65-a96b-aa969fd384d5,Mail enabled security,assigned,KS07M@knsh.com.tw,Windows Server AD,True,True
+KS08.總經理室,6a923d63-07e4-4efd-bce2-61f754852904,Mail enabled security,assigned,KS08@knsh.com.tw,Windows Server AD,True,True
+KS080001.總經理室幕僚,655a02d0-7e24-46db-bda8-c543216fa05b,Mail enabled security,assigned,KS080001@knsh.com.tw,Windows Server AD,True,True
+KS0801.樂活事業部,8c27224f-22c9-4524-94d0-7d62d9a604c0,Mail enabled security,assigned,KS0801@knsh.com.tw,Windows Server AD,True,True
+KS0805.發行部,1eb751f5-4313-4d54-8dd8-5b6979e5490a,Mail enabled security,assigned,KS0805@knsh.com.tw,Windows Server AD,True,True
+KS080501.發行部管理組,eb346957-190c-4fd1-9a31-91bd53fe87db,Mail enabled security,assigned,KS080501@knsh.com.tw,Windows Server AD,True,True
+KS080503.發行部發行組,66586595-efa2-4080-8885-acbf50345ca7,Mail enabled security,assigned,KS080503@knsh.com.tw,Windows Server AD,True,True
+KS080505.發行部流通加工組,6b439460-b417-4ca6-a48c-880edb28156c,Mail enabled security,assigned,KS080505@knsh.com.tw,Windows Server AD,True,True
+KS0805C.發行部組長以上,2c4468cd-a30c-4456-9412-4b2e860685ce,Mail enabled security,assigned,KS0805C@knsh.com.tw,Windows Server AD,True,True
+KS0807.總務部,a058d4ed-dfc8-441e-8b9a-2507c14bd2ea,Mail enabled security,assigned,KS0807@knsh.com.tw,Windows Server AD,True,True
+KS080701.總務部事務組,bb0e43de-918e-4b07-8d08-ceab844030ed,Mail enabled security,assigned,KS080701@knsh.com.tw,Windows Server AD,True,True
+KS080703.總務部行政組,8de593a6-686c-452e-9380-46481f71d546,Mail enabled security,assigned,KS080703@knsh.com.tw,Windows Server AD,True,True
+KS0807C.總務部組長以上,250bb605-ead6-42a5-b948-6caf1faecd87,Mail enabled security,assigned,KS0807C@knsh.com.tw,Windows Server AD,True,True
+KS0809.採購部,8d0a5edf-27bc-419e-b6db-9a1cf35c4dac,Mail enabled security,assigned,KS0809@knsh.com.tw,Windows Server AD,True,True
+KS080901.採購部印前組,722d3b7e-9fdc-4940-a1c7-f4fed4d045d6,Mail enabled security,assigned,KS080901@knsh.com.tw,Windows Server AD,True,True
+KS080903.採購部印務組,5e05f276-c47f-4f4a-8d83-688ca510390f,Mail enabled security,assigned,KS080903@knsh.com.tw,Windows Server AD,True,True
+KS0809C.採購部組長以上,cdfe7952-06b7-4f59-8ba8-303cbc94e217,Mail enabled security,assigned,KS0809C@knsh.com.tw,Windows Server AD,True,True
+KS08M.總經理室直屬主管,9f1951cf-40d2-4f27-8f92-b1fda27e1982,Mail enabled security,assigned,KS08M@knsh.com.tw,Windows Server AD,True,True
+KS10.幼兒園,6094892e-3c9d-466c-8b72-8ed03178cc0d,Mail enabled security,assigned,KS10@knsh.com.tw,Windows Server AD,True,True
+KS1001.康軒附設幼兒園,7887c670-8864-4944-9208-119ab4dfd613,Mail enabled security,assigned,KS1001@knsh.com.tw,Windows Server AD,True,True
+KS100101.康軒附設幼兒園教務組,af36ac75-3110-474a-a69c-08c4c03c48bd,Mail enabled security,assigned,KS100101@knsh.com.tw,Windows Server AD,True,True
+KS100103.康軒附設幼兒園行政組,029dd33c-0e91-419c-8bbf-bda25eba1715,Mail enabled security,assigned,KS100103@knsh.com.tw,Windows Server AD,True,True
+KS100105.康軒附設幼兒園保育組,dc9bba85-831d-4c44-91c5-a780b94f254b,Mail enabled security,assigned,KS100105@knsh.com.tw,Windows Server AD,True,True
+KS100107.International R&D(KH),ec26afe4-7235-4473-bbcc-a427c150d8e1,Mail enabled security,assigned,KS100107@knsh.com.tw,Windows Server AD,True,True
+KS1001C.康軒附設幼兒園組長以上,5d7d8cf7-3d76-44b0-95c1-5c9cafa4bd56,Mail enabled security,assigned,KS1001C@knsh.com.tw,Windows Server AD,True,True
+KS1002.康軒附設內湖幼兒園,20f8a234-7866-4d71-9be3-d5d57981baa2,Mail enabled security,assigned,KS1002@knsh.com.tw,Windows Server AD,True,True
+KS100201.康軒附設內湖幼兒園教務組,90c2df6e-dac2-490d-bee2-1b98265efb4f,Mail enabled security,assigned,KS100201@knsh.com.tw,Windows Server AD,True,True
+KS100203.康軒附設內湖幼兒園行政組,31cfe050-1f1d-4403-851b-2c0b9c2288d2,Mail enabled security,assigned,KS100203@knsh.com.tw,Windows Server AD,True,True
+KS100205.康軒附設內湖幼兒園保育組,4ce9707a-fac7-4729-9a90-7e3535c0c7e6,Mail enabled security,assigned,KS100205@knsh.com.tw,Windows Server AD,True,True
+KS100207 International R&D(NH),75dd2c1f-6474-43dc-bd00-fb4a88e7d8b6,Mail enabled security,assigned,KS100207@knsh.com.tw,Windows Server AD,True,True
+KS1002C.康軒附設內湖幼兒園組長以上,c3505ae3-2ab3-44a8-a485-4adbf5427cc4,Mail enabled security,assigned,KS1002C@knsh.com.tw,Windows Server AD,True,True
+math,aa764a95-60d6-475a-ab5e-9de562fc2ba2,Security,assigned,,Windows Server AD,False,True
+NJ900. 南京康轩 - 和欣,099a9051-cdcf-4789-abaf-2f25c274c8b1,Mail enabled security,assigned,NJ900@knsh.com.cn,Windows Server AD,True,True
+NJ901. 南京康轩外派人员,3ca42f8a-93d5-4d24-8817-5fc2478c54a8,Mail enabled security,assigned,NJ901@knsh.com.cn,Windows Server AD,True,True
+NJ903. 学前营业处,1ad9248c-be87-4921-ab82-f69671d09444,Mail enabled security,assigned,NJ903@knsh.com.cn,Windows Server AD,True,True
+NJ9031. 学前营业处全体业务,8f4bfe88-258b-40c6-9ac4-1bb57ed1f3e8,Mail enabled security,assigned,NJ9031@knsh.com.cn,Windows Server AD,True,True
+NJ9032. 学前营业处全体讲师,a3ce8812-229e-4930-ba95-81593ec4c2d3,Mail enabled security,assigned,NJ9032@knsh.com.cn,Windows Server AD,True,True
+NJ9033. 学前一处,f4072faa-9a9a-48a5-9c20-b5283e2b17c5,Mail enabled security,assigned,NJ9033@knsh.com.cn,Windows Server AD,True,True
+NJ90330. 学前一处行政组,c35bd73f-ccac-4675-9a9c-52f09410433c,Mail enabled security,assigned,NJ90330@knsh.com.cn,Windows Server AD,True,True
+NJ9034. 学前二处,f53bbede-a44d-49ee-a0ab-82c09d070bfc,Mail enabled security,assigned,NJ9034@knsh.com.cn,Windows Server AD,True,True
+NJ9035. 学前营业处教研主任群,ff28203e-3790-467e-a418-78a59da9e130,Mail enabled security,assigned,NJ9035@knsh.com.cn,Windows Server AD,True,True
+NJ9036. 课程顾问组,896fe488-e6e6-4671-9299-09b49a4bc277,Mail enabled security,assigned,NJ9036@knsh.com.cn,Windows Server AD,True,True
+NJ904. 职教营业处,ecd27912-3261-4a45-a626-3586ff3f35ac,Mail enabled security,assigned,NJ904@knsh.com.cn,Windows Server AD,True,True
+NJ90411. 职教营业处华北营业区,1b42fab2-5059-40a9-973d-aaf62dae74c3,Mail enabled security,assigned,NJ90411@knsh.com.cn,Windows Server AD,True,True
+NJ90412. 职教营业处西北营业区,5475ed70-7f16-4678-a10a-51915a36babd,Mail enabled security,assigned,NJ90412@knsh.com.cn,Windows Server AD,True,True
+NJ90413. 职教营业处华中营业区,2078bc3d-d832-4349-afc1-22b685e0ad10,Mail enabled security,assigned,NJ90413@knsh.com.cn,Windows Server AD,True,True
+NJ90421. 职教营业处中原营业区,73ca1057-60f7-460e-830c-afcc98e1655e,Mail enabled security,assigned,NJ90421@knsh.com.cn,Windows Server AD,True,True
+NJ90423. 职教营业处华东营业区,c0fc8506-5cf8-47c6-9ec4-bc43690984c7,Mail enabled security,assigned,NJ90423@knsh.com.cn,Windows Server AD,True,True
+NJ90424. 职教营业处华南一区,01fcacef-cd65-47b2-8464-5ef96ceb7bfa,Mail enabled security,assigned,NJ90424@knsh.com.cn,Windows Server AD,True,True
+NJ90425. 职教营业处华南二区,edecc28d-3d19-41e1-847d-f890f9d978fa,Mail enabled security,assigned,NJ90425@knsh.com.cn,Windows Server AD,True,True
+NJ9043. 职教营业处市场部,d4d71ad3-32a7-43dc-b10b-aa0d6e4ed450,Mail enabled security,assigned,NJ9043@knsh.com.cn,Windows Server AD,True,True
+NJ90431. 职教营业处市场部商务组,c0451bf2-9826-4271-bea9-5e56e272cbaa,Mail enabled security,assigned,NJ90431@knsh.com.cn,Windows Server AD,True,True
+NJ90432. 职教营业处市场部营销组,fa993bf9-ac8e-4042-be8e-d609d05e24d0,Mail enabled security,assigned,NJ90432@knsh.com.cn,Windows Server AD,True,True
+NJ9044. 职教大区经理,61f3b6ab-ca4d-4029-9228-95abbc82f188,Mail enabled security,assigned,NJ9044@knsh.com.cn,Windows Server AD,True,True
+NJ9045. 职教业务主管,7994eec4-3ca7-4da1-bb1d-a58facf924b4,Mail enabled security,assigned,NJ9045@knsh.com.cn,Windows Server AD,True,True
+NJ905. 特教营业部,3d516d06-2407-440e-a622-2d1b8386c230,Mail enabled security,assigned,NJ905@knsh.com.cn,Windows Server AD,True,True
+NJ906. 市场部,3d8fb0da-a120-4815-a7f2-9337ed0527c6,Mail enabled security,assigned,NJ906@knsh.com.cn,Windows Server AD,True,True
+NJ9060. 产品营销组,08dd9462-0bc1-4fe0-85b2-aeb23cac4c42,Mail enabled security,assigned,NJ9060@knsh.com.cn,Windows Server AD,True,True
+NJ9062. 市场管理组,b1cb342a-3a31-4631-b51b-f326d8312065,Mail enabled security,assigned,NJ9062@knsh.com.cn,Windows Server AD,True,True
+NJ9063. 营业处全国区客服组,fd27d3be-5378-459d-aa65-4ebfd0deea4c,Mail enabled security,assigned,NJ9063@knsh.com.cn,Windows Server AD,True,True
+NJ9066. 营业处行政人员,a61cb2fd-2dd1-4532-882e-3193ec5bbdf0,Mail enabled security,assigned,NJ9066@knsh.com.cn,Windows Server AD,True,True
+NJ9067. 营业处行政客服人事,d6dcf8fd-9599-470c-bd9c-7764d965758f,Mail enabled security,assigned,NJ9067@knsh.com.cn,Windows Server AD,True,True
+NJ907. 学前营业部协理,472a33d5-f43f-4927-875e-4bb1e66fc469,Mail enabled security,assigned,NJ907@knsh.com.cn,Windows Server AD,True,True
+NJ908. 学前营业处区经理,b63e3e58-a4b6-4598-9ac7-28250ed7cd5e,Mail enabled security,assigned,NJ908@knsh.com.cn,Windows Server AD,True,True
+NJ910. 学前营业处教研部,caddd094-20cc-4a79-9226-e15e293e26df,Mail enabled security,assigned,NJ910@knsh.com.cn,Windows Server AD,True,True
+NJ9101. 教研一组,df970d6d-8c8c-4080-95db-374d75d3d457,Mail enabled security,assigned,NJ9101@knsh.com.cn,Windows Server AD,True,True
+NJ9102. 教研二组,b80d5345-7a0e-4a5b-8d06-8ca86d988fc6,Mail enabled security,assigned,NJ9102@knsh.com.cn,Windows Server AD,True,True
+NJ913. 培训中心,88441f75-4966-4b2c-b1ad-6ce598c6bccd,Mail enabled security,assigned,NJ913@knsh.com.cn,Windows Server AD,True,True
+NJ9131. 培训中心行企组,d260e783-8c05-4c60-a879-fa7c27e7e4f0,Mail enabled security,assigned,NJ9131@knsh.com.cn,Windows Server AD,True,True
+NJ9132. 培训中心教研组,1a3219c1-f008-49fa-a7fa-a87e61389cba,Mail enabled security,assigned,NJ9132@knsh.com.cn,Windows Server AD,True,True
+NJ9133. 培训中心营业组,d5fe7a93-dfac-4b66-9605-2a85835c835d,Mail enabled security,assigned,NJ9133@knsh.com.cn,Windows Server AD,True,True
+NJ914. 华北营业部,5eb7f58a-355e-4c98-b687-81f2df7d3aeb,Mail enabled security,assigned,NJ914@knsh.com.cn,Windows Server AD,True,True
+NJ9140. 华北营业部行政组,17b4cb71-bb13-4e8f-b6f9-9811d5b9576d,Mail enabled security,assigned,NJ9140@knsh.com.cn,Windows Server AD,True,True
+NJ9141. 学前一处华北业务,f7253439-54bf-4e7a-a043-d7415bd89119,Mail enabled security,assigned,NJ9141@knsh.com.cn,Windows Server AD,True,True
+NJ9143. 学前一处华北营业部教研中心,1ff1f6b0-e9fe-4df8-999c-ead1744cb293,Mail enabled security,assigned,NJ9143@knsh.com.cn,Windows Server AD,True,True
+NJ9148. 华北营业部学前主管组,0b74fc0c-7402-4d27-8812-d0df062704dd,Mail enabled security,assigned,NJ9148@knsh.com.cn,Windows Server AD,True,True
+NJ915. 中原营业部,4e83b01b-39bd-4a4c-ab7f-d16b71513143,Mail enabled security,assigned,NJ915@knsh.com.cn,Windows Server AD,True,True
+NJ9150. 中原营业部行政组,a12f589d-429e-4c5a-a93a-68394b6fdca8,Mail enabled security,assigned,NJ9150@knsh.com.cn,Windows Server AD,True,True
+NJ9151. 学前一处中原业务,04709b29-ae8d-45ae-bc2f-c7d7104795f4,Mail enabled security,assigned,NJ9151@knsh.com.cn,Windows Server AD,True,True
+NJ91511. 学前一处中原营业部中原一区业务,a5a3b2fb-55ee-49c4-a01a-b9d4cea6b686,Mail enabled security,assigned,NJ91511@knsh.com.cn,Windows Server AD,True,True
+NJ91513. 学前一处中原营业部中原二区业务,22f9164e-a279-4a24-bb3a-52c620b968e8,Mail enabled security,assigned,NJ91513@knsh.com.cn,Windows Server AD,True,True
+NJ9153. 学前一处中原营业部中原一区教研中心,fec613c4-5631-4d5b-ab11-a97ae85de439,Mail enabled security,assigned,NJ9153@knsh.com.cn,Windows Server AD,True,True
+NJ9155. 学前一处中原营业部中原二区教研中心,60cbac39-7b22-4467-95ec-41a5a0b614f9,Mail enabled security,assigned,NJ9155@knsh.com.cn,Windows Server AD,True,True
+NJ9158. 中原营业部学前主管组,6ef54463-f0ab-40ad-9cb4-dcaf548c441a,Mail enabled security,assigned,NJ9158@knsh.com.cn,Windows Server AD,True,True
+NJ91580. 中原学前组,21496caa-906b-4266-874c-4046ea1c278a,Mail enabled security,assigned,NJ91580@knsh.com.cn,Windows Server AD,True,True
+NJ916. 华东营业部,36c83253-34ce-46b5-8212-5170ce062401,Mail enabled security,assigned,NJ916@knsh.com.cn,Windows Server AD,True,True
+NJ9160. 华东营业部行政组,acbfc05a-b7f7-4d36-bfa0-6387cd237c02,Mail enabled security,assigned,NJ9160@knsh.com.cn,Windows Server AD,True,True
+NJ9161. 学前二处华东业务,c2fedc50-7f63-4961-92e1-13a1d97f51d4,Mail enabled security,assigned,NJ9161@knsh.com.cn,Windows Server AD,True,True
+NJ9162. 学前二处华东营业部教研中心,595515b4-5014-4aec-ad26-a6b3680ef032,Mail enabled security,assigned,NJ9162@knsh.com.cn,Windows Server AD,True,True
+NJ9168. 华东营业部学前主管组,b424bdb0-2fa2-4320-b43f-34e52705f62d,Mail enabled security,assigned,NJ9168@knsh.com.cn,Windows Server AD,True,True
+NJ917. 华南营业部,83e02cc6-11bf-491b-ba81-10d4824697df,Mail enabled security,assigned,NJ917@knsh.com.cn,Windows Server AD,True,True
+NJ9170. 华南营业部行政组,6fd8df4b-f753-4502-92ba-e6a7b1c1681c,Mail enabled security,assigned,NJ9170@knsh.com.cn,Windows Server AD,True,True
+NJ9171. 学前二处华南业务,cc13b3f0-f831-485a-ae15-59a98fcb1156,Mail enabled security,assigned,NJ9171@knsh.com.cn,Windows Server AD,True,True
+NJ9172. 学前二处华南营业部教研中心,a82c00a4-16a4-4924-a3bc-43129a430928,Mail enabled security,assigned,NJ9172@knsh.com.cn,Windows Server AD,True,True
+NJ9178. 华南营业部学前主管组,28ba926b-f49e-4dab-bf89-44d3ab2b3098,Mail enabled security,assigned,NJ9178@knsh.com.cn,Windows Server AD,True,True
+NJ9179. 华南营业部学前组,da3eed46-0b07-4370-9caa-0768fc4430f5,Mail enabled security,assigned,NJ9179@knsh.com.cn,Windows Server AD,True,True
+NJ918. 西南营业部,f113cc9a-a9db-4d02-b8a1-f5c11a53d1eb,Mail enabled security,assigned,NJ918@knsh.com.cn,Windows Server AD,True,True
+NJ9180. 西南营业部行政组,ff25dbf8-e4a0-480e-82b2-2dcf390f93f1,Mail enabled security,assigned,NJ9180@knsh.com.cn,Windows Server AD,True,True
+NJ9181. 学前二处西南业务,d68815e3-36b3-4eb9-91af-9deeb9b77301,Mail enabled security,assigned,NJ9181@knsh.com.cn,Windows Server AD,True,True
+NJ9182. 学前二处西南营业部教研中心,33d335e8-fd6c-4e4a-ab70-a7fc6c3da016,Mail enabled security,assigned,NJ9182@knsh.com.cn,Windows Server AD,True,True
+NJ9188. 西南营业部学前主管组,65b9c537-3a8d-409f-a195-a7ca313af852,Mail enabled security,assigned,NJ9188@knsh.com.cn,Windows Server AD,True,True
+NJ919. 长春营业区,ac9c8141-0ff1-4286-9e15-bf67b13fb1d3,Mail enabled security,assigned,NJ919@knsh.com.cn,Windows Server AD,True,True
+NJ9190. 长春营业区行政组,c83de830-04bc-4e61-a2ba-3aadb8fd2370,Mail enabled security,assigned,NJ9190@knsh.com.cn,Windows Server AD,True,True
+NJ9191. 学前一处长春业务,a9cc97f7-11cb-4f0c-875c-18de0946a4e4,Mail enabled security,assigned,NJ9191@knsh.com.cn,Windows Server AD,True,True
+NJ9198. 长春营业区学前主管组,86dd9454-719b-4701-b2d0-5b982a331d26,Mail enabled security,assigned,NJ9198@knsh.com.cn,Windows Server AD,True,True
+NJ921. 西北营业部,c756ab2c-fa28-4573-b07c-3a153b71f267,Mail enabled security,assigned,NJ921@knsh.com.cn,Windows Server AD,True,True
+NJ9210. 西北营业部行政组,e9e0c2b3-ad1e-4c46-8c38-c5758e68041f,Mail enabled security,assigned,NJ9210@knsh.com.cn,Windows Server AD,True,True
+NJ9211. 学前一处西北业务,3422122e-1373-4c09-b8aa-a03da3de4fc5,Mail enabled security,assigned,NJ9211@knsh.com.cn,Windows Server AD,True,True
+NJ9212. 学前一处西北营业部教研中心,ec626e51-01b7-48c1-9c95-2e60e4a863af,Mail enabled security,assigned,NJ9212@knsh.com.cn,Windows Server AD,True,True
+NJ9218. 西北营业部学前主管组,348271af-84c2-4450-9bba-4e86edcb3273,Mail enabled security,assigned,NJ9218@knsh.com.cn,Windows Server AD,True,True
+NJ925. 互联网运营部,2d528adc-6021-4e77-b2f9-51a6962918df,Mail enabled security,assigned,NJ925@knsh.com.cn,Windows Server AD,True,True
+NJ9251. B端运营组,1081b025-78a1-4fdb-a4a6-3dae2863a865,Mail enabled security,assigned,NJ9251@knsh.com.cn,Windows Server AD,True,True
+NJ9252. C端运营组,afb5ae23-a495-4921-aaeb-78c276ec68a1,Mail enabled security,assigned,NJ9252@knsh.com.cn,Windows Server AD,True,True
+NJ930. 行政处,18d60df1-f9a1-4ac4-a204-71eea1282345,Mail enabled security,assigned,NJ930@knsh.com.cn,Windows Server AD,True,True
+NJ9301. 行政处总务组,06c4a5f7-cc5c-4c93-aef8-434177a4eea3,Mail enabled security,assigned,NJ9301@knsh.com.cn,Windows Server AD,True,True
+NJ931. 行政处采购部,ee1bd093-d9ec-4fee-9ea1-77f804609559,Mail enabled security,assigned,NJ931@knsh.com.cn,Windows Server AD,True,True
+NJ9311. 行政处采购部印务组,0a727762-8318-4f8f-8925-e5ea7fdf7cf2,Mail enabled security,assigned,NJ9311@knsh.com.cn,Windows Server AD,True,True
+NJ9312. 行政处采购部采购组,f7fcca93-070b-48c6-810b-7dae86a4dd2e,Mail enabled security,assigned,NJ9312@knsh.com.cn,Windows Server AD,True,True
+NJ932. 行政处发行部,53a51a28-338d-49d5-b3ad-3287e261bdeb,Mail enabled security,assigned,NJ932@knsh.com.cn,Windows Server AD,True,True
+NJ933. 财务部,e9cb1f0e-af0d-4457-aa21-182ec0db38af,Mail enabled security,assigned,NJ933@knsh.com.cn,Windows Server AD,True,True
+NJ9330. 分公司财务,9daa9c06-e781-4284-879a-4106d3393315,Mail enabled security,assigned,NJ9330@knsh.com.cn,Windows Server AD,True,True
+NJ934. 人力资源部,57de13f3-3173-4559-93ca-7f41376098e6,Mail enabled security,assigned,NJ934@knsh.com.cn,Windows Server AD,True,True
+NJ9341. 人才发展组,75bf1d8a-743e-465b-89af-e3e6636fd5a5,Mail enabled security,assigned,NJ9341@knsh.com.cn,Windows Server AD,True,True
+NJ9342. 人才管理组,931f89e3-256b-4a01-ad68-5fcccefdb0e6,Mail enabled security,assigned,NJ9342@knsh.com.cn,Windows Server AD,True,True
+NJ935. 总经理室,93b9da07-a5b0-49cb-9c26-f4ca95018b44,Mail enabled security,assigned,NJ935@knsh.com.cn,Windows Server AD,True,True
+NJ936. 资讯部,c7782346-7c28-4ab1-be4b-13c0e2a1e5c9,Mail enabled security,assigned,NJ936@knsh.com.cn,Windows Server AD,True,True
+NJ940. 产品研发处,0be7f4dd-ec88-420a-9ad6-325f39fdb632,Mail enabled security,assigned,NJ940@knsh.com.cn,Windows Server AD,True,True
+NJ9401. 产品研发处主管组,3f4d3a2e-c930-4ebc-88d5-13090d4f14aa,Mail enabled security,assigned,NJ9401@knsh.com.cn,Windows Server AD,True,True
+NJ9402. 产品研发处部级主管,8590e21b-f31f-4d37-9a1e-36f87e42bff0,Mail enabled security,assigned,NJ9402@knsh.com.cn,Windows Server AD,True,True
+NJ9405. 产品研发处玩具组,9c13db13-f592-46fa-9a48-d1df5a807764,Mail enabled security,assigned,NJ9405@knsh.com.cn,Windows Server AD,True,True
+NJ9413. 产品研发处数位组,c84ced3c-efc7-4b01-9194-4b3e3309ac07,Mail enabled security,assigned,NJ9413@knsh.com.cn,Windows Server AD,True,True
+NJ9415. 产品研发处影像媒体组,72c64c80-8585-48b6-a64e-372795e89121,Mail enabled security,assigned,NJ9415@knsh.com.cn,Windows Server AD,True,True
+NJ9418. 产品研发处美编组,75c28721-9575-4f68-89e4-7811db00df7b,Mail enabled security,assigned,NJ9418@knsh.com.cn,Windows Server AD,True,True
+NJ942. 研发一部,7631907b-e2a3-4a24-83b1-c49131257b6e,Mail enabled security,assigned,NJ942@knsh.com.cn,Windows Server AD,True,True
+NJ9421. 研发一部研发项目群组,1fb58c01-0707-47db-ab5e-4217df3e2188,Mail enabled security,assigned,NJ9421@knsh.com.cn,Windows Server AD,True,True
+NJ943. 研发二部,e2b6d02d-5cb7-4724-90a8-62f9eba992ca,Mail enabled security,assigned,NJ943@knsh.com.cn,Windows Server AD,True,True
+NJ9431. 研发二部研发项目群组,cd5b97cb-1fbd-4e4d-90a6-be65c4940906,Mail enabled security,assigned,NJ9431@knsh.com.cn,Windows Server AD,True,True
+NJ944. 研发三部,21ebdee2-9837-4173-9d7a-1bae691e976c,Mail enabled security,assigned,NJ944@knsh.com.cn,Windows Server AD,True,True
+NJ9441. 研发三部研发一组,90e9b276-c3e6-4993-b333-9bb5d8c04e60,Mail enabled security,assigned,NJ9441@knsh.com.cn,Windows Server AD,True,True
+NJ9442. 研发三部研发二组,6e80196e-6a2b-4ae8-8b2f-ac24c2d8115f,Mail enabled security,assigned,NJ9442@knsh.com.cn,Windows Server AD,True,True
+NJ9443. 研发三部特教组,fc2a372b-5753-4d69-ad3c-51f77c3c93bf,Mail enabled security,assigned,NJ9443@knsh.com.cn,Windows Server AD,True,True
+NJ949. 学前教育研究院,3ff041a9-fe4b-4459-abd9-c12814fff332,Mail enabled security,assigned,NJ949@knsh.com.cn,Windows Server AD,True,True
+NJ950. 南京公司,cf2b326d-288f-4e0c-90ee-42c605169462,Mail enabled security,assigned,NJ950@knsh.com.cn,Windows Server AD,True,True
+NJ957. 南京基层主管,359936e4-6e89-474c-b08d-716c709faa7d,Mail enabled security,assigned,NJ957@knsh.com.cn,Windows Server AD,True,True
+NJ9570. 南京康轩后勤基层主管,881b9a50-8b13-433d-8d97-65ae97b13e77,Mail enabled security,assigned,NJ9570@knsh.com.cn,Windows Server AD,True,True
+NJ9571. 南京康轩营业基层主管,7939ff8e-bd76-4f8c-825d-068b044ee9a4,Mail enabled security,assigned,NJ9571@knsh.com.cn,Windows Server AD,True,True
+NJ958. 南京部级主管,5ea82d21-9abf-4f1b-b8ea-5aa3c326b05d,Mail enabled security,assigned,NJ958@knsh.com.cn,Windows Server AD,True,True
+NJ959. 南京康轩主管组,830464c3-f48c-4558-8bdc-d242a1c7b2a6,Mail enabled security,assigned,NJ959@knsh.com.cn,Windows Server AD,True,True
+NJ960. 南京经管会议群,c01653c0-3e8e-4239-b606-7bb28da8061e,Mail enabled security,assigned,NJ960@knsh.com.cn,Windows Server AD,True,True
+NJ961. 南京主管会议群,77e8a128-9a24-4726-8424-2ec94f7c0cc6,Mail enabled security,assigned,NJ961@knsh.com.cn,Windows Server AD,True,True
+NJ962. 国家政策研究小组,05a76c0e-c12e-4793-b2e4-9ec6808bbffc,Mail enabled security,assigned,NJ962@knsh.com.cn,Windows Server AD,True,True
+Science,bde174f2-deee-4db7-8fad-f542e1bf9129,Security,assigned,,Windows Server AD,False,True
+SocialStudies,2959c0f0-6acd-4d95-89b3-b44fbf7691a6,Security,assigned,,Windows Server AD,False,True
+td-wifi,184019c8-959d-4327-b765-59a46fae41ff,Security,assigned,,Windows Server AD,False,True
+testlk,fe3e70a0-e149-453c-9dd3-0268e52ecce4,Security,assigned,,Windows Server AD,False,True

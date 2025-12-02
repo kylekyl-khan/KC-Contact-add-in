@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>康橋通訊錄</title>
+    <!-- 之後跑在 Outlook 裡會用到；現在在瀏覽器多載沒關係 -->
+    <script
+      src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="taskpane.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <div class="app-header-left">
+          <span class="app-title">康橋通訊錄</span>
+          <span class="app-badge">預覽模式</span>
+        </div>
+        <div class="app-header-right">
+          <input
+            id="search-input"
+            class="search-input"
+            type="text"
+            placeholder="搜尋姓名 / 職稱 / Email"
+          />
+          <button id="clear-search-btn" class="search-clear-btn">清除</button>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <aside class="org-panel">
+          <div class="org-panel-title">組織樹</div>
+          <div id="org-tree" class="org-tree"></div>
+        </aside>
+
+        <section class="contacts-panel">
+          <div class="contacts-header">
+            <div id="breadcrumb" class="breadcrumb"></div>
+            <div class="contacts-meta">
+              <span id="contacts-count" class="contacts-count">共 0 筆</span>
+            </div>
+          </div>
+
+          <div id="contacts-list" class="contacts-list"></div>
+
+          <div class="selection-panel">
+            <div class="selection-header">
+              <span class="selection-title">已選擇收件人</span>
+              <span id="selection-count" class="selection-count">0 位</span>
+              <button
+                id="clear-selection-btn"
+                class="selection-clear-btn"
+                type="button"
+              >
+                清除全部
+              </button>
+            </div>
+            <div id="selection-list" class="selection-list"></div>
+
+            <div class="selection-actions">
+              <button id="btn-add-to" class="action-btn" type="button">加入收件人</button>
+              <button id="btn-add-cc" class="action-btn" type="button">加入副本</button>
+              <button id="btn-add-bcc" class="action-btn" type="button">加入密件</button>
+            </div>
+            </div>
+
+    <script type="text/javascript" src="https://localhost:3000/taskpane.js"></script>
+  </body>
+</html>
