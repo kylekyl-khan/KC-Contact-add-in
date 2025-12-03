@@ -9,13 +9,12 @@ let selectedRecipients = [];
 
 // 定義校區前綴對照表
 const CAMPUS_PREFIX_MAP = {
-  "KCXG": "秀岡校區",
   "KCQS": "青山校區",
+  "KCXG": "秀岡校區",
   "KCHC": "新竹校區",
   // "NJ": "南京校區", // 已移除
   "KS": "康軒集團",
-  "K1": "康軒集團",
-  "KKC": "康橋幼兒園"
+  "K1": "康軒集團"
 };
 
 Office.onReady(() => {
@@ -74,11 +73,16 @@ async function initializeOrgUI() {
 }
 
 // === 核心邏輯：建立樹狀骨架 ===
+// === 核心邏輯：建立樹狀骨架 (前綴編碼層級版) ===
+// === 核心邏輯：建立樹狀骨架 (層級編碼匹配版) ===
+// === 核心邏輯：建立樹狀骨架 (過濾髒資料版) ===
 function buildOrgTreeStructure(groups) {
-  orgNodeIndex = {}; 
   const root = { id: "root", name: "康橋通訊錄", children: [], users: [] };
   
+  // 1. 建立校區容器
   const campusNodes = {};
+  const campusPrefixes = Object.keys(CAMPUS_PREFIX_MAP);
+
   for (const [prefix, name] of Object.entries(CAMPUS_PREFIX_MAP)) {
     if (!campusNodes[name]) {
       const node = { 
@@ -87,65 +91,100 @@ function buildOrgTreeStructure(groups) {
           children: [], 
           users: [], 
           type: 'campus',
-          membersLoaded: true // 校區節點視為已載入(因為它只是容器)
+          membersLoaded: true 
       };
       campusNodes[name] = node;
       root.children.push(node);
     }
   }
 
-  // 解析群組
-  let parsedGroups = groups.map(g => {
+  // 2. 解析並建立有效節點
+  const allNodes = [];
+
+  groups.forEach(g => {
+    // 解析代碼：抓取開頭的英數字
     const match = g.displayName && g.displayName.match(/^([A-Z0-9]+)[\.\-_\s]+(.+)$/);
+    
     if (match) {
-      return { 
-        original: g, 
-        code: match[1], 
-        name: match[2].trim() 
+      const fullCode = match[1]; 
+      const showName = match[2].trim(); 
+
+      // 判斷所屬校區
+      let belongingPrefix = null;
+      let maxPrefixLen = 0;
+      campusPrefixes.forEach(cp => {
+          if (fullCode.startsWith(cp) && cp.length > maxPrefixLen) {
+              belongingPrefix = cp;
+              maxPrefixLen = cp.length;
+          }
+      });
+
+      // 🔥🔥🔥 關鍵修正：過濾髒資料 🔥🔥🔥
+      // 如果抓到的 Code (如 KCHC) 剛好等於校區前綴 (如 KCHC)
+      // 代表這個群組名稱格式有問題 (例如 "KCHC 名稱...")
+      // 這種節點會破壞層級結構，我們直接「跳過不處理」！
+      if (fullCode === belongingPrefix) {
+          // console.warn(`已過濾無效群組節點: ${g.displayName}`);
+          return; // ⛔️ 直接 return，不把它加入 allNodes，它就徹底消失了
+      }
+
+      const node = {
+          id: g.id,
+          code: fullCode,
+          name: showName,
+          children: [],
+          users: [],
+          original: g,
+          membersLoaded: false,
+          isLoading: false,
+          campusPrefix: belongingPrefix
       };
-    }
-    return null; 
-  }).filter(g => g !== null);
-
-  parsedGroups.sort((a, b) => a.code.length - b.code.length || a.code.localeCompare(b.code));
-
-  parsedGroups.forEach(pg => {
-    orgNodeIndex[pg.code] = { 
-        id: pg.code, // 這是樹的 ID
-        name: pg.name, 
-        children: [], 
-        users: [], 
-        original: pg.original, // 保留原始 Graph 資料以便後續查詢 ID
-        membersLoaded: false,  // 標記：成員尚未載入
-        isLoading: false       // 🔥 新增：標記是否正在載入中 (防止連點)
-    };
-  });
-
-  parsedGroups.forEach(pg => {
-    const currentNode = orgNodeIndex[pg.code];
-    let parentFound = false;
-
-    for (let i = pg.code.length - 1; i >= 2; i--) {
-      const parentCode = pg.code.substring(0, i);
-      if (orgNodeIndex[parentCode]) {
-        orgNodeIndex[parentCode].children.push(currentNode);
-        parentFound = true;
-        break;
-      }
-    }
-
-    if (!parentFound) {
-      for (const [prefix, campusName] of Object.entries(CAMPUS_PREFIX_MAP)) {
-        if (pg.code.startsWith(prefix)) {
-          campusNodes[campusName].children.push(currentNode);
-          break;
-        }
-      }
+      allNodes.push(node);
     }
   });
+
+  // 3. 排序 (編碼短的在前)
+  allNodes.sort((a, b) => a.code.length - b.code.length || a.code.localeCompare(b.code));
+
+  // 4. 找爸爸 (邏輯不變)
+  allNodes.forEach(childNode => {
+      let bestParent = null;
+
+      for (const potentialParent of allNodes) {
+          if (potentialParent === childNode) continue;
+
+          // 條件：是前綴 + 長度更短
+          if (childNode.code.startsWith(potentialParent.code) && 
+              potentialParent.code.length < childNode.code.length) {
+              
+              if (!bestParent || potentialParent.code.length > bestParent.code.length) {
+                  bestParent = potentialParent;
+              }
+          }
+      }
+
+      if (bestParent) {
+          bestParent.children.push(childNode);
+      } else {
+          // 沒爸爸，歸類到校區
+          const campusName = CAMPUS_PREFIX_MAP[childNode.campusPrefix];
+          if (campusName && campusNodes[campusName]) {
+              campusNodes[campusName].children.push(childNode);
+          } else {
+             // 沒校區的孤兒，看情況處理
+             // root.children.push(childNode);
+          }
+      }
+  });
+
+  // 5. 排序顯示
+  const codeSort = (a, b) => a.code.localeCompare(b.code);
+  Object.values(campusNodes).forEach(c => c.children.sort(codeSort));
+  allNodes.forEach(n => { if (n.children.length > 0) n.children.sort(codeSort); });
 
   return root;
 }
+
 
 // === 渲染 UI (支援 Lazy Loading) ===
 function renderOrgTree(rootNode) {
