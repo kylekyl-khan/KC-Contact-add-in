@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <Id>1ca5f588-4385-4294-ad12-94ea3adab9af</Id>
-  <Version>1.0.0.2</Version>
+  <Version>1.0.0.4</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="KC contact (Graph)"/>
   <Description DefaultValue="A template to get started."/>
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-128.png"/>
+  <IconUrl DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
-  </AppDomains>
+  <AppDomain>https://login.microsoftonline.com</AppDomain>
+  <AppDomain>https://kc-contact-addin-1081581013682.asia-east1.run.app</AppDomain>
+</AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
@@ -23,7 +24,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+        <SourceLocation DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -85,13 +86,13 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://kc-contact-addin-1081581013682.asia-east1.run.app/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="KC Contact (Graph)"/>
