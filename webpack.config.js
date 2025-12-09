@@ -4,9 +4,8 @@ const devCerts = require("office-addin-dev-certs");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-// ✅ 這些網址設定是用來在 Build 階段自動替換 manifest.xml 的，請保留
 const urlDev = "https://localhost:3000/";
-const urlProd = "https://kc-contact-addin-1081581013682.asia-east1.run.app/"; // 確認這是你的正式站台網址
+const urlProd = "https://kc-contact-addin-1081581013682.asia-east1.run.app/"; 
 
 async function getHttpsOptions() {
   const httpsOptions = await devCerts.getHttpsServerOptions();
@@ -16,13 +15,14 @@ async function getHttpsOptions() {
 module.exports = async (env, options) => {
   const dev = options.mode === "development";
   const config = {
-    // ✅ 關鍵設定：使用 "source-map" 來避免 CSP (Content Security Policy) 的 unsafe-eval 錯誤
     devtool: "source-map",
     
+    // 🔥 修改 1: 新增 auth 入口
     entry: {
       polyfill: ["core-js/stable", "regenerator-runtime/runtime"],
       taskpane: ["./src/taskpane/taskpane.js", "./src/taskpane/taskpane.html"],
       commands: "./src/commands/commands.js",
+      auth: ["./src/taskpane/auth.js", "./src/taskpane/auth.html"], // ✅ 新增這行
     },
     output: {
       clean: true,
@@ -59,6 +59,12 @@ module.exports = async (env, options) => {
         template: "./src/taskpane/taskpane.html",
         chunks: ["polyfill", "taskpane"],
       }),
+      // 🔥 修改 2: 為 auth.html 產生獨立的 HTML
+      new HtmlWebpackPlugin({
+        filename: "auth.html",
+        template: "./src/taskpane/auth.html",
+        chunks: ["polyfill", "auth"], // ✅ 只包含 auth 邏輯
+      }),
       new CopyWebpackPlugin({
         patterns: [
           {
@@ -66,7 +72,6 @@ module.exports = async (env, options) => {
             to: "assets/[name][ext][query]",
           },
           {
-            // 這裡就是用到 urlDev 的地方：自動替換 Manifest 內的網址
             from: "manifest*.xml",
             to: "[name]" + "[ext]",
             transform(content) {
@@ -89,10 +94,8 @@ module.exports = async (env, options) => {
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
-      // ✅ 修正點：原本誤寫為 sserver，已更正為 server
       server: {
         type: "https",
-        // 邏輯保持不變：如果是 production 或已有 https 選項，就不重新產生憑證
         options: (env.WEBPACK_BUILD || options.https !== undefined || options.mode === 'production') 
           ? options.https 
           : await getHttpsOptions(),

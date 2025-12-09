@@ -8,9 +8,9 @@ const clientId = "11cc40ea-7116-4f77-ae4f-fca0eefbbe4c";
 
 function getRedirectUri() {
   if (window.location.hostname === "localhost") {
-    return "https://localhost:3000/taskpane.html";
+    return "https://localhost:3000/auth.html";
   }
-  return window.location.origin + "/taskpane.html";
+  return window.location.origin + "/auth.html";
 }
 
 const msalConfig = {
